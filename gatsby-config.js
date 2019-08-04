@@ -14,8 +14,9 @@ module.exports = {
         name: `Felix Zheng`,
         start_url: "/",
         background_color: "#fff",
-        icon: `assets/fz-logo.png`
+        icon: `src/assets/fz-logo.png`
       }
-    }
+    },
+    `gatsby-plugin-resolve-src`
   ]
 };

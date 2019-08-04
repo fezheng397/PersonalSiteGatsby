@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 import '../styles/core.scss';
+import { Homepage } from './homepage/components/homepage';
 import * as styles from './Index.module.scss';
 
 interface IndexPageProps {
@@ -35,6 +36,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
         <p>{tagline}</p>
         <p>Hey, I'm</p>
         <h1>Felix Zheng</h1>
+        <Homepage />
       </div>
     );
   }
