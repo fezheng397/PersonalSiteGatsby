@@ -1,15 +1,21 @@
 .homepage-hero {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-  h1 {
-    font-size: 2.5em;
-  }
+  .hero-banner {
+    h1 {
+      font-size: 2.5em;
+    }
 
-  h3 {
-    color: #aaaaaa;
+    h3 {
+    }
+
+    .titles {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -21,6 +27,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2em;
+  border: 4px rgba(0, 0, 0, 0.02) solid;
 
   img {
     height: 100%;

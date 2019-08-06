@@ -1,5 +1,79 @@
 $font-path: "./base/fonts" !default;
 
+/* Gotham-Rounded */
+@font-face {
+  font-family: "Gotham-Rounded";
+  font-style: normal;
+  font-weight: 600;
+  src: url("#{$font-path}/gotham-rounded/GothamRoundedBold.ttf") format("ttf");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Gotham-Rounded";
+  font-style: normal;
+  font-weight: 500;
+  src: url("#{$font-path}/gotham-rounded/GothamRoundedMedium.ttf") format("ttf");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Gotham-Rounded";
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{$font-path}/gotham-rounded/GothamRoundedBook.ttf") format("ttf");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Gotham-Rounded";
+  font-style: normal;
+  font-weight: 300;
+  src: url("#{$font-path}/gotham-rounded/GothamRoundedLight.ttf") format("ttf");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Nunito */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("#{$font-path}/Nunito/Nunito-Light.ttf") format("ttf");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$font-path}/Nunito/Nunito-Regular.ttf") format("ttf");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("#{$font-path}/Nunito/Nunito-SemiBold.ttf") format("ttf");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("#{$font-path}/Nunito/Nunito-Bold.ttf") format("ttf");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
 /* Avenir */
 @font-face {
   font-family: "Avenir";

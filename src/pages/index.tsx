@@ -1,8 +1,9 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 import '../styles/core.scss';
 import { Homepage } from './homepage/components/homepage';
-import * as styles from './Index.module.scss';
 
 interface IndexPageProps {
   data: {
@@ -26,18 +27,26 @@ export const indexPageQuery = graphql`
   }
 `;
 
+const SiteContainer = styled.div`
+  margin: 0 auto;
+  max-width: 1040px;
+`;
+
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     const { name, tagline } = this.props.data.site.siteMetadata;
+    console.log(this.props.data.site.siteMetadata);
 
     return (
-      <div className={styles.Container}>
-        <h1>{name}</h1>
-        <p>{tagline}</p>
-        <p>Hey, I'm</p>
-        <h1>Felix Zheng</h1>
+      <SiteContainer>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Felix Zheng</title>
+          <link rel="canonical" href="http://felixzheng.com" />
+        </Helmet>
+
         <Homepage />
-      </div>
+      </SiteContainer>
     );
   }
 }
