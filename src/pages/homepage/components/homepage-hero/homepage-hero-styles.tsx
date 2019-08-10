@@ -26,6 +26,14 @@ export const HeroHeader = styled.h1`
   font-size: 2.5rem;
 `;
 
+export const HomepageHeroContainer = styled.div`
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
 export const SubHeader = styled.h3`
   color: #aaaaaa;
 `;

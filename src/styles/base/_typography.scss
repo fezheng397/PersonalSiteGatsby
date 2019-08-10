@@ -52,7 +52,6 @@ i {
 
 p {
   margin: 0 0 _size(element-margin) 0;
-  cursor: default;
 }
 
 h1,
@@ -67,7 +66,6 @@ h6 {
   line-height: 1em;
   margin: 0 0 (#{_size(element-margin)} * 0.5) 0;
   letter-spacing: 0.025em;
-  cursor: default;
 
   a {
     color: inherit;

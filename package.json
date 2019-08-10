@@ -13,6 +13,7 @@
     "@babel/core": "^7.5.5",
     "@types/react-helmet": "^5.0.9",
     "@types/styled-components": "^4.1.18",
+    "@types/svg-sprite": "0.0.32",
     "breakpoint-sass": "^2.7.1",
     "gatsby": "^2.13.28",
     "gatsby-plugin-manifest": "^2.2.4",
