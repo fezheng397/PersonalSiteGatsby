@@ -1,13 +1,44 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export interface IButtonProps {
-  className: string;
+  className?: string;
   placeholder: string;
-  size: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  type: 'primary' | 'secondary';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  type?: 'primary' | 'secondary';
 }
 
 export interface IButtonState {}
+
+const sizes = {
+  xs: '',
+  sm: '',
+  md: '',
+  lg: '',
+  xl: '',
+};
+
+const ButtonComponent = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-family: ${Styles.Fonts.fontHeader};
+  font-weight: ${Styles.Fonts.weightStd};
+  margin: none;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+`;
 
 export class Button extends React.Component<IButtonProps, IButtonState> {
   public static defaultProps = {
@@ -18,9 +49,7 @@ export class Button extends React.Component<IButtonProps, IButtonState> {
   public render() {
     const { className, placeholder } = this.props;
     return (
-      <div className={`${className}`}>
-        <button>{placeholder}</button>
-      </div>
+      <ButtonComponent className={className}>{placeholder}</ButtonComponent>
     );
   }
 }

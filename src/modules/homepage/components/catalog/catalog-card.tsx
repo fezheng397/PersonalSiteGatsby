@@ -26,7 +26,7 @@ const CatalogCardComponent = styled(Card)`
 const CardImage = styled.img`
   height: 172px;
   width: 100%;
-  border-radius: ${Styles.Sizes.radius5} ${Styles.Sizes.radius5} 0 0;
+  border-radius: ${Styles.Sizes.radius4} ${Styles.Sizes.radius4} 0 0;
 `;
 
 const CardDescription = styled.div`

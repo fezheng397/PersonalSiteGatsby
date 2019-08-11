@@ -11,6 +11,11 @@ const HomepageCatalogComponent = styled.div`
   padding: ${Styles.Spaces.section8} 0;
 `;
 
+const CatalogHeader = styled.div`
+  text-align: center;
+  margin-bottom: ${Styles.Spaces.section4};
+`;
+
 const CardContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
@@ -21,6 +26,10 @@ export class HomepageCatalog extends React.Component {
   public render() {
     return (
       <HomepageCatalogComponent>
+        <CatalogHeader>
+          <h1>Check out what I do!</h1>
+        </CatalogHeader>
+
         <CardContainer>
           <StyledLink to="/engineering">
             <CatalogCard

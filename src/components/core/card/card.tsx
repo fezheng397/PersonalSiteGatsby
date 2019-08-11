@@ -16,7 +16,7 @@ export interface ICardState {}
 const CardComponent = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: ${Styles.Sizes.radius5};
+  border-radius: ${Styles.Sizes.radius4};
 
   cursor: pointer;
 `;
