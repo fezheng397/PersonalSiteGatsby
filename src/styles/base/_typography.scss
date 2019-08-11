@@ -13,19 +13,24 @@ select,
 textarea,
 button {
   font-size: 16px;
-  // XLarge.
+  /*
+  XLarge.
   @include breakpoint($large) {
     font-size: 15px;
   }
 
-  // Large.
+  Large.
   @include breakpoint($medium) {
     font-size: 14px;
   }
 
-  // XXSmall.
+  XXSmall.
   @include breakpoint($med-small) {
     font-size: 13px;
+  }
+  */
+  @include breakpoint($medium) {
+    font-size: 14px;
   }
 }
 

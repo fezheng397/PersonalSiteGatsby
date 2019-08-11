@@ -1,50 +1,17 @@
-import { Card } from 'components/core/card/card';
+import { Container } from 'components/core/container/container';
+import { CatalogCard } from 'pages/homepage/components/catalog/catalog-card';
+import { HomepageCatalog } from 'pages/homepage/components/catalog/homepage-catalog';
+import { HomepageHero } from 'pages/homepage/components/homepage-hero/homepage-hero';
 import React from 'react';
 import styled from 'styled-components';
-import { HomepageHero } from './homepage-hero/homepage-hero';
-
-const HomepageCatalog = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-`;
-
-const CatalogCard = styled(Card)`
-  width: 50%;
-`;
 
 export class Homepage extends React.Component {
   public render() {
     return (
-      <div className="container-lg">
+      <Container size="lg">
         <HomepageHero />
-        <HomepageCatalog>
-          <CatalogCard
-            imageDesc="Engineering Image"
-            imageSrc={require('assets/categories/softeng/active-stock.jpg')}
-            header="Engineering"
-            subHeader="Development"
-          />
-          <CatalogCard
-            imageDesc="Engineering Image"
-            imageSrc={require('assets/categories/softeng/active-stock.jpg')}
-            header="Engineering"
-            subHeader="Development"
-          />
-          <CatalogCard
-            imageDesc="Engineering Image"
-            imageSrc={require('assets/categories/softeng/active-stock.jpg')}
-            header="Engineering"
-            subHeader="Development"
-          />
-          <CatalogCard
-            imageDesc="Engineering Image"
-            imageSrc={require('assets/categories/softeng/active-stock.jpg')}
-            header="Engineering"
-            subHeader="Development"
-          />
-        </HomepageCatalog>
-      </div>
+        <HomepageCatalog />
+      </Container>
     );
   }
 }

@@ -1,7 +1,8 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { lightMode } from 'vars/light-mode';
 import '../styles/core.scss';
 import { Homepage } from './homepage/components/homepage';
 
@@ -27,10 +28,7 @@ export const indexPageQuery = graphql`
   }
 `;
 
-const SiteContainer = styled.div`
-  margin: 0 auto;
-  max-width: 1040px;
-`;
+const SiteContainer = styled.div``;
 
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
@@ -38,15 +36,17 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     console.log(this.props.data.site.siteMetadata);
 
     return (
-      <SiteContainer>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Felix Zheng</title>
-          <link rel="canonical" href="http://felixzheng.com" />
-        </Helmet>
+      <ThemeProvider theme={lightMode}>
+        <SiteContainer>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Felix Zheng</title>
+            <link rel="canonical" href="http://felixzheng.com" />
+          </Helmet>
 
-        <Homepage />
-      </SiteContainer>
+          <Homepage />
+        </SiteContainer>
+      </ThemeProvider>
     );
   }
 }
