@@ -15,7 +15,7 @@ const CatalogCardComponent = styled(Card)`
   height: 300px;
   width: 300px;
   box-shadow: ${Styles.Shadows.standard};
-  margin-bottom: ${Styles.Spaces.spacing16};
+  margin: ${Styles.Spaces.spacing16} ${Styles.Spaces.spacing4};
 
   &:hover,
   &:focus {
@@ -30,7 +30,7 @@ const CardImage = styled.img`
 `;
 
 const CardDescription = styled.div`
-  padding: ${Styles.Spaces.spacing2} 0 0 ${Styles.Spaces.spacing4};
+  padding: ${Styles.Spaces.spacing4} 0 0 ${Styles.Spaces.spacing6};
 `;
 
 export class CatalogCard extends React.Component<ICatalogCardProps, {}> {

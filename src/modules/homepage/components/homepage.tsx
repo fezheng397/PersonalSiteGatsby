@@ -1,7 +1,7 @@
 import { Container } from 'components/core/container/container';
-import { CatalogCard } from 'pages/homepage/components/catalog/catalog-card';
-import { HomepageCatalog } from 'pages/homepage/components/catalog/homepage-catalog';
-import { HomepageHero } from 'pages/homepage/components/homepage-hero/homepage-hero';
+import { CatalogCard } from 'modules/homepage/components/catalog/catalog-card';
+import { HomepageCatalog } from 'modules/homepage/components/catalog/homepage-catalog';
+import { HomepageHero } from 'modules/homepage/components/homepage-hero/homepage-hero';
 import React from 'react';
 import styled from 'styled-components';
 

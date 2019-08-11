@@ -1,12 +1,13 @@
 import React from 'react';
-import { renderStatic } from 'react-helmet';
 import styled from 'styled-components';
 
 export interface IContainerProps {
-  size?: 'lg' | 'fluid';
+  size?: 'sm' | 'md' | 'lg' | 'fluid';
 }
 
 const sizes = {
+  sm: '600px',
+  md: '800px',
   lg: '1040px',
   fluid: '100%',
 };
