@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export const HeadshotImg = styled.img`
   height: 100%;
@@ -35,7 +36,7 @@ export const HomepageHeroContainer = styled.div`
 `;
 
 export const SubHeader = styled.h3`
-  color: #aaaaaa;
+  color: ${Styles.Colors.textSubHeader};
 `;
 
 export const Titles = styled.div`

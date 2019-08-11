@@ -41,18 +41,22 @@ export class HomepageCatalog extends React.Component {
         </CardContainer>
 
         <CardContainer>
-          <CatalogCard
-            imageDesc="Engineering Image"
-            imageSrc={require('assets/categories/blog/active-stock.jpg')}
-            header="Blog"
-            subHeader="Development"
-          />
-          <CatalogCard
-            imageDesc="Engineering Image"
-            imageSrc={require('assets/categories/design/active-stock.jpg')}
-            header="Design"
-            subHeader="Development"
-          />
+          <StyledLink to="/blog">
+            <CatalogCard
+              imageDesc="Engineering Image"
+              imageSrc={require('assets/categories/blog/active-stock.jpg')}
+              header="Blog"
+              subHeader="Development"
+            />
+          </StyledLink>
+          <StyledLink to="/design">
+            <CatalogCard
+              imageDesc="Engineering Image"
+              imageSrc={require('assets/categories/design/active-stock.jpg')}
+              header="Design"
+              subHeader="Development"
+            />
+          </StyledLink>
         </CardContainer>
       </HomepageCatalogComponent>
     );
