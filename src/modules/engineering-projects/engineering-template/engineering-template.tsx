@@ -1,5 +1,6 @@
 import { Container } from 'components/core/container/container';
 import { SubHeader } from 'components/core/headers/headers';
+import { Logo } from 'components/core/logo/logo';
 import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
@@ -32,6 +33,7 @@ const TemplateBannerContainer = styled.div`
 `;
 
 const ProjectBanner = styled.div`
+  position: relative;
   width: 80%;
   height: 100%;
   border-radius: ${Styles.Sizes.radius2};
@@ -72,6 +74,12 @@ const DetailSubHeader = styled.h5`
   color: ${Styles.Colors.textSubHeader};
 `;
 
+const TemplateLogo = styled(Logo)`
+  position: absolute;
+  left: 50%;
+  top: -25px;
+`;
+
 // Turn ProjectBanner into a component. Also Project details
 export class EngineeringTemplate extends React.Component<
   IEngineeringTemplateProps,
@@ -83,6 +91,7 @@ export class EngineeringTemplate extends React.Component<
       <EngineeringTemplateContainer size="lg">
         <TemplateBannerContainer />
         <ProjectBanner>
+          <TemplateLogo logo={require('assets/logos/gh-1200.png')} />
           <h1>GrubHub - Diner Platform</h1>
           <SubHeader>Software Engineering Intern</SubHeader>
           <Specifications>

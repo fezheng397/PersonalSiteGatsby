@@ -38,7 +38,7 @@ export class HomepageHero extends React.Component {
           <LogoContainer>
             <img
               alt="grubhub-logo"
-              src={require('assets/logos/grubhub-logo.png')}
+              src={require('assets/logos/gh-1200.png')}
               style={{
                 height: '100%',
                 width: '100%',
