@@ -1,6 +1,6 @@
-import { EngineeringTemplate } from 'modules/engineering-projects/engineering-template/engineering-template';
+import { GrubhubProject } from 'modules/engineering-projects/grubhub/grubhub';
 import React from 'react';
 
 export default function GrubhubPage() {
-  return <EngineeringTemplate />;
+  return <GrubhubProject />;
 }
