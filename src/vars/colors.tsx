@@ -1,10 +1,10 @@
 export const Colors = {
   // Text
-  primaryColor: '#fff',
+  primaryWhite: '#fff',
   textOffBlack: '#252525',
   textSubHeader: '#aaaaaa',
   textGreen: `#0EB955`,
 
   // Background
-  bgGray: '#f4f4f4',
+  bgGray: '#f6f6f6',
 };

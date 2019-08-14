@@ -19,7 +19,7 @@ const ProjectCardComponent = styled(Card)`
 
 const ProjectCardImage = styled.img`
   width: 300px;
-  height: 172px;
+  height: 175px;
   border-radius: ${Styles.Sizes.radius5};
   background: ${Styles.Colors.bgGray};
 `;

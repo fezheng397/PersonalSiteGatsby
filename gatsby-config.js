@@ -17,6 +17,7 @@ module.exports = {
         icon: `src/assets/fz-logo.png`
       }
     },
-    `gatsby-plugin-resolve-src`
+    `gatsby-plugin-resolve-src`,
+    "gatsby-plugin-remove-serviceworker"
   ]
 };

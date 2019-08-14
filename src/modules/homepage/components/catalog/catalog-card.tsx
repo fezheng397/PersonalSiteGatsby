@@ -24,7 +24,7 @@ const CatalogCardComponent = styled(Card)`
 `;
 
 const CardImage = styled.img`
-  height: 172px;
+  height: 175px;
   width: 100%;
   border-radius: ${Styles.Sizes.radius4} ${Styles.Sizes.radius4} 0 0;
 `;

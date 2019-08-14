@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 export interface IContainerProps {
+  className?: string;
   size?: 'sm' | 'md' | 'lg' | 'fluid';
 }
 
@@ -19,7 +20,11 @@ const ContainerComponent = styled.div`
 
 export class Container extends React.Component<IContainerProps, {}> {
   public render() {
-    const { children, size } = this.props;
-    return <ContainerComponent size={size}>{children}</ContainerComponent>;
+    const { children, className, size } = this.props;
+    return (
+      <ContainerComponent className={className} size={size}>
+        {children}
+      </ContainerComponent>
+    );
   }
 }

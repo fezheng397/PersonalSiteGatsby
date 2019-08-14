@@ -1,16 +1,15 @@
+import { HeroHeader, SubHeader } from 'components/core/headers/headers';
 import { IconProvider } from 'components/core/icon-provider/icon-provider';
 import { Icon } from 'components/core/icon/icon';
-import React from 'react';
-import styled from 'styled-components';
 import {
   HeadshotImg,
   HeadshotImgContainer,
   HeroBanner,
-  HeroHeader,
   HomepageHeroContainer,
-  SubHeader,
   Titles,
-} from './homepage-hero-styles';
+} from 'modules/homepage/components/homepage-hero/homepage-hero-styles';
+import React from 'react';
+import styled from 'styled-components';
 
 const LogoContainer = styled.div`
   height: 50px;

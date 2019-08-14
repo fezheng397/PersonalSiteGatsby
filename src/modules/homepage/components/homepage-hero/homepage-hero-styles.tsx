@@ -23,20 +23,12 @@ export const HeroBanner = styled.div`
   text-align: center;
 `;
 
-export const HeroHeader = styled.h1`
-  font-size: 2.5rem;
-`;
-
 export const HomepageHeroContainer = styled.div`
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   height: 100vh;
-`;
-
-export const SubHeader = styled.h3`
-  color: ${Styles.Colors.textSubHeader};
 `;
 
 export const Titles = styled.div`
