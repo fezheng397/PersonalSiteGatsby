@@ -16,6 +16,7 @@ const CatalogCardComponent = styled(Card)`
   width: 300px;
   box-shadow: ${Styles.Shadows.standard};
   margin: ${Styles.Spaces.spacing16} ${Styles.Spaces.spacing4};
+  cursor: pointer;
 
   &:hover,
   &:focus {

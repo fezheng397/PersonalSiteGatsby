@@ -17,8 +17,6 @@ const CardComponent = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: ${Styles.Sizes.radius4};
-
-  cursor: pointer;
 `;
 
 export class Card extends React.Component<ICardProps, ICardState> {

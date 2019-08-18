@@ -16,6 +16,7 @@ export const Spaces = {
   section4: `${base * 4}px`,
   section6: `${base * 6}px`,
   section8: `${base * 8}px`,
+  section10: `${base * 10}px`,
   section16: `${base * 16}px`,
   section32: `${base * 32}px`,
 };

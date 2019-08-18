@@ -15,22 +15,32 @@ export interface IProjectCardProps {
 const ProjectCardComponent = styled(Card)`
   width: 300px;
   height: 100%;
+  cursor: pointer;
 `;
 
-const ProjectCardImage = styled.img`
+const ProjectImagecontainer = styled.div`
   width: 300px;
   height: 175px;
   border-radius: ${Styles.Sizes.radius5};
   background: ${Styles.Colors.bgGray};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ProjectCardImage = styled.img`
+  width: 240px;
+  height: 140px;
+  border-radius: ${Styles.Sizes.radius5};
 `;
 
 const ProjectName = styled.h1``;
 
-const ProjectRole = styled.h3`
+const ProjectRole = styled.h4`
   color: ${Styles.Colors.textGreen};
 `;
 
-const ProjectSetting = styled.h3`
+const ProjectSetting = styled.h4`
   color: ${Styles.Colors.textSubHeader};
 `;
 
@@ -46,7 +56,10 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
     } = this.props;
     return (
       <ProjectCardComponent>
-        <ProjectCardImage alt={imageDesc} src={imageSrc} />
+        <ProjectImagecontainer>
+          <ProjectCardImage alt={imageDesc} src={imageSrc} />
+        </ProjectImagecontainer>
+
         <h1>{projectName}</h1>
         <ProjectRole>{role}</ProjectRole>
         <ProjectSetting>

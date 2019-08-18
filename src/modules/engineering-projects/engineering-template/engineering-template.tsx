@@ -40,14 +40,16 @@ const ProjectBanner = styled.div`
   box-shadow: ${Styles.Shadows.standard};
   background-color: ${Styles.Colors.primaryWhite};
   margin-top: -50px;
-  padding: ${Styles.Spaces.section8};
   text-align: center;
   z-index: 8000;
 `;
 
+const ProjectBannerContent = styled.div`
+  padding: ${Styles.Spaces.section10};
+`;
+
 const Specifications = styled.div`
-  padding: ${Styles.Spaces.section8} ${Styles.Spaces.section8}
-    ${Styles.Spaces.section4} ${Styles.Spaces.section8};
+  padding: ${Styles.Spaces.section8} 0 ${Styles.Spaces.section4} 0;
 `;
 
 const ProjectDetailsContainer = styled.div`
@@ -76,8 +78,16 @@ const DetailSubHeader = styled.h5`
 
 const TemplateLogo = styled(Logo)`
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   top: -25px;
+`;
+
+const IPhoneFrame = styled.img`
+  width: 230px;
+  height: 500px;
+  border-radius: 25px;
 `;
 
 // Turn ProjectBanner into a component. Also Project details
@@ -90,27 +100,34 @@ export class EngineeringTemplate extends React.Component<
     return (
       <EngineeringTemplateContainer size="lg">
         <TemplateBannerContainer />
+
         <ProjectBanner>
           <TemplateLogo logo={require('assets/logos/gh-1200.png')} />
-          <h1>GrubHub - Diner Platform</h1>
-          <SubHeader>Software Engineering Intern</SubHeader>
-          <Specifications>
-            <ProjectDetailsContainer>
-              <ProjectDetail>
-                <DetailHeader>Duration</DetailHeader>
-                <DetailSubHeader>Summer 2019 (3 mos)</DetailSubHeader>
-              </ProjectDetail>
-              <ProjectDetail>
-                <DetailHeader>Team</DetailHeader>
-                <DetailSubHeader>Growth & Lifecycle</DetailSubHeader>
-              </ProjectDetail>
-              <ProjectDetail noBorder={true}>
-                <DetailHeader>Role</DetailHeader>
-                <DetailSubHeader>Front-end Engineering</DetailSubHeader>
-              </ProjectDetail>
-            </ProjectDetailsContainer>
-          </Specifications>
+          <ProjectBannerContent>
+            <h1>GrubHub - Diner Platform</h1>
+            <SubHeader>Software Engineering Intern</SubHeader>
+            <Specifications>
+              <ProjectDetailsContainer>
+                <ProjectDetail>
+                  <DetailHeader>Duration</DetailHeader>
+                  <DetailSubHeader>Summer 2019 (3 mos)</DetailSubHeader>
+                </ProjectDetail>
+                <ProjectDetail>
+                  <DetailHeader>Team</DetailHeader>
+                  <DetailSubHeader>Growth & Lifecycle</DetailSubHeader>
+                </ProjectDetail>
+                <ProjectDetail noBorder={true}>
+                  <DetailHeader>Role</DetailHeader>
+                  <DetailSubHeader>Front-end Engineering</DetailSubHeader>
+                </ProjectDetail>
+              </ProjectDetailsContainer>
+            </Specifications>
+          </ProjectBannerContent>
         </ProjectBanner>
+        <IPhoneFrame
+          alt="iphone frame"
+          src={require('assets/grubhub/projects/promote-mweb-option2.png')}
+        />
         {children}
       </EngineeringTemplateContainer>
     );
