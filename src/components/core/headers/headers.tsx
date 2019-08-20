@@ -8,3 +8,7 @@ export const HeroHeader = styled.h1`
 export const SubHeader = styled.h3`
   color: ${Styles.Colors.textSubHeader};
 `;
+
+export const SectionHeader = styled.h1`
+  margin: ${Styles.Spaces.spacing8} 0;
+`;

@@ -1,6 +1,7 @@
 import { Container } from 'components/core/container/container';
 import { SubHeader } from 'components/core/headers/headers';
 import { Logo } from 'components/core/logo/logo';
+import { PhoneFrame } from 'components/core/phone-frame/phone-frame';
 import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
@@ -84,12 +85,6 @@ const TemplateLogo = styled(Logo)`
   top: -25px;
 `;
 
-const IPhoneFrame = styled.img`
-  width: 230px;
-  height: 500px;
-  border-radius: 25px;
-`;
-
 // Turn ProjectBanner into a component. Also Project details
 export class EngineeringTemplate extends React.Component<
   IEngineeringTemplateProps,
@@ -124,9 +119,17 @@ export class EngineeringTemplate extends React.Component<
             </Specifications>
           </ProjectBannerContent>
         </ProjectBanner>
-        <IPhoneFrame
+        <PhoneFrame
           alt="iphone frame"
-          src={require('assets/grubhub/projects/promote-mweb-option2.png')}
+          src={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}
+        />
+        <PhoneFrame
+          alt="iphone frame"
+          src={require('assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif')}
+        />
+        <PhoneFrame
+          alt="iphone frame"
+          src={require('assets/grubhub/projects/city-carousel/city-carousel.gif')}
         />
         {children}
       </EngineeringTemplateContainer>

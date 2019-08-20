@@ -26,15 +26,15 @@ const ProjectImagecontainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: ${Styles.Spaces.spacing2};
 `;
 
 const ProjectCardImage = styled.img`
-  width: 240px;
-  height: 140px;
-  border-radius: ${Styles.Sizes.radius5};
+  width: 220px;
+  height: 129px;
 `;
 
-const ProjectName = styled.h1``;
+const ProjectName = styled.h2``;
 
 const ProjectRole = styled.h4`
   color: ${Styles.Colors.textGreen};
@@ -60,7 +60,7 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
           <ProjectCardImage alt={imageDesc} src={imageSrc} />
         </ProjectImagecontainer>
 
-        <h1>{projectName}</h1>
+        <ProjectName>{projectName}</ProjectName>
         <ProjectRole>{role}</ProjectRole>
         <ProjectSetting>
           {timePeriod} - {location}
