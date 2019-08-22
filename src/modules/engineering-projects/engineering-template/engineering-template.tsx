@@ -2,6 +2,7 @@ import { Container } from 'components/core/container/container';
 import { SubHeader } from 'components/core/headers/headers';
 import { Logo } from 'components/core/logo/logo';
 import { PhoneFrame } from 'components/core/phone-frame/phone-frame';
+import { EngineeringOverview } from 'modules/engineering-projects/engineering-template/engineering-overview';
 import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
@@ -23,7 +24,8 @@ const EngineeringTemplateContainer = styled(Container)`
 const TemplateBannerContainer = styled.div`
   width: 100%;
   height: 300px;
-  background: url(${require('assets/grubhub/grubhub-hq.jpeg')});
+  background: ${(props: IEngineeringTemplateProps) =>
+    `url(${props.bannerImageSrc}) no-repeat`};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 60%;
@@ -91,10 +93,10 @@ export class EngineeringTemplate extends React.Component<
   IEngineeringTemplateState
 > {
   public render() {
-    const { children } = this.props;
+    const { bannerImageSrc, children } = this.props;
     return (
       <EngineeringTemplateContainer size="lg">
-        <TemplateBannerContainer />
+        <TemplateBannerContainer bannerImageSrc={bannerImageSrc} />
 
         <ProjectBanner>
           <TemplateLogo logo={require('assets/logos/gh-1200.png')} />
@@ -119,6 +121,7 @@ export class EngineeringTemplate extends React.Component<
             </Specifications>
           </ProjectBannerContent>
         </ProjectBanner>
+        <EngineeringOverview />
         <PhoneFrame
           alt="iphone frame"
           src={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}

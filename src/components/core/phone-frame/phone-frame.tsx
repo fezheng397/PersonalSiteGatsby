@@ -7,4 +7,5 @@ export const PhoneFrame = styled.img`
   border-radius: 25px;
   border: 5px #f6f6f6 solid;
   box-shadow: ${Styles.Shadows.standard};
+  margin: ${Styles.Spaces.section8};
 `;
