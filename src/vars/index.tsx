@@ -4,6 +4,7 @@ import { Fonts } from 'vars/fonts';
 import { Shadows } from 'vars/shadows';
 import { Sizes } from 'vars/sizes';
 import { Spaces } from 'vars/spaces';
+import { Transitions } from 'vars/transitions';
 
 export const Styles = {
   Breakpoints,
@@ -13,4 +14,5 @@ export const Styles = {
   Shadows,
   Sizes,
   Spaces,
+  Transitions,
 };

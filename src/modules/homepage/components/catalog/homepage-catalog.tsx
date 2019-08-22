@@ -1,6 +1,4 @@
-import { Container } from 'components/core/container/container';
 import { StyledLink } from 'components/core/link/link-styles';
-import { Link } from 'gatsby';
 import { CatalogCard } from 'modules/homepage/components/catalog/catalog-card';
 import React from 'react';
 import styled from 'styled-components';

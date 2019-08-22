@@ -27,6 +27,11 @@ const ProjectImagecontainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: ${Styles.Spaces.spacing2};
+  transition: ${Styles.Transitions.boxShadow};
+
+  &:hover {
+    box-shadow: ${Styles.Shadows.imageShadow};
+  }
 `;
 
 const ProjectCardImage = styled.img`

@@ -17,11 +17,11 @@ const CatalogCardComponent = styled(Card)`
   box-shadow: ${Styles.Shadows.standard};
   margin: ${Styles.Spaces.spacing16} ${Styles.Spaces.spacing4};
   cursor: pointer;
+  transition: ${Styles.Transitions.boxShadow};
 
   &:hover,
   &:focus {
-    box-shadow: ${Styles.Shadows.standardHover};
-    transform: translate(0, -2px);
+    box-shadow: ${Styles.Shadows.imageShadow};
   }
 `;
 

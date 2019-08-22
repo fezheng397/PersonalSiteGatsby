@@ -33,6 +33,10 @@ const TemplateBannerContainer = styled.div`
   position: relative;
   transition: opacity 200ms ease-in;
   margin-top: ${Styles.Spaces.section8};
+
+  ${Styles.MediaQuery.sm} {
+    margin-top: 0;
+  }
 `;
 
 const ProjectBanner = styled.div`
@@ -45,6 +49,11 @@ const ProjectBanner = styled.div`
   margin-top: -50px;
   text-align: center;
   z-index: 8000;
+
+  ${Styles.MediaQuery.sm} {
+    width: 100%;
+    box-shadow: none;
+  }
 `;
 
 const ProjectBannerContent = styled.div`

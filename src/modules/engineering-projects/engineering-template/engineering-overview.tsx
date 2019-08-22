@@ -8,21 +8,23 @@ export interface IEngineeringOverviewProps {
 }
 
 const OverviewContainer = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   margin: ${Styles.Spaces.section16} 0;
 `;
 
 const OverviewImg = styled.img`
   height: 380px;
-  width: 550px;
+  width: 380px;
   border-radius: ${Styles.Sizes.radius4};
 `;
 
-const OverviewDescContainer = styled.div``;
+const OverviewDescContainer = styled.div`
+  margin-left: ${Styles.Spaces.spacing8};
+  height: 100%;
+`;
 
 export function EngineeringOverview({
   overviewDescription,
@@ -32,7 +34,10 @@ export function EngineeringOverview({
       <OverviewImg src={require('assets/grubhub/grubhub-hq-3.jpg')} />
       <OverviewDescContainer>
         <SectionHeader>Overview</SectionHeader>
-        <p>Hello this is a text description</p>
+        <p>
+          Hello this is a text description Hello this is a text description
+          Hello this is a text description
+        </p>
       </OverviewDescContainer>
     </OverviewContainer>
   );
