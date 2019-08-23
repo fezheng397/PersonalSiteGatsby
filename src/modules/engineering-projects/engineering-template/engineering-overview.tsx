@@ -1,4 +1,5 @@
 import { SectionHeader } from 'components/core/headers/headers';
+import { EngineeringTemplateContainer } from 'modules/engineering-projects/engineering-template/engineering-template';
 import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
@@ -30,15 +31,17 @@ export function EngineeringOverview({
   overviewDescription,
 }: IEngineeringOverviewProps) {
   return (
-    <OverviewContainer>
-      <OverviewImg src={require('assets/grubhub/grubhub-hq-3.jpg')} />
-      <OverviewDescContainer>
-        <SectionHeader>Overview</SectionHeader>
-        <p>
-          Hello this is a text description Hello this is a text description
-          Hello this is a text description
-        </p>
-      </OverviewDescContainer>
-    </OverviewContainer>
+    <EngineeringTemplateContainer size="lg">
+      <OverviewContainer>
+        <OverviewImg src={require('assets/grubhub/grubhub-hq-3.jpg')} />
+        <OverviewDescContainer>
+          <SectionHeader>Overview</SectionHeader>
+          <p>
+            Hello this is a text description Hello this is a text description
+            Hello this is a text description
+          </p>
+        </OverviewDescContainer>
+      </OverviewContainer>
+    </EngineeringTemplateContainer>
   );
 }
