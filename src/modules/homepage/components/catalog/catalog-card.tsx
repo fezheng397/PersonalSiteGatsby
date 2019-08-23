@@ -8,7 +8,7 @@ export interface ICatalogCardProps {
   imageDesc: string;
   imageSrc: string;
   header: string;
-  subHeader: string;
+  subHeader?: string;
 }
 
 const CatalogCardComponent = styled(Card)`
