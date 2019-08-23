@@ -12,3 +12,17 @@ export const SubHeader = styled.h3`
 export const SectionHeader = styled.h1`
   margin: ${Styles.Spaces.spacing8} 0;
 `;
+
+export const CenteredSectionHeader = styled(SectionHeader)`
+  text-align: center;
+`;
+
+export const SectionHeaderMajor = styled(CenteredSectionHeader)`
+  &:after {
+    content: "";
+    border-bottom: solid 2px #e6e6e6;
+    display: block;
+    width: ${Styles.Spaces.spacing16};
+    margin: ${Styles.Spaces.spacing8} auto 0 auto;
+  }
+`;

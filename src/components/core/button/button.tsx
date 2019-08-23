@@ -4,6 +4,7 @@ import { Styles } from 'vars';
 
 export interface IButtonProps {
   className?: string;
+  onClick?: () => void;
   placeholder: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   type?: 'primary' | 'secondary';
@@ -47,9 +48,11 @@ export class Button extends React.Component<IButtonProps, IButtonState> {
   };
 
   public render() {
-    const { className, placeholder } = this.props;
+    const { children, className, onClick, placeholder } = this.props;
     return (
-      <ButtonComponent className={className}>{placeholder}</ButtonComponent>
+      <ButtonComponent className={className} onClick={onClick}>
+        {children ? children : placeholder}
+      </ButtonComponent>
     );
   }
 }

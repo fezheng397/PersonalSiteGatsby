@@ -9,7 +9,7 @@ export interface IEngineeringOverviewProps {
 }
 
 const OverviewContainer = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

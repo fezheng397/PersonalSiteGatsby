@@ -41,7 +41,7 @@ const TemplateBannerContainer = styled.div`
 
 const ProjectBanner = styled.div`
   position: relative;
-  width: 80%;
+  width: 90%;
   height: 100%;
   border-radius: ${Styles.Sizes.radius2};
   box-shadow: ${Styles.Shadows.standard};
