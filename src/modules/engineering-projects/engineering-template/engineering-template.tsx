@@ -27,7 +27,7 @@ export const EngineeringTemplateContainer = styled(Container)`
 const projectDetails: ProjectDetails[] = [
   { header: 'Duration', subHeader: 'Summer 2019 (3 mos)' },
   { header: 'Team', subHeader: 'Growth & Lifecycle' },
-  { header: 'Role', subHeader: 'Front-end Engineer' },
+  { header: 'Platform', subHeader: 'Web, Front-end' },
 ];
 
 export class EngineeringTemplate extends React.Component<

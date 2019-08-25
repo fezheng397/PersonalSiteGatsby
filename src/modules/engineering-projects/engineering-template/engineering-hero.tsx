@@ -93,6 +93,11 @@ const TemplateLogo = styled(Logo)`
   top: -25px;
 `;
 
+const HeroProjectHeader = styled.h1`
+  font-size: 2.75em;
+  line-height: 1.75em;
+`;
+
 export function EngineeringHero({
   bannerImageSrc,
   projectDetails,
@@ -105,7 +110,7 @@ export function EngineeringHero({
       <ProjectBanner>
         <TemplateLogo logo={require('assets/logos/gh-1200.png')} />
         <ProjectBannerContent>
-          <h1>GrubHub - Diner Platform</h1>
+          <HeroProjectHeader>Grubhub</HeroProjectHeader>
           <SubHeader>Software Engineering Intern</SubHeader>
           <Specifications>
             <ProjectDetailsContainer>
