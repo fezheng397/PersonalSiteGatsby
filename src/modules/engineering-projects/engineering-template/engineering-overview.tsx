@@ -1,4 +1,4 @@
-import { SectionHeader } from 'components/core/headers/headers';
+import { GHSectionHeader } from 'components/core/headers/headers';
 import { EngineeringTemplateContainer } from 'modules/engineering-projects/engineering-template/engineering-template';
 import React from 'react';
 import styled from 'styled-components';
@@ -10,9 +10,6 @@ export interface IEngineeringOverviewProps {
 
 const OverviewContainer = styled.div`
   width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin: ${Styles.Spaces.section16} 0;
 `;
 
@@ -22,14 +19,7 @@ const OverviewImg = styled.img`
   border-radius: ${Styles.Sizes.radius4};
 `;
 
-const OverviewHeader = styled(SectionHeader)`
-  color: ${Styles.Colors.textGHPurple};
-`;
-
-const OverviewDescContainer = styled.div`
-  margin-left: ${Styles.Spaces.spacing8};
-  height: 100%;
-`;
+const OverviewDescContainer = styled.div``;
 
 const OverviewSection = styled.div`
   margin-bottom: ${Styles.Spaces.spacing4};
@@ -45,22 +35,39 @@ export function EngineeringOverview({
   return (
     <EngineeringTemplateContainer size="lg">
       <OverviewContainer>
-        <OverviewImg src={require('assets/grubhub/grubhub-hq-3.jpg')} />
         <OverviewDescContainer>
-          <OverviewHeader>Overview</OverviewHeader>
+          <GHSectionHeader>Overview</GHSectionHeader>
           <OverviewSection>
             <OverviewSectionHeader>
               <h2>Background</h2>
             </OverviewSectionHeader>
             <p>
               Hello this is a text description Hello this is a text description
+              Hello this is a text description Hello this is a text description
+              Hello this is a text description Hello this is a text description
+              Hello this is a text description Hello this is a text description
+              Hello this is a text description Hello this is a text description
+              Hello this is a text description Hello this is a text description
             </p>
           </OverviewSection>
 
-          <h2>My Role</h2>
-          <p>
-            Hello this is a text description Hello this is a text description
-          </p>
+          <OverviewSectionHeader>
+            <h2>My Role</h2>
+          </OverviewSectionHeader>
+          <ul>
+            <li>
+              <strong>1)</strong> Hello this is a text description Hello this is
+              a text description
+            </li>
+            <li>
+              <strong>2)</strong> Hello this is a text description Hello this is
+              a text description
+            </li>
+            <li>
+              <strong>3)</strong> Hello this is a text description Hello this is
+              a text description
+            </li>
+          </ul>
         </OverviewDescContainer>
       </OverviewContainer>
     </EngineeringTemplateContainer>

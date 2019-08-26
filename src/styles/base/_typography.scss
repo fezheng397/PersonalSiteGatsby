@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  color: $off-black;
+  color: $light-black;
 }
 
 html,
@@ -46,8 +46,8 @@ textarea {
 
 strong,
 b {
-  font-weight: _font(weight-bold);
-  color: $fg-bold;
+  font-weight: 600;
+  color: $light-black;
 }
 
 em,
@@ -58,6 +58,7 @@ i {
 p {
   font-family: $font-0;
   margin: 0 0 _size(element-margin) 0;
+  color: $light-black;
 }
 
 h1,

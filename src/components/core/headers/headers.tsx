@@ -17,6 +17,10 @@ export const CenteredSectionHeader = styled(SectionHeader)`
   text-align: center;
 `;
 
+export const GHSectionHeader = styled(CenteredSectionHeader)`
+  color: ${Styles.Colors.textGHPurple};
+`;
+
 export const SectionHeaderMajor = styled(CenteredSectionHeader)`
   &:after {
     content: "";
@@ -25,4 +29,9 @@ export const SectionHeaderMajor = styled(CenteredSectionHeader)`
     width: ${Styles.Spaces.spacing16};
     margin: ${Styles.Spaces.spacing8} auto 0 auto;
   }
+`;
+
+export const SectionSubHeader = styled.h5`
+  text-transform: uppercase;
+  font-weight: 600;
 `;

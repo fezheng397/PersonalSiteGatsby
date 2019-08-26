@@ -1,4 +1,4 @@
-import { CenteredSectionHeader } from 'components/core/headers/headers';
+import { GHSectionHeader } from 'components/core/headers/headers';
 import { EngineeringTemplate } from 'modules/engineering-projects/engineering-template/engineering-template';
 import { Autocomplete } from 'modules/engineering-projects/grubhub/projects/autocomplete';
 import { CityPage } from 'modules/engineering-projects/grubhub/projects/city-page';
@@ -15,7 +15,7 @@ export class GrubhubProject extends React.Component {
       <EngineeringTemplate
         bannerImageSrc={require('assets/grubhub/grubhub-hq.jpeg')}
       >
-        <CenteredSectionHeader>Projects</CenteredSectionHeader>
+        <GHSectionHeader>Projects</GHSectionHeader>
         <ProjectNav />
         <DashiGatsby />
         <CityPage />

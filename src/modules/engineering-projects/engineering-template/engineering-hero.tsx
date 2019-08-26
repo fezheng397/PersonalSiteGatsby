@@ -1,4 +1,4 @@
-import { SubHeader } from 'components/core/headers/headers';
+import { SectionSubHeader, SubHeader } from 'components/core/headers/headers';
 import { Logo } from 'components/core/logo/logo';
 import { EngineeringTemplateContainer } from 'modules/engineering-projects/engineering-template/engineering-template';
 import React from 'react';
@@ -75,12 +75,8 @@ const ProjectDetail = styled.div`
     props.noBorder ? 'none' : '2px rgba(0, 0, 0, 0.08) solid'};
 `;
 
-const DetailHeader = styled.h5`
-  text-transform: uppercase;
-  font-weight: 600;
-`;
-
-const DetailSubHeader = styled.h5`
+const DetailDesc = styled.p`
+  font-size: 0.9em;
   margin-top: ${Styles.Spaces.spacing1};
   color: ${Styles.Colors.textSubHeader};
 `;
@@ -117,13 +113,13 @@ export function EngineeringHero({
               {projectDetails.map((detail, index) => {
                 return index === projectDetails.length - 1 ? (
                   <ProjectDetail noBorder={true}>
-                    <DetailHeader>{detail.header}</DetailHeader>
-                    <DetailSubHeader>{detail.subHeader}</DetailSubHeader>
+                    <SectionSubHeader>{detail.header}</SectionSubHeader>
+                    <DetailDesc>{detail.subHeader}</DetailDesc>
                   </ProjectDetail>
                 ) : (
                   <ProjectDetail>
-                    <DetailHeader>{detail.header}</DetailHeader>
-                    <DetailSubHeader>{detail.subHeader}</DetailSubHeader>
+                    <SectionSubHeader>{detail.header}</SectionSubHeader>
+                    <DetailDesc>{detail.subHeader}</DetailDesc>
                   </ProjectDetail>
                 );
               })}
