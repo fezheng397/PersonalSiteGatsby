@@ -1,6 +1,7 @@
 import { HeroHeader, SubHeader } from 'components/core/headers/headers';
 import { IconProvider } from 'components/core/icon-provider/icon-provider';
 import { Icon } from 'components/core/icon/icon';
+
 import {
   HeadshotImg,
   HeadshotImgContainer,

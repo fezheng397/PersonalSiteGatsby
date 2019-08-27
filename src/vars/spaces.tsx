@@ -8,6 +8,7 @@ export const Spaces = {
   spacing4: `${base * 4}px`,
   spacing6: `${base * 6}px`,
   spacing8: `${base * 8}px`,
+  spacing10: `${base * 10}px`,
   spacing16: `${base * 16}px`,
 
   // Section Spacing

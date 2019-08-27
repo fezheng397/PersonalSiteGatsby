@@ -5,7 +5,7 @@ import { Styles } from 'vars';
 export interface IButtonProps {
   className?: string;
   onClick?: () => void;
-  placeholder: string;
+  placeholder?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   type?: 'primary' | 'secondary';
 }

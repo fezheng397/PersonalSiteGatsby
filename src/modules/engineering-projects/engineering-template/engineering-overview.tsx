@@ -10,7 +10,11 @@ export interface IEngineeringOverviewProps {
 
 const OverviewContainer = styled.div`
   width: 90%;
-  margin: ${Styles.Spaces.section16} 0;
+  margin-bottom: ${Styles.Spaces.section16};
+`;
+
+const OverviewHeader = styled(GHSectionHeader)`
+  margin: ${Styles.Spaces.spacing16};
 `;
 
 const OverviewImg = styled.img`
@@ -36,7 +40,7 @@ export function EngineeringOverview({
     <EngineeringTemplateContainer size="lg">
       <OverviewContainer>
         <OverviewDescContainer>
-          <GHSectionHeader>Overview</GHSectionHeader>
+          <OverviewHeader>Overview</OverviewHeader>
           <OverviewSection>
             <OverviewSectionHeader>
               <h2>Background</h2>
@@ -50,7 +54,6 @@ export function EngineeringOverview({
               Hello this is a text description Hello this is a text description
             </p>
           </OverviewSection>
-
           <OverviewSectionHeader>
             <h2>My Role</h2>
           </OverviewSectionHeader>
