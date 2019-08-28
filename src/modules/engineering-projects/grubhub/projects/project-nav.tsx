@@ -118,10 +118,8 @@ const NavButton = styled(Button)`
       transition: all 0.25s ease-out;
     }
 
-    #city-icon_svg__clouds {
-      animation: ${shake} infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-      backface-visibility: hidden;
-      perspective: 1000px;
+    #city-icon_svg__building {
+      transform: scale(1.2);
       transform-origin: 50% 50%;
       transition: all 0.25s ease-out;
     }
@@ -186,8 +184,8 @@ const AnimatedIcon = styled(SVGComponent)`
     transform-origin: 50% 50%;
     transition: all 0.25s ease-out;
   }
-  #city-icon_svg__clouds {
-    transform: translateX(0) translateY(0);
+  #city-icon_svg__building {
+    transform: scale(1);
     transform-origin: 50% 50%;
     transition: all 0.25s ease-out;
   }

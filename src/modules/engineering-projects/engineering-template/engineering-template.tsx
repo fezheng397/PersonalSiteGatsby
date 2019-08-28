@@ -38,7 +38,7 @@ export class EngineeringTemplate extends React.Component<
     const { bannerImageSrc, children } = this.props;
     console.log('project details:', projectDetails);
     return (
-      <Container size="fluid">
+      <div>
         <EngineeringHero
           bannerImageSrc={bannerImageSrc}
           projectDetails={projectDetails}
@@ -46,18 +46,18 @@ export class EngineeringTemplate extends React.Component<
         <EngineeringOverview />
         {children}
         <PhoneFrame
-          alt="iphone frame"
-          src={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}
+          imageAlt="iphone frame"
+          imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}
         />
         <PhoneFrame
-          alt="iphone frame"
-          src={require('assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif')}
+          imageAlt="iphone frame"
+          imageSrc={require('assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif')}
         />
         <PhoneFrame
-          alt="iphone frame"
-          src={require('assets/grubhub/projects/city-carousel/city-carousel.gif')}
+          imageAlt="iphone frame"
+          imageSrc={require('assets/grubhub/projects/city-carousel/city-carousel.gif')}
         />
-      </Container>
+      </div>
     );
   }
 }

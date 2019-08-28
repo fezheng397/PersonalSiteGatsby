@@ -14,7 +14,7 @@ const OverviewContainer = styled.div`
 `;
 
 const OverviewHeader = styled(GHSectionHeader)`
-  margin: ${Styles.Spaces.spacing16};
+  margin: ${Styles.Spaces.spacing16} 0;
 `;
 
 const OverviewImg = styled.img`
@@ -57,20 +57,6 @@ export function EngineeringOverview({
           <OverviewSectionHeader>
             <h2>My Role</h2>
           </OverviewSectionHeader>
-          <ul>
-            <li>
-              <strong>1)</strong> Hello this is a text description Hello this is
-              a text description
-            </li>
-            <li>
-              <strong>2)</strong> Hello this is a text description Hello this is
-              a text description
-            </li>
-            <li>
-              <strong>3)</strong> Hello this is a text description Hello this is
-              a text description
-            </li>
-          </ul>
         </OverviewDescContainer>
       </OverviewContainer>
     </EngineeringTemplateContainer>

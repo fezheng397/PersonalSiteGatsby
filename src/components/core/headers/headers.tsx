@@ -9,6 +9,14 @@ export const SubHeader = styled.h3`
   color: ${Styles.Colors.textSubHeader};
 `;
 
+export const SectionHeader2 = styled.h2`
+  margin: ${Styles.Spaces.spacing8} 0;
+`;
+
+export const CenteredSectionHeader2 = styled(SectionHeader2)`
+  text-align: center;
+`;
+
 export const SectionHeader = styled.h1`
   margin: ${Styles.Spaces.spacing8} 0;
 `;
@@ -31,7 +39,16 @@ export const SectionHeaderMajor = styled(CenteredSectionHeader)`
   }
 `;
 
-export const SectionSubHeader = styled.h5`
+export const SectionSubHeader3 = styled.h3`
+  font-weight: 400;
+`;
+
+export const SectionSubHeader4 = styled.h4`
+  text-transform: uppercase;
+  font-weight: 600;
+`;
+
+export const SectionSubHeader5 = styled.h5`
   text-transform: uppercase;
   font-weight: 600;
 `;

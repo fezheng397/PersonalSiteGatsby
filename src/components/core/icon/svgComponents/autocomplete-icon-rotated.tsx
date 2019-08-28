@@ -1,13 +1,12 @@
 import React from 'react';
 
-export const SvgAutocompleteIconRotated = (props) => (
+export const SvgAutocompleteIconRotated = () => (
   <svg
     id="autocomplete-icon-rotated_svg__Layer_1"
     data-name="Layer 1"
     viewBox="0 0 110 109.966"
     width="100%"
     height="100%"
-    {...props}
   >
     <defs>
       <style>

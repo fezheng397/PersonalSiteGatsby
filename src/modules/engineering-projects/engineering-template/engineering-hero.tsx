@@ -1,4 +1,4 @@
-import { SectionSubHeader, SubHeader } from 'components/core/headers/headers';
+import { SectionSubHeader5, SubHeader } from 'components/core/headers/headers';
 import { Logo } from 'components/core/logo/logo';
 import { EngineeringTemplateContainer } from 'modules/engineering-projects/engineering-template/engineering-template';
 import React from 'react';
@@ -100,7 +100,7 @@ export function EngineeringHero({
 }: IEngineeringHeroProps) {
   console.log('project details in hero:', projectDetails.length);
   return (
-    <EngineeringTemplateContainer size="lg">
+    <EngineeringTemplateContainer noMobilePadding={true} size="lg">
       <TemplateBannerContainer bannerImageSrc={bannerImageSrc} />
 
       <ProjectBanner>
@@ -113,12 +113,12 @@ export function EngineeringHero({
               {projectDetails.map((detail, index) => {
                 return index === projectDetails.length - 1 ? (
                   <ProjectDetail noBorder={true}>
-                    <SectionSubHeader>{detail.header}</SectionSubHeader>
+                    <SectionSubHeader5>{detail.header}</SectionSubHeader5>
                     <DetailDesc>{detail.subHeader}</DetailDesc>
                   </ProjectDetail>
                 ) : (
                   <ProjectDetail>
-                    <SectionSubHeader>{detail.header}</SectionSubHeader>
+                    <SectionSubHeader5>{detail.header}</SectionSubHeader5>
                     <DetailDesc>{detail.subHeader}</DetailDesc>
                   </ProjectDetail>
                 );

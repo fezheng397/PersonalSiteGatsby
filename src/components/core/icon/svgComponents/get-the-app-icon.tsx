@@ -1,13 +1,12 @@
 import React from 'react';
 
-export const SvgGetTheAppIcon = (props) => (
+export const SvgGetTheAppIcon = () => (
   <svg
     id="get-the-app-icon_svg__Layer_1"
     data-name="Layer 1"
     viewBox="0 0 109.975 109.972"
     width="100%"
     height="100%"
-    {...props}
   >
     <defs>
       <style>

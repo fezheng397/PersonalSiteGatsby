@@ -1,12 +1,11 @@
 import React from 'react';
 
-export const SvgGatsbyIcon = (props) => (
+export const SvgGatsbyIcon = () => (
   <svg
     data-name="Layer 1"
     viewBox="0 0 109.975 109.972"
     width="100%"
     height="100%"
-    {...props}
   >
     <circle
       id="project-icon__background"

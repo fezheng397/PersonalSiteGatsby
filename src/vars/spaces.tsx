@@ -20,4 +20,7 @@ export const Spaces = {
   section10: `${base * 10}px`,
   section16: `${base * 16}px`,
   section32: `${base * 32}px`,
+
+  // Mobile Padding
+  mobileSmall: `${base * 6}px`,
 };
