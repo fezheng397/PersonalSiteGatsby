@@ -1,4 +1,4 @@
-import { GHSectionHeader } from 'components/core/headers/headers';
+import { CenteredSectionHeader } from 'components/core/headers/headers';
 import { EngineeringTemplateContainer } from 'modules/engineering-projects/engineering-template/engineering-template';
 import React from 'react';
 import styled from 'styled-components';
@@ -13,14 +13,8 @@ const OverviewContainer = styled.div`
   margin-bottom: ${Styles.Spaces.section16};
 `;
 
-const OverviewHeader = styled(GHSectionHeader)`
+const OverviewHeader = styled(CenteredSectionHeader)`
   margin: ${Styles.Spaces.spacing16} 0;
-`;
-
-const OverviewImg = styled.img`
-  height: 380px;
-  width: 380px;
-  border-radius: ${Styles.Sizes.radius4};
 `;
 
 const OverviewDescContainer = styled.div``;

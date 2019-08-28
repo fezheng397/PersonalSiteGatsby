@@ -1,6 +1,7 @@
 export const Fonts = {
   // Font Types
-  fontHeader: '"Nunito", sans-serif',
+  nunitoRegular: '"Nunito", sans-serif',
+  nunitoSemibold: '"Nunito Semibold", sans-serif',
   fontRegular: '"Open-Sans", sans-serif',
 
   // Font Weights

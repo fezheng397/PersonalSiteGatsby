@@ -90,7 +90,7 @@ const TemplateLogo = styled(Logo)`
 `;
 
 const HeroProjectHeader = styled.h1`
-  font-size: 2.75em;
+  font-size: 2.9em;
   line-height: 1.75em;
 `;
 

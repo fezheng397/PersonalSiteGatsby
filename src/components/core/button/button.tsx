@@ -27,7 +27,7 @@ const ButtonComponent = styled.button`
   background-color: transparent;
   cursor: pointer;
   border: none;
-  font-family: ${Styles.Fonts.fontHeader};
+  font-family: ${Styles.Fonts.nunitoRegular};
   font-weight: ${Styles.Fonts.weightStd};
   margin: none;
   text-align: center;

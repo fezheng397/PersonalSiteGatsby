@@ -30,6 +30,8 @@ export const GHSectionHeader = styled(CenteredSectionHeader)`
 `;
 
 export const SectionHeaderMajor = styled(CenteredSectionHeader)`
+  font-size: 2.5em;
+
   &:after {
     content: "";
     border-bottom: solid 2px #e6e6e6;

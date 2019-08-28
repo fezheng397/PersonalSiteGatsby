@@ -104,36 +104,39 @@ export function Autocomplete({  }: IAutocompleteProps) {
         </PhoneFrameRow>
         <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
       </Container>
-      <TextSectionContainer>
-        <CenteredSectionHeader2>Ideation</CenteredSectionHeader2>
-        <TextSectionSubHeader>App Audit</TextSectionSubHeader>
-        <TextSectionSubHeader>Feature Architecture</TextSectionSubHeader>
+      <Container id="autocomplete-project-ideation" size="lg">
+        <TextSectionContainer>
+          <CenteredSectionHeader2>Ideation</CenteredSectionHeader2>
+          <TextSectionSubHeader>App Audit</TextSectionSubHeader>
+          <TextSectionSubHeader>Feature Architecture</TextSectionSubHeader>
 
-        <TextSectionSubHeader />
-      </TextSectionContainer>
-
-      <TextSectionContainer>
-        <CenteredSectionHeader2>Implementation</CenteredSectionHeader2>
-        <TextSectionSubHeader>Coding...</TextSectionSubHeader>
-        <PhoneFrameRow>
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/autocomplete/homepage.png')}
-            caption="Logged-out Homepage Entry - Redesigned Address Input"
-          />
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/autocomplete/entry.png')}
-            caption="After Focusing on Address Input"
-          />
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/autocomplete/search-results.png')}
-            caption="After Typing to See Results"
-          />
-        </PhoneFrameRow>
-        <TextSectionSubHeader />
-      </TextSectionContainer>
+          <TextSectionSubHeader />
+        </TextSectionContainer>
+      </Container>
+      <Container id="autocomplete-project-implementation" size="lg">
+        <TextSectionContainer>
+          <CenteredSectionHeader2>Implementation</CenteredSectionHeader2>
+          <TextSectionSubHeader>Coding...</TextSectionSubHeader>
+          <PhoneFrameRow>
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/autocomplete/homepage.png')}
+              caption="Logged-out Homepage Entry - Redesigned Address Input"
+            />
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/autocomplete/entry.png')}
+              caption="After Focusing on Address Input - Fullscreen Modal for Autocomplete"
+            />
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/autocomplete/search-results.png')}
+              caption="After Typing to See Results"
+            />
+          </PhoneFrameRow>
+          <TextSectionSubHeader />
+        </TextSectionContainer>
+      </Container>
     </AutocompleteComponent>
   );
 }

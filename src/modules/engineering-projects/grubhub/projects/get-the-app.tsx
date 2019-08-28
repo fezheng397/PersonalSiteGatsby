@@ -4,14 +4,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
 
-export interface IHeroRedesignProps {}
+export interface IGetTheAppProps {}
 
-const HeroRedesignComponent = styled(Container)``;
+const GetTheAppComponent = styled(Container)``;
 
-export function HeroRedesign({  }: IHeroRedesignProps) {
+export function GetTheApp({  }: IGetTheAppProps) {
   return (
-    <HeroRedesignComponent>
+    <GetTheAppComponent>
       <SectionHeaderMajor>Homepage Hero Redesign</SectionHeaderMajor>
-    </HeroRedesignComponent>
+    </GetTheAppComponent>
   );
 }

@@ -1,9 +1,9 @@
-import { GHSectionHeader } from 'components/core/headers/headers';
+import { CenteredSectionHeader } from 'components/core/headers/headers';
 import { EngineeringTemplate } from 'modules/engineering-projects/engineering-template/engineering-template';
 import { Autocomplete } from 'modules/engineering-projects/grubhub/projects/autocomplete';
 import { CityPage } from 'modules/engineering-projects/grubhub/projects/city-page';
 import { DashiGatsby } from 'modules/engineering-projects/grubhub/projects/dashi-gatsby';
-import { HeroRedesign } from 'modules/engineering-projects/grubhub/projects/hero-redesign';
+import { GetTheApp } from 'modules/engineering-projects/grubhub/projects/get-the-app';
 import { ProjectNav } from 'modules/engineering-projects/grubhub/projects/project-nav';
 import React from 'react';
 import styled from 'styled-components';
@@ -15,12 +15,12 @@ export class GrubhubProject extends React.Component {
       <EngineeringTemplate
         bannerImageSrc={require('assets/grubhub/grubhub-hq.jpeg')}
       >
-        <GHSectionHeader>Projects</GHSectionHeader>
+        <CenteredSectionHeader>Projects</CenteredSectionHeader>
         <ProjectNav />
         <DashiGatsby />
         <CityPage />
         <Autocomplete />
-        <HeroRedesign />
+        <GetTheApp />
       </EngineeringTemplate>
     );
   }
