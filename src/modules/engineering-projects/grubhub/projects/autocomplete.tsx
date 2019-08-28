@@ -73,12 +73,16 @@ export function Autocomplete({  }: IAutocompleteProps) {
         />
       </Container>
       <Container id="autocomplete-project-analysis" size="lg">
-        <CenteredSectionHeader2>Analysis</CenteredSectionHeader2>
         <TextSectionSubHeader>The Problem</TextSectionSubHeader>
         <TextSectionContainer>
           <TextSectionDesc>
-            The reason for this project was because the current homepage is
-            shite
+            On entering the current Grubhub landing page, you can click on the
+            input to begin entering your address and discover delivery near your
+            location. However, on mobile web, the autocomplete results are
+            blocked by the keyboard unless you scroll down. Furthermore, it's
+            unclear what the difference is between the results and the query you
+            typed. All of this presents an inconvenient user experience on the
+            most important page for new customer acquisition.
           </TextSectionDesc>
         </TextSectionContainer>
         <PhoneFrameRow>
@@ -99,11 +103,12 @@ export function Autocomplete({  }: IAutocompleteProps) {
           />
         </PhoneFrameRow>
         <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
-        <TextSectionSubHeader>App Audit</TextSectionSubHeader>
       </Container>
       <TextSectionContainer>
         <CenteredSectionHeader2>Ideation</CenteredSectionHeader2>
+        <TextSectionSubHeader>App Audit</TextSectionSubHeader>
         <TextSectionSubHeader>Feature Architecture</TextSectionSubHeader>
+
         <TextSectionSubHeader />
       </TextSectionContainer>
 
