@@ -40,8 +40,8 @@ export function EngineeringOverview({
               <h2>Background</h2>
             </OverviewSectionHeader>
             <p>
-              Over the summer, I worked with the Growth & Lifecycle team on the
-              commercial, front-end web platform. Hello this is a text
+              Over the summer, I worked with the Growth & Lifecycle (G&L) team
+              on the commercial, front-end web platform. Hello this is a text
               description Hello this is a text description Hello this is a text
               description Hello this is a text description Hello this is a text
               description Hello this is a text description Hello this is a text

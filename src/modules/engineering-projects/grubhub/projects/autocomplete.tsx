@@ -73,7 +73,7 @@ export function Autocomplete({  }: IAutocompleteProps) {
           <PhoneFrame
             imageAlt="iphone frame"
             imageSrc={require('assets/grubhub/projects/autocomplete/homepage-default-cropped.png')}
-            caption="Logged-out Homepage Entry"
+            caption="Current Logged-out Homepage Entry"
           />
           <PhoneFrame
             imageAlt="iphone frame"

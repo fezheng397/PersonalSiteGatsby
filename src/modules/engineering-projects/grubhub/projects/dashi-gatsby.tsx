@@ -39,7 +39,7 @@ const dashiGatsbyTemplate: IProjectTemplateProps = {
 export function DashiGatsby({  }: IDashiGatsbyProps) {
   return (
     <DashiGatsbyComponent>
-      <SectionHeaderMajor>Dashy - Gatsby</SectionHeaderMajor>
+      <SectionHeaderMajor>Dashi - Gatsby</SectionHeaderMajor>
       <Container id="dashi-gatsby-project-header" size="lg">
         <ProjectTemplate
           imageAlt={dashiGatsbyTemplate.imageAlt}
@@ -51,9 +51,21 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
       </Container>
       <Container id="dashi-gatsby-project-analysis" size="lg">
         <TextSectionContainer>
-          <TextSectionSubHeader>The Problem</TextSectionSubHeader>
+          <TextSectionSubHeader>Problem Statement</TextSectionSubHeader>
           <TextSectionDesc>
-            Too many legacy technologies - difficult to maintain.
+            Dashi, the repository responsible for the generation of the static
+            pages on Grubhub's domain, slowly became outdated and difficult to
+            maintain. This was partly due to the legacy technologies (such as
+            Angular 1) that hadn't been updated, as well as the need for 3
+            different third-party technologies, which both made the project hard
+            to maintain, and time-consuming to onboard to new members.
+          </TextSectionDesc>
+          <TextSectionSubHeader>
+            Reviewing Team Lead Expectations
+          </TextSectionSubHeader>
+          <TextSectionDesc>
+            Since this was a project that was solely based on the engineering
+            side, I would be giving the finished deliverable to G&L's team lead.
           </TextSectionDesc>
         </TextSectionContainer>
       </Container>

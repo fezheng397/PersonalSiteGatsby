@@ -8,6 +8,10 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Styles } from 'vars';
 
+export interface IProjectNavProps {
+  selectNewProject: (newProject: number) => void;
+}
+
 const ProjectNavComponent = styled.div`
   height: 120px;
   width: 100%;
@@ -191,33 +195,48 @@ const AnimatedIcon = styled(SVGComponent)`
   }
 `;
 
-export function ProjectNav() {
+export function ProjectNav({ selectNewProject }: IProjectNavProps) {
   return (
     <ProjectNavComponent>
       <IconProvider />
       <NavItems>
         {' '}
         <NavItem>
-          <NavButton>
+          <NavButton
+            onClick={() => {
+              selectNewProject(1);
+            }}
+          >
             <AnimatedIcon icon="GatsbyIcon" />
             <div>Dashi-Gatsby</div>
           </NavButton>
         </NavItem>
         <NavItem>
-          <NavButton>
+          <NavButton
+            onClick={() => {
+              selectNewProject(2);
+            }}
+          >
             <AnimatedIcon icon="CityIcon" />
             <div>City Page</div>
           </NavButton>
         </NavItem>
         <NavItem>
-          <NavButton>
+          <NavButton
+            onClick={() => {
+              selectNewProject(3);
+            }}
+          >
             <AnimatedIcon icon="AutocompleteIcon" />
             <div>Autocomplete</div>
           </NavButton>
         </NavItem>
         <NavItem>
-          <NavButton>
-            {' '}
+          <NavButton
+            onClick={() => {
+              selectNewProject(4);
+            }}
+          >
             <AnimatedIcon icon="GetTheAppIcon" />
             <div>Get the App</div>
           </NavButton>
