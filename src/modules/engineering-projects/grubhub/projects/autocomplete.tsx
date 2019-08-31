@@ -1,10 +1,14 @@
 import { Container } from 'components/core/container/container';
-import { SectionHeaderMajor } from 'components/core/headers/headers';
+import {
+  CenteredSectionHeader2,
+  SectionHeaderMajor,
+} from 'components/core/headers/headers';
 import {
   PhoneFrame,
   PhoneFrameRow,
 } from 'components/core/phone-frame/phone-frame';
 import {
+  BackgroundSection,
   TextSectionContainer,
   TextSectionDesc,
   TextSectionSubHeader,
@@ -22,8 +26,9 @@ export interface IAutocompleteProps {}
 const AutocompleteComponent = styled.div``;
 
 const autocompleteTemplate: IProjectTemplateProps = {
-  imageAlt: '',
+  imageAlt: 'Autocomplete Illustration',
   imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
+  imagePosition: 'left',
   objective: `To create an intuitive and efficient experience for users landing on
   the logged out homepage looking to quickly find food near them and
   order.`,
@@ -47,13 +52,14 @@ export function Autocomplete({  }: IAutocompleteProps) {
         <ProjectTemplate
           imageAlt={autocompleteTemplate.imageAlt}
           imageSrc={autocompleteTemplate.imageSrc}
+          imagePosition={autocompleteTemplate.imagePosition}
           objective={autocompleteTemplate.objective}
           roles={autocompleteTemplate.roles}
         />
       </Container>
       <Container id="autocomplete-project-analysis" size="lg">
         <TextSectionContainer>
-          <TextSectionSubHeader>The Problem</TextSectionSubHeader>
+          <TextSectionSubHeader>Problem Statement</TextSectionSubHeader>
           <TextSectionDesc>
             On entering the current Grubhub landing page, you are prompted to
             click on the input to begin entering your address and discover
@@ -80,14 +86,26 @@ export function Autocomplete({  }: IAutocompleteProps) {
             caption="After Scrolling to See Results"
           />
         </PhoneFrameRow>
-        <TextSectionSubHeader>The Solution</TextSectionSubHeader>
+        <TextSectionContainer>
+          <TextSectionSubHeader>
+            Reviewing Stakeholder Expectations
+          </TextSectionSubHeader>
+          <TextSectionDesc>After</TextSectionDesc>
+        </TextSectionContainer>
       </Container>
       <Container id="autocomplete-project-ideation" size="lg">
         <TextSectionContainer>
-          <TextSectionSubHeader>App Audit</TextSectionSubHeader>
           <TextSectionSubHeader>Feature Architecture</TextSectionSubHeader>
-
-          <TextSectionSubHeader />
+          <TextSectionDesc>
+            One of the most challenging aspects of implementing the new
+            autocomplete component was taking into consideration the current
+            address input implementation. This is because the current address
+            input was the most widespread component throughout the entire
+            website, filled with excessive conditional rendering and business
+            logic. As a result, I set out to try and split up the component
+            while creating the new fullscreen autocomplete modal, to create a
+            better foundational structure for the component in the future.
+          </TextSectionDesc>
         </TextSectionContainer>
       </Container>
       <Container id="autocomplete-project-implementation" size="lg">
@@ -129,6 +147,31 @@ export function Autocomplete({  }: IAutocompleteProps) {
           </PhoneFrameRow>
           <TextSectionSubHeader />
         </TextSectionContainer>
+        <Container id="autocomplete-project-review" size="lg">
+          <TextSectionContainer>
+            <TextSectionSubHeader>Stakeholder Review</TextSectionSubHeader>
+            <TextSectionDesc>
+              After the implementation was complete, I moved onto stakeholder
+              review, ensuring both the designers and the product managers
+              involved throughout the process were satisfied with the engineered
+              feature.
+            </TextSectionDesc>
+          </TextSectionContainer>
+          <TextSectionSubHeader>
+            Unit and Automated/Smoke Tests
+          </TextSectionSubHeader>
+          <BackgroundSection bgColor={Styles.Colors.bgGray}>
+            <TextSectionDesc>
+              Once the stakeholders were satisfied, I moved on to testing.
+            </TextSectionDesc>
+          </BackgroundSection>
+          <TextSectionContainer>
+            <TextSectionSubHeader>Code Review</TextSectionSubHeader>
+            <TextSectionDesc>
+              Once the stakeholders were satisfied, I moved on to code reviews.
+            </TextSectionDesc>
+          </TextSectionContainer>
+        </Container>
       </Container>
     </AutocompleteComponent>
   );

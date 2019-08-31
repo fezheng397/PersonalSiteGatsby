@@ -40,17 +40,16 @@ export function EngineeringOverview({
               <h2>Background</h2>
             </OverviewSectionHeader>
             <p>
-              Hello this is a text description Hello this is a text description
-              Hello this is a text description Hello this is a text description
-              Hello this is a text description Hello this is a text description
-              Hello this is a text description Hello this is a text description
-              Hello this is a text description Hello this is a text description
-              Hello this is a text description Hello this is a text description
+              Over the summer, I worked with the Growth & Lifecycle team on the
+              commercial, front-end web platform. Hello this is a text
+              description Hello this is a text description Hello this is a text
+              description Hello this is a text description Hello this is a text
+              description Hello this is a text description Hello this is a text
+              description Hello this is a text description Hello this is a text
+              description Hello this is a text description Hello this is a text
+              description Hello this is a text description
             </p>
           </OverviewSection>
-          <OverviewSectionHeader>
-            <h2>My Role</h2>
-          </OverviewSectionHeader>
         </OverviewDescContainer>
       </OverviewContainer>
     </EngineeringTemplateContainer>
