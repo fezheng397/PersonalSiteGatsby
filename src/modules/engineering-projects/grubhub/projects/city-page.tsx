@@ -37,7 +37,7 @@ const cityPageTemplate: IProjectTemplateProps = {
 export function CityPage({  }: ICityPageProps) {
   return (
     <CityPageComponent>
-      <SectionHeaderMajor>City Page Carousel</SectionHeaderMajor>
+      <SectionHeaderMajor>City Page</SectionHeaderMajor>
       <Container id="city-page-project-header" size="lg">
         <ProjectTemplate
           imageAlt={cityPageTemplate.imageAlt}
@@ -49,6 +49,16 @@ export function CityPage({  }: ICityPageProps) {
       </Container>
       <Container id="city-page-project-analysis" size="lg">
         <TextSectionContainer>
+          <TextSectionSubHeader>The Problem</TextSectionSubHeader>
+          <TextSectionDesc>
+            The city carousel was a new pattern. No locking when swiping on
+            mobile, leading to an unintuitive and disruptive user experience.
+          </TextSectionDesc>
+          <TextSectionSubHeader>The Problem</TextSectionSubHeader>
+          <TextSectionDesc>
+            The city carousel was a new pattern. No locking when swiping on
+            mobile, leading to an unintuitive and disruptive user experience.
+          </TextSectionDesc>
           <TextSectionSubHeader>The Problem</TextSectionSubHeader>
           <TextSectionDesc>
             The city carousel was a new pattern. No locking when swiping on

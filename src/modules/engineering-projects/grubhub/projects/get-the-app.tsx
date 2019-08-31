@@ -43,7 +43,7 @@ const getTheAppTemplate: IProjectTemplateProps = {
 export function GetTheApp({  }: IGetTheAppProps) {
   return (
     <GetTheAppComponent>
-      <SectionHeaderMajor>Homepage Hero Redesign</SectionHeaderMajor>
+      <SectionHeaderMajor>Get The App</SectionHeaderMajor>
       <Container id="get-the-app-project-header" size="lg">
         <ProjectTemplate
           imageAlt={getTheAppTemplate.imageAlt}
