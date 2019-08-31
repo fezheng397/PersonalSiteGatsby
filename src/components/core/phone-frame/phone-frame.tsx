@@ -40,6 +40,15 @@ export const PhoneFrameCaption = styled.h5`
   font-weight: 600;
 `;
 
+export const PhoneFrameRow = styled.div`
+  display: flex;
+  justify-content: center;
+
+  ${Styles.MediaQuery.md} {
+    flex-direction: column;
+  }
+`;
+
 export function PhoneFrame({ caption, imageAlt, imageSrc }: IPhoneFrameProp) {
   return (
     <PhoneFrameContainer>

@@ -1,10 +1,14 @@
 import { Container } from 'components/core/container/container';
+import { SectionHeaderMajor } from 'components/core/headers/headers';
 import {
-  CenteredSectionHeader2,
-  SectionHeaderMajor,
-  SectionSubHeader4,
-} from 'components/core/headers/headers';
-import { PhoneFrame } from 'components/core/phone-frame/phone-frame';
+  PhoneFrame,
+  PhoneFrameRow,
+} from 'components/core/phone-frame/phone-frame';
+import {
+  TextSectionContainer,
+  TextSectionDesc,
+  TextSectionSubHeader,
+} from 'modules/engineering-projects/grubhub/projects/project-template';
 import {
   IProjectTemplateProps,
   ProjectTemplate,
@@ -16,22 +20,6 @@ import { Styles } from 'vars';
 export interface IAutocompleteProps {}
 
 const AutocompleteComponent = styled.div``;
-
-const TextSectionContainer = styled.div`
-  max-width: 500px;
-  margin: 0 auto;
-  align-items: center;
-`;
-
-const TextSectionSubHeader = styled(SectionSubHeader4)`
-  text-align: center;
-  color: ${Styles.Colors.textLightBlack};
-  margin: ${Styles.Spaces.spacing8} 0;
-`;
-
-const TextSectionDesc = styled.p`
-  margin-bottom: ${Styles.Spaces.spacing16};
-`;
 
 const autocompleteTemplate: IProjectTemplateProps = {
   imageAlt: '',
@@ -51,15 +39,6 @@ const autocompleteTemplate: IProjectTemplateProps = {
   ],
 };
 
-const PhoneFrameRow = styled.div`
-  display: flex;
-  justify-content: center;
-
-  ${Styles.MediaQuery.md} {
-    flex-direction: column;
-  }
-`;
-
 export function Autocomplete({  }: IAutocompleteProps) {
   return (
     <AutocompleteComponent id="autocomplete-component">
@@ -73,16 +52,15 @@ export function Autocomplete({  }: IAutocompleteProps) {
         />
       </Container>
       <Container id="autocomplete-project-analysis" size="lg">
-        <TextSectionSubHeader>The Problem</TextSectionSubHeader>
         <TextSectionContainer>
+          <TextSectionSubHeader>The Problem</TextSectionSubHeader>
           <TextSectionDesc>
-            On entering the current Grubhub landing page, you can click on the
-            input to begin entering your address and discover delivery near your
-            location. However, on mobile web, the autocomplete results are
-            blocked by the keyboard unless you scroll down. Furthermore, it's
-            unclear what the difference is between the results and the query you
-            typed. All of this presents an inconvenient user experience on the
-            most important page for new customer acquisition.
+            On entering the current Grubhub landing page, you are prompted to
+            click on the input to begin entering your address and discover
+            delivery near your location. However, on mobile web, the
+            autocomplete results are blocked by the keyboard unless you scroll
+            down, presenting an inconvenient user experience on the most
+            important page for new customer acquisition.
           </TextSectionDesc>
         </TextSectionContainer>
         <PhoneFrameRow>
@@ -102,11 +80,10 @@ export function Autocomplete({  }: IAutocompleteProps) {
             caption="After Scrolling to See Results"
           />
         </PhoneFrameRow>
-        <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
+        <TextSectionSubHeader>The Solution</TextSectionSubHeader>
       </Container>
       <Container id="autocomplete-project-ideation" size="lg">
         <TextSectionContainer>
-          <CenteredSectionHeader2>Ideation</CenteredSectionHeader2>
           <TextSectionSubHeader>App Audit</TextSectionSubHeader>
           <TextSectionSubHeader>Feature Architecture</TextSectionSubHeader>
 
@@ -115,8 +92,7 @@ export function Autocomplete({  }: IAutocompleteProps) {
       </Container>
       <Container id="autocomplete-project-implementation" size="lg">
         <TextSectionContainer>
-          <CenteredSectionHeader2>Implementation</CenteredSectionHeader2>
-          <TextSectionSubHeader>Coding...</TextSectionSubHeader>
+          <TextSectionSubHeader>Implementation</TextSectionSubHeader>
           <PhoneFrameRow>
             <PhoneFrame
               imageAlt="iphone frame"
@@ -132,6 +108,23 @@ export function Autocomplete({  }: IAutocompleteProps) {
               imageAlt="iphone frame"
               imageSrc={require('assets/grubhub/projects/autocomplete/search-results.png')}
               caption="After Typing to See Results"
+            />
+          </PhoneFrameRow>
+          <PhoneFrameRow>
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif')}
+              caption="Basic Autocomplete Functionality"
+            />
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/autocomplete/geolocate.gif')}
+              caption="Geolocate Button Functionality"
+            />
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/autocomplete/use-my-location.gif')}
+              caption="Use My Location Functionality"
             />
           </PhoneFrameRow>
           <TextSectionSubHeader />

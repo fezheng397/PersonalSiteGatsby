@@ -1,3 +1,4 @@
+import { SectionSubHeader4 } from 'components/core/headers/headers';
 import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
@@ -13,6 +14,22 @@ export interface Role {
   roleHeader: string;
   roleDesc: string;
 }
+
+export const TextSectionContainer = styled.div`
+  max-width: 550px;
+  margin: 0 auto;
+  align-items: center;
+`;
+
+export const TextSectionSubHeader = styled(SectionSubHeader4)`
+  text-align: center;
+  color: ${Styles.Colors.textLightBlack};
+  margin: ${Styles.Spaces.spacing8} 0;
+`;
+
+export const TextSectionDesc = styled.p`
+  margin-bottom: ${Styles.Spaces.spacing16};
+`;
 
 const ProjectTemplateSection = styled.div`
   display: flex;

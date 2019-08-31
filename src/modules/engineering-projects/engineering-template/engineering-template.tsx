@@ -45,18 +45,6 @@ export class EngineeringTemplate extends React.Component<
         />
         <EngineeringOverview />
         {children}
-        <PhoneFrame
-          imageAlt="iphone frame"
-          imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}
-        />
-        <PhoneFrame
-          imageAlt="iphone frame"
-          imageSrc={require('assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif')}
-        />
-        <PhoneFrame
-          imageAlt="iphone frame"
-          imageSrc={require('assets/grubhub/projects/city-carousel/city-carousel.gif')}
-        />
       </div>
     );
   }

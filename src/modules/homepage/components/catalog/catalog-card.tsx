@@ -21,7 +21,7 @@ const CatalogCardComponent = styled(Card)`
 
   &:hover,
   &:focus {
-    box-shadow: ${Styles.Shadows.imageShadow};
+    box-shadow: ${Styles.Shadows.imageShadowHover};
   }
 `;
 
