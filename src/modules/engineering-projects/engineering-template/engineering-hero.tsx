@@ -100,11 +100,7 @@ export function EngineeringHero({
 }: IEngineeringHeroProps) {
   return (
     <EngineeringTemplateContainer noMobilePadding={true} size="lg">
-      <TransitionItem
-        timeout={300}
-        transitionType="fade-translate"
-        translateY={50}
-      >
+      <TransitionItem timeout={300} transitionType="fade-translate">
         <TemplateBannerContainer bannerImageSrc={bannerImageSrc} />
       </TransitionItem>
 
