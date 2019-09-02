@@ -19,6 +19,7 @@ import { Styles } from 'vars';
 
 export interface IGrubhubProjectState {
   currentProject: number;
+  navPosFixed: boolean;
   projectInState: boolean;
 }
 
@@ -27,11 +28,20 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
-const ProjectsContainer = styled.div``;
+const ProjectsContainer = styled.div`
+  padding-top: ${(props: { navPosFixed: boolean }) =>
+    props.navPosFixed ? '120px' : '0'};
+
+  ${Styles.MediaQuery.md} {
+    padding-top: ${(props: { navPosFixed: boolean }) =>
+      props.navPosFixed ? '120px' : '0'};
+  }
+`;
 
 export class GrubhubProject extends React.Component {
   public state = {
     currentProject: 1,
+    navPosFixed: false,
     projectInState: true,
   };
   public windowUtil = new WindowUtil();
@@ -44,7 +54,7 @@ export class GrubhubProject extends React.Component {
   }
 
   public render() {
-    const { currentProject } = this.state;
+    const { currentProject, navPosFixed } = this.state;
 
     return (
       <div>
@@ -53,10 +63,17 @@ export class GrubhubProject extends React.Component {
         >
           <div id="project-nav-component-container">
             <CenteredSectionHeader>Projects</CenteredSectionHeader>
-            <ProjectNav selectNewProject={this.selectNewProject.bind(this)} />
+            <ProjectNav
+              navPosFixed={this.navPosFixed}
+              selectNewProject={this.selectNewProject.bind(this)}
+            />
           </div>
 
-          <ProjectsContainer id="projects-container" ref={this.projectsRef}>
+          <ProjectsContainer
+            id="projects-container"
+            navPosFixed={navPosFixed}
+            ref={this.projectsRef}
+          >
             {this.getCurrentProject(currentProject)}
           </ProjectsContainer>
         </EngineeringTemplate>
@@ -69,6 +86,10 @@ export class GrubhubProject extends React.Component {
     scrollTo(document.getElementById('project-nav-component-container'));
     // await delay(200);
     this.setState({ currentProject: newProject, projectInState: true });
+  }
+
+  public navPosFixed = (fixed: boolean) => {
+    this.setState({ navPosFixed: fixed });
   }
 
   private getCurrentProject(currentProject) {

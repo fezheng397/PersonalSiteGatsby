@@ -12,6 +12,7 @@ import {
 import { Styles } from 'vars';
 
 export interface IProjectNavProps {
+  navPosFixed: (fixed: boolean) => void;
   selectNewProject: (newProject: number) => void;
 }
 
@@ -24,7 +25,7 @@ const ProjectNavComponent = styled.div`
   ${(props: { fixPosition?: boolean }) =>
     props.fixPosition ? 'position: fixed; top: 0;' : 'position: relative'}
   background: ${Styles.Colors.primaryWhite};
-  height: 120px;
+  height: 124px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -63,10 +64,6 @@ const shake = () => keyframes`
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
-`;
-
-const ProjectAnchor = styled.a`
-  text-decoration: none;
 `;
 
 const NavButton = styled(Button)`
@@ -297,8 +294,10 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
 
     if (scrollTop >= this.projectNavOffsetY) {
       this.setState({ fixPosition: true });
+      this.props.navPosFixed(true);
     } else {
       this.setState({ fixPosition: false });
+      this.props.navPosFixed(false);
     }
   }
 }
