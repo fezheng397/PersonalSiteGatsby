@@ -61,6 +61,7 @@ const AutocompleteImageContainer = styled.div`
 
 const AutocompleteImage = styled.img`
   max-width: 400px;
+  border-radius: ${Styles.Sizes.radius5};
 
   ${Styles.MediaQuery.md} {
     max-width: 90%;

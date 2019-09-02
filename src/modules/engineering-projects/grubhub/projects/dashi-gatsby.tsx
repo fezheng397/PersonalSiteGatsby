@@ -19,7 +19,7 @@ const DashiGatsbyComponent = styled(Container)``;
 
 const dashiGatsbyTemplate: IProjectTemplateProps = {
   imageAlt: 'Dashi Gatsby Illustration',
-  imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
+  imageSrc: require('assets/grubhub/projects/dashi-gatsby/Gatsby_Contentful.jpg'),
   imagePosition: 'left',
   objective: `To create an intuitive and efficient experience for users landing on
   the logged out homepage looking to quickly find food near them and

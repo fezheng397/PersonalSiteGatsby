@@ -31,6 +31,7 @@ export const GHSectionHeader = styled(CenteredSectionHeader)`
 
 export const SectionHeaderMajor = styled(CenteredSectionHeader)`
   font-size: 2.5em;
+  padding: ${Styles.Spaces.spacing8} 0;
 
   &:after {
     content: "";

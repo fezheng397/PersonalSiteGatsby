@@ -28,7 +28,7 @@ const TemplateBannerContainer = styled.div`
     `url(${props.bannerImageSrc}) no-repeat`};
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 60%;
+
   border-radius: ${Styles.Sizes.radius2};
   position: relative;
   transition: opacity 200ms ease-in;

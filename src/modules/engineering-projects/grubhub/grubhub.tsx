@@ -7,11 +7,21 @@ import { GetTheApp } from 'modules/engineering-projects/grubhub/projects/get-the
 import { ProjectNav } from 'modules/engineering-projects/grubhub/projects/project-nav';
 import React from 'react';
 import styled from 'styled-components';
-import { scrollTo, WindowUtil } from 'utilities/window-util';
+import {
+  checkRelativePosition,
+  getCurrentWindowPosition,
+  scrollTo,
+  WindowUtil,
+} from 'utilities/window-util';
 import { Styles } from 'vars';
 
 export interface IGrubhubProjectState {
   currentProject: number;
+}
+
+if (typeof window !== 'undefined') {
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]');
 }
 
 const ProjectsContainer = styled.div``;
@@ -34,7 +44,7 @@ export class GrubhubProject extends React.Component {
 
     return (
       <EngineeringTemplate
-        bannerImageSrc={require('assets/grubhub/grubhub-hq.jpeg')}
+        bannerImageSrc={require('assets/grubhub/grubhub-hq.png')}
       >
         <CenteredSectionHeader>Projects</CenteredSectionHeader>
 

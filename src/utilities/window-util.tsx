@@ -10,3 +10,21 @@ export function scrollTo(ref) {
     // ref.current.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+export function getCurrentWindowPosition() {
+  return window.pageYOffset;
+}
+
+export function checkRelativePosition(currentY, ref) {
+  // console.log(ref.current.getBoundingClientRect());
+  console.log('Ref is: ', ref);
+  if (!ref || !ref.current) {
+    return false;
+  }
+
+  if (currentY > ref.current.getBoundingClientRect().top) {
+    console.log('Component Y: ', ref.current.getBoundingClientRect().top);
+    return true;
+  }
+  return false;
+}
