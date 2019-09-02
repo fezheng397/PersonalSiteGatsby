@@ -1,4 +1,5 @@
 import { Button } from 'components/core/button/button';
+import { CenteredSectionHeader } from 'components/core/headers/headers';
 import { IconProvider } from 'components/core/icon-provider/icon-provider';
 import { Icon } from 'components/core/icon/icon';
 import { SVGComponent } from 'components/core/icon/svgComponents';
@@ -236,6 +237,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
     console.log('fix position:', fixPosition);
     return (
       <div id="project-nav-component-container">
+        <CenteredSectionHeader>Projects</CenteredSectionHeader>
         <ProjectNavComponent
           id="project-nav-component"
           ref={projectNavRef}
@@ -243,52 +245,44 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
         >
           <NavItems>
             <NavItem>
-              <ProjectAnchor href="#project-nav-component-container">
-                <NavButton
-                  onClick={() => {
-                    selectNewProject(1);
-                  }}
-                >
-                  <AnimatedIcon icon="GatsbyIcon" />
-                  <div>Dashi-Gatsby</div>
-                </NavButton>
-              </ProjectAnchor>
+              <NavButton
+                onClick={() => {
+                  selectNewProject(1);
+                }}
+              >
+                <AnimatedIcon icon="GatsbyIcon" />
+                <div>Dashi-Gatsby</div>
+              </NavButton>
             </NavItem>
             <NavItem>
-              <ProjectAnchor href="#project-nav-component-container">
-                <NavButton
-                  onClick={() => {
-                    selectNewProject(2);
-                  }}
-                >
-                  <AnimatedIcon icon="CityIcon" />
-                  <div>City Page</div>
-                </NavButton>
-              </ProjectAnchor>
+              <NavButton
+                onClick={() => {
+                  selectNewProject(2);
+                }}
+              >
+                <AnimatedIcon icon="CityIcon" />
+                <div>City Page</div>
+              </NavButton>
             </NavItem>
             <NavItem>
-              <ProjectAnchor href="#project-nav-component-container">
-                <NavButton
-                  onClick={() => {
-                    selectNewProject(3);
-                  }}
-                >
-                  <AnimatedIcon icon="AutocompleteIcon" />
-                  <div>Autocomplete</div>
-                </NavButton>
-              </ProjectAnchor>
+              <NavButton
+                onClick={() => {
+                  selectNewProject(3);
+                }}
+              >
+                <AnimatedIcon icon="AutocompleteIcon" />
+                <div>Autocomplete</div>
+              </NavButton>
             </NavItem>
             <NavItem>
-              <ProjectAnchor href="#project-nav-component-container">
-                <NavButton
-                  onClick={() => {
-                    selectNewProject(4);
-                  }}
-                >
-                  <AnimatedIcon icon="GetTheAppIcon" />
-                  <div>Get the App</div>
-                </NavButton>
-              </ProjectAnchor>
+              <NavButton
+                onClick={() => {
+                  selectNewProject(4);
+                }}
+              >
+                <AnimatedIcon icon="GetTheAppIcon" />
+                <div>Get the App</div>
+              </NavButton>
             </NavItem>
           </NavItems>
         </ProjectNavComponent>

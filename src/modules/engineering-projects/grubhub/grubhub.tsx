@@ -5,6 +5,7 @@ import { CityPage } from 'modules/engineering-projects/grubhub/projects/city-pag
 import { DashiGatsby } from 'modules/engineering-projects/grubhub/projects/dashi-gatsby';
 import { GetTheApp } from 'modules/engineering-projects/grubhub/projects/get-the-app';
 import { ProjectNav } from 'modules/engineering-projects/grubhub/projects/project-nav';
+import { delay } from 'q';
 import React from 'react';
 import styled from 'styled-components';
 import {
@@ -46,9 +47,7 @@ export class GrubhubProject extends React.Component {
       <EngineeringTemplate
         bannerImageSrc={require('assets/grubhub/grubhub-hq.png')}
       >
-        <CenteredSectionHeader>Projects</CenteredSectionHeader>
-
-        <ProjectNav selectNewProject={this.selectNewProject} />
+        <ProjectNav selectNewProject={this.selectNewProject.bind(this)} />
         <ProjectsContainer id="projects-container" ref={this.projectsRef}>
           {this.getCurrentProject(currentProject)}
         </ProjectsContainer>
@@ -56,7 +55,8 @@ export class GrubhubProject extends React.Component {
     );
   }
 
-  public selectNewProject = (newProject: number) => {
+  public async selectNewProject(newProject: number) {
+    await delay(150);
     this.setState({ currentProject: newProject });
     // scrollTo(this.projectsRef);
   }
