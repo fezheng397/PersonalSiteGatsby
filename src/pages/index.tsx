@@ -2,9 +2,9 @@ import { graphql } from 'gatsby';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
+import 'styles/core.scss';
 import { lightMode } from 'vars/light-mode';
 import { Homepage } from '../modules/homepage/components/homepage';
-import '../styles/core.scss';
 
 interface IndexPageProps {
   data: {

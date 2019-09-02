@@ -4,7 +4,6 @@ module.exports = {
     tagline: `Gatsby + SASS + Typescript = 💪`
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
     `gatsby-plugin-sharp`,
@@ -19,6 +18,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-resolve-src`,
+    `gatsby-plugin-sass`,
     "gatsby-plugin-remove-serviceworker"
   ]
 };

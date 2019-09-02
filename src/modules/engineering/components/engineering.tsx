@@ -8,9 +8,9 @@ import styled from 'styled-components';
 export interface IEngineeringProps {}
 
 const EngineeringComponent = styled(Container)`
-display:flex
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ProjectContainer = styled.div``;

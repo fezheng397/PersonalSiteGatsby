@@ -71,8 +71,8 @@ const AutocompleteImage = styled.img`
 const ProjectSectionTextContainer = styled.div`
   ${(props: IProjectTemplateProps) =>
     props.imagePosition === 'left'
-      ? `margin-left: ${Styles.Spaces.section32}`
-      : `margin-right: ${Styles.Spaces.section32}`}
+      ? `margin-left: ${Styles.Spaces.section32};`
+      : `margin-right: ${Styles.Spaces.section32};`}
 
   ${Styles.MediaQuery.md} {
     margin-left: 0;
