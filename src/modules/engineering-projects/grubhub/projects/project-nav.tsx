@@ -21,13 +21,12 @@ export interface IProjectNavProps {
 
 export interface IProjectNavState {
   fixPosition: boolean;
-  currentY: number;
-  projectNavRef?: any;
+  projectNavOffsetY: number;
 }
 
 const ProjectNavComponent = styled.div`
   ${(props: { fixPosition?: boolean }) =>
-    props.fixPosition ? 'position: fixed; top: 0;' : ''}
+    props.fixPosition ? 'position: fixed; top: 0;' : 'position: relative'}
   background: ${Styles.Colors.primaryWhite};
   height: 120px;
   width: 100%;
@@ -219,10 +218,11 @@ const AnimatedIcon = styled(SVGComponent)`
 export class ProjectNav extends React.Component<IProjectNavProps, {}> {
   public state = {
     fixPosition: false,
-    currentY: window.pageYOffset,
+    projectNavOffsetY: 0,
   };
 
   private projectNavRef;
+  private projectNavOffsetY: number;
 
   constructor(props) {
     super(props);
@@ -235,69 +235,73 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
     const { projectNavRef } = this;
     console.log('fix position:', fixPosition);
     return (
-      <ProjectNavComponent
-        id="project-nav-component"
-        ref={projectNavRef}
-        fixPosition={fixPosition}
-      >
-        <NavItems>
-          <NavItem>
-            <ProjectAnchor href="#project-nav-component">
-              <NavButton
-                onClick={() => {
-                  selectNewProject(1);
-                }}
-              >
-                <AnimatedIcon icon="GatsbyIcon" />
-                <div>Dashi-Gatsby</div>
-              </NavButton>
-            </ProjectAnchor>
-          </NavItem>
-          <NavItem>
-            <ProjectAnchor href="#project-nav-component">
-              <NavButton
-                onClick={() => {
-                  selectNewProject(2);
-                }}
-              >
-                <AnimatedIcon icon="CityIcon" />
-                <div>City Page</div>
-              </NavButton>
-            </ProjectAnchor>
-          </NavItem>
-          <NavItem>
-            <ProjectAnchor href="#project-nav-component">
-              <NavButton
-                onClick={() => {
-                  selectNewProject(3);
-                }}
-              >
-                <AnimatedIcon icon="AutocompleteIcon" />
-                <div>Autocomplete</div>
-              </NavButton>
-            </ProjectAnchor>
-          </NavItem>
-          <NavItem>
-            <ProjectAnchor href="#project-nav-component">
-              <NavButton
-                onClick={() => {
-                  selectNewProject(4);
-                }}
-              >
-                <AnimatedIcon icon="GetTheAppIcon" />
-                <div>Get the App</div>
-              </NavButton>
-            </ProjectAnchor>
-          </NavItem>
-        </NavItems>
-      </ProjectNavComponent>
+      <div id="project-nav-component-container">
+        <ProjectNavComponent
+          id="project-nav-component"
+          ref={projectNavRef}
+          fixPosition={fixPosition}
+        >
+          <NavItems>
+            <NavItem>
+              <ProjectAnchor href="#project-nav-component-container">
+                <NavButton
+                  onClick={() => {
+                    selectNewProject(1);
+                  }}
+                >
+                  <AnimatedIcon icon="GatsbyIcon" />
+                  <div>Dashi-Gatsby</div>
+                </NavButton>
+              </ProjectAnchor>
+            </NavItem>
+            <NavItem>
+              <ProjectAnchor href="#project-nav-component-container">
+                <NavButton
+                  onClick={() => {
+                    selectNewProject(2);
+                  }}
+                >
+                  <AnimatedIcon icon="CityIcon" />
+                  <div>City Page</div>
+                </NavButton>
+              </ProjectAnchor>
+            </NavItem>
+            <NavItem>
+              <ProjectAnchor href="#project-nav-component-container">
+                <NavButton
+                  onClick={() => {
+                    selectNewProject(3);
+                  }}
+                >
+                  <AnimatedIcon icon="AutocompleteIcon" />
+                  <div>Autocomplete</div>
+                </NavButton>
+              </ProjectAnchor>
+            </NavItem>
+            <NavItem>
+              <ProjectAnchor href="#project-nav-component-container">
+                <NavButton
+                  onClick={() => {
+                    selectNewProject(4);
+                  }}
+                >
+                  <AnimatedIcon icon="GetTheAppIcon" />
+                  <div>Get the App</div>
+                </NavButton>
+              </ProjectAnchor>
+            </NavItem>
+          </NavItems>
+        </ProjectNavComponent>
+      </div>
     );
   }
 
   public componentDidMount() {
     console.log('Didmount projectnav ref', this.projectNavRef);
     window.addEventListener('scroll', this.handleScroll, true);
-    this.setState({ projectNavRef: this.projectNavRef });
+    this.projectNavOffsetY = document.getElementById(
+      'project-nav-component',
+    ).offsetTop;
   }
 
   public componentWillUnmount() {
@@ -306,19 +310,12 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
 
   public handleScroll = (event) => {
     const scrollTop = window.pageYOffset;
+    const projectNavOffset = document.getElementById('project-nav-component')
+      .offsetTop;
     console.log('Scrolltop:', scrollTop);
-    console.log(
-      'Project nav top',
-      document.getElementById('project-nav-component').getBoundingClientRect()
-        .top + window.scrollY,
-    );
-    if (
-      scrollTop >=
-      document.getElementById('project-nav-component').getBoundingClientRect()
-        .top +
-        window.scrollY
-    ) {
-      this.setState({ fixPosition: true });
+    console.log('state project nav offset', this.projectNavOffsetY);
+    if (scrollTop >= this.projectNavOffsetY) {
+      this.setState({ fixPosition: true, projectNavOffsetY: projectNavOffset });
     } else {
       this.setState({ fixPosition: false });
     }
