@@ -46,6 +46,7 @@ const ProjectTemplateSection = styled.div`
 
   ${Styles.MediaQuery.md} {
     flex-direction: column;
+    margin: ${Styles.Spaces.section8} 0;
   }
 `;
 
