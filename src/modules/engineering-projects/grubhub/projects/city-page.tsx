@@ -25,11 +25,11 @@ const cityPageTemplate: IProjectTemplateProps = {
   objective: `To create a new page, highlighting all the top restaurants at a certain city.`,
   roles: [
     {
-      roleHeader: 'Role Header',
+      roleHeader: 'Design Review',
       roleDesc: 'This is a text description',
     },
     {
-      roleHeader: 'Role Header',
+      roleHeader: 'Implementation',
       roleDesc: 'This is a text description',
     },
   ],

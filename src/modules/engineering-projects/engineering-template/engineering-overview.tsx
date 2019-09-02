@@ -44,8 +44,8 @@ export function EngineeringOverview({
             <OverviewHeader>Overview</OverviewHeader>
           </TransitionItem>
           <TransitionItem
-            timeout={400}
-            delay={150}
+            timeout={500}
+            delay={400}
             transitionType="fade-translate"
             translateY={100}
           >

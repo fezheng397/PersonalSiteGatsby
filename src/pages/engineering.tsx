@@ -1,3 +1,4 @@
+import { TransitionItem } from 'components/core/transition/transition';
 import { Layout } from 'layouts';
 import { Engineering } from 'modules/engineering/components/engineering';
 import React from 'react';

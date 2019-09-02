@@ -6,6 +6,7 @@ import {
 } from 'components/core/phone-frame/phone-frame';
 import { TransitionItem } from 'components/core/transition/transition';
 import {
+  BackgroundSection,
   IProjectTemplateProps,
   ProjectTemplate,
 } from 'modules/engineering-projects/grubhub/projects/project-template';
@@ -27,12 +28,11 @@ const getTheAppTemplate: IProjectTemplateProps = {
   imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
   imagePosition: 'left',
   objective: `To encourage users landing on the logged out homepage to download the mobile app without
-  blocking their natural experience with a fullscreen pullover. The incentive for this is because app owners
-  tend to have greater loyalty for a brand and as a result, provide a longer LTV (Lifetime Value).`,
+  blocking their natural experience with a fullscreen pullover.`,
   roles: [
     {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
+      roleHeader: 'Implementation',
+      roleDesc: 'Responsible for implementing the feature end to end.',
     },
     {
       roleHeader: 'Role Header',
@@ -57,6 +57,18 @@ export function GetTheApp({  }: IGetTheAppProps) {
         </Container>
         <Container id="get-the-app-project-analysis" size="lg">
           <TextSectionContainer>
+            <TextSectionSubHeader>Problem Statement</TextSectionSubHeader>
+            <TextSectionDesc>
+              For this feature, there wasn't necessarily a existing problem, but
+              rather potential improvement that coudl be made. In the food
+              delivery space, because customers typically show greater loyalty
+              to a brand after downloading their app, our PMs wanted to create a
+              call to action to download the app right on the front page of our
+              web app. The greater loyalty a customer shows for the brand, the
+              greater their LTV (Lifetime Value) and the greater the benefit to
+              Grubhub's operations.
+            </TextSectionDesc>
+
             <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
             <TextSectionDesc>
               On entering the current Grubhub landing page, you are prompted to
@@ -67,6 +79,8 @@ export function GetTheApp({  }: IGetTheAppProps) {
               important page for new customer acquisition.
             </TextSectionDesc>
           </TextSectionContainer>
+        </Container>
+        <Container id="get-the-app-project-implementation" size="lg">
           <PhoneFrameRow>
             <PhoneFrame
               imageAlt="iphone frame"
@@ -101,6 +115,34 @@ export function GetTheApp({  }: IGetTheAppProps) {
               caption="Android Option 3"
             />
           </PhoneFrameRow>
+        </Container>
+        <Container id="autocomplete-project-review" size="lg">
+          <TextSectionContainer>
+            <TextSectionSubHeader>Stakeholder Review</TextSectionSubHeader>
+            <TextSectionDesc>
+              After the implementation was complete, I moved onto stakeholder
+              review, ensuring both the designers and the product managers
+              involved throughout the process were satisfied with the engineered
+              feature. Typically, this step was pretty straightforward during my
+              3 months at Grubhub. However, for this project there was a scope
+              change midway through.
+            </TextSectionDesc>
+
+            <TextSectionSubHeader>Testing</TextSectionSubHeader>
+            <TextSectionDesc>
+              Once the stakeholders were satisfied, I moved on to testing. For 
+            </TextSectionDesc>
+          </TextSectionContainer>
+          <BackgroundSection bgColor={Styles.Colors.bgGray}>
+            <p>This is a text description</p>
+          </BackgroundSection>
+          <TextSectionContainer>
+            <TextSectionSubHeader>Code Review</TextSectionSubHeader>
+            <TextSectionDesc>
+              The code-review process for this particular project dragged on for
+              a long time.
+            </TextSectionDesc>
+          </TextSectionContainer>
         </Container>
       </GetTheAppComponent>
     </TransitionItem>

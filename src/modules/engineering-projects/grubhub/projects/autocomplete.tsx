@@ -10,6 +10,8 @@ import {
 import { TransitionItem } from 'components/core/transition/transition';
 import {
   BackgroundSection,
+  BackgroundSectionContent,
+  BackgroundSectionSubHeader,
   TextSectionContainer,
   TextSectionDesc,
   TextSectionSubHeader,
@@ -89,10 +91,15 @@ export function Autocomplete({  }: IAutocompleteProps) {
             />
           </PhoneFrameRow>
           <TextSectionContainer>
-            <TextSectionSubHeader>
-              Reviewing Stakeholder Expectations
-            </TextSectionSubHeader>
-            <TextSectionDesc>After</TextSectionDesc>
+            <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
+            <TextSectionDesc>
+              Prior to beginning my work on this feature, my lead wanted to
+              ensure that he wanted the delivered component to be highly
+              reusable. This is due to the widespread use of the address input
+              throughout Grubhub's entire site, making it a challenge to create
+              a component that can handle various cases of business logic as
+              well as various forms of presentations.
+            </TextSectionDesc>
           </TextSectionContainer>
         </Container>
         <Container id="autocomplete-project-ideation" size="lg">
@@ -151,34 +158,45 @@ export function Autocomplete({  }: IAutocompleteProps) {
             </PhoneFrameRow>
             <TextSectionSubHeader />
           </TextSectionContainer>
-          <Container id="autocomplete-project-review" size="lg">
-            <TextSectionContainer>
-              <TextSectionSubHeader>Stakeholder Review</TextSectionSubHeader>
-              <TextSectionDesc>
-                After the implementation was complete, I moved onto stakeholder
-                review, ensuring both the designers and the product managers
-                involved throughout the process were satisfied with the
-                engineered feature. Typically, this step was pretty
-                straightforward during my 3 months at Grubhub. However, for this
-                project there was a scope change midway through.
-              </TextSectionDesc>
+        </Container>
+        <Container id="autocomplete-project-review" size="lg">
+          <TextSectionContainer>
+            <TextSectionSubHeader>Stakeholder Review</TextSectionSubHeader>
+            <TextSectionDesc>
+              After the implementation was complete, I moved onto stakeholder
+              review, ensuring both the designers and the product managers
+              involved throughout the process were satisfied with the engineered
+              feature. Typically, this step was pretty straightforward during my
+              3 months at Grubhub. However, for this project there was a scope
+              change midway through.
+            </TextSectionDesc>
 
-              <TextSectionSubHeader>Testing</TextSectionSubHeader>
-              <TextSectionDesc>
-                Once the stakeholders were satisfied, I moved on to testing.
-              </TextSectionDesc>
-            </TextSectionContainer>
-            <BackgroundSection bgColor={Styles.Colors.bgGray}>
-              <p>This is a text description</p>
-            </BackgroundSection>
-            <TextSectionContainer>
-              <TextSectionSubHeader>Code Review</TextSectionSubHeader>
-              <TextSectionDesc>
-                The code-review process for this particular project dragged on
-                for a long time.
-              </TextSectionDesc>
-            </TextSectionContainer>
-          </Container>
+            <TextSectionSubHeader>Testing</TextSectionSubHeader>
+            <TextSectionDesc>
+              Once the stakeholders were satisfied, I moved on to testing.
+            </TextSectionDesc>
+          </TextSectionContainer>
+          <BackgroundSection bgColor={Styles.Colors.bgGray}>
+            <BackgroundSectionContent>
+              <ul>
+                <BackgroundSectionSubHeader>Header</BackgroundSectionSubHeader>
+                <li>list item 1</li>
+                <li>list item 2</li>
+              </ul>
+              <ul>
+                <BackgroundSectionSubHeader>Header</BackgroundSectionSubHeader>
+                <li>list item 1</li>
+                <li>list item 2</li>
+              </ul>
+            </BackgroundSectionContent>
+          </BackgroundSection>
+          <TextSectionContainer>
+            <TextSectionSubHeader>Code Review</TextSectionSubHeader>
+            <TextSectionDesc>
+              The code-review process for this particular project dragged on for
+              a long time.
+            </TextSectionDesc>
+          </TextSectionContainer>
         </Container>
       </AutocompleteComponent>
     </TransitionItem>

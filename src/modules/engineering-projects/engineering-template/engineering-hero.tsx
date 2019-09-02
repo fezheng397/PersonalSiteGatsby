@@ -109,17 +109,17 @@ export function EngineeringHero({
         <TemplateLogo logo={require('assets/logos/gh-1200.png')} />
         <ProjectBannerContent>
           <TransitionItem
-            timeout={400}
+            timeout={500}
             transitionType="fade-translate"
             translateX={100}
           >
             <HeroProjectHeader>Grubhub</HeroProjectHeader>
           </TransitionItem>
           <TransitionItem
-            timeout={400}
+            timeout={500}
             delay={150}
             transitionType="fade-translate"
-            translateY={100}
+            translateX={100}
           >
             <SubHeader>Software Engineering Intern</SubHeader>
           </TransitionItem>
@@ -130,7 +130,7 @@ export function EngineeringHero({
                 return index === projectDetails.length - 1 ? (
                   <TransitionItem
                     timeout={400}
-                    delay={(index + 1) * 150 + 75}
+                    delay={(index + 1) * 100 + 275}
                     transitionType="fade-translate"
                     translateY={75}
                   >
@@ -142,7 +142,7 @@ export function EngineeringHero({
                 ) : (
                   <TransitionItem
                     timeout={400}
-                    delay={(index + 1) * 150 + 75}
+                    delay={(index + 1) * 100 + 275}
                     transitionType="fade-translate"
                     translateY={75}
                   >

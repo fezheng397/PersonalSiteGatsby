@@ -22,9 +22,8 @@ const dashiGatsbyTemplate: IProjectTemplateProps = {
   imageAlt: 'Dashi Gatsby Illustration',
   imageSrc: require('assets/grubhub/projects/dashi-gatsby/Gatsby_Contentful.jpg'),
   imagePosition: 'left',
-  objective: `To create an intuitive and efficient experience for users landing on
-  the logged out homepage looking to quickly find food near them and
-  order.`,
+  objective: `To architect a proof of concept (POC) migration for the diner platform's
+  static-site generator repository from legacy technologies to GatsbyJS.`,
   roles: [
     {
       roleHeader: 'Role Header',

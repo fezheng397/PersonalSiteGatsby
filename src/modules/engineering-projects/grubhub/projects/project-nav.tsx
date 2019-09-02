@@ -63,6 +63,7 @@ const NavButton = styled(Button)`
   }
 
   &:hover,
+  &:focus,
   &:active {
     color: ${Styles.Colors.textOffBlack};
 
@@ -236,7 +237,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
             >
               <AnimatedIcon icon="CityIcon" />
               <div>City Page</div>
-            </NavButton>{' '}
+            </NavButton>
           </NavItem>
           <NavItem>
             <NavButton
@@ -246,7 +247,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
             >
               <AnimatedIcon icon="AutocompleteIcon" />
               <div>Autocomplete</div>
-            </NavButton>{' '}
+            </NavButton>
           </NavItem>
           <NavItem>
             <NavButton
@@ -256,7 +257,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
             >
               <AnimatedIcon icon="GetTheAppIcon" />
               <div>Get the App</div>
-            </NavButton>{' '}
+            </NavButton>
           </NavItem>
         </NavItems>
       </ProjectNavComponent>

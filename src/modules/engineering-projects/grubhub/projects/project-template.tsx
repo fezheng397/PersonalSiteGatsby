@@ -28,6 +28,12 @@ export const TextSectionSubHeader = styled(SectionSubHeader4)`
   margin: ${Styles.Spaces.spacing8} 0;
 `;
 
+export const BackgroundSectionSubHeader = styled(TextSectionSubHeader)`
+  text-transform: initial;
+  margin-top: 0;
+  margin-bottom: ${Styles.Spaces.spacing2};
+`;
+
 export const TextSectionDesc = styled.p`
   margin-bottom: ${Styles.Spaces.spacing16};
 `;
@@ -37,6 +43,12 @@ export const BackgroundSection = styled.div`
   border-radius: ${Styles.Sizes.radius5};
   color: #fff;
   padding: ${Styles.Spaces.section8} ${Styles.Spaces.section8};
+`;
+
+export const BackgroundSectionContent = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 const ProjectTemplateSection = styled.div`
