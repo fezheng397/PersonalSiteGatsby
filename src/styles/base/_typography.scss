@@ -37,8 +37,9 @@ button {
 body,
 input,
 select,
-textarea {
-  font-family: $font-0;
+textarea,
+div {
+  font-family: $font-1;
   font-weight: 400;
   line-height: 1.5em;
   letter-spacing: 0.05em;
@@ -46,7 +47,7 @@ textarea {
 
 strong,
 b {
-  font-weight: 600;
+  font-weight: 700;
   color: $light-black;
 }
 
@@ -68,7 +69,7 @@ h4,
 h5,
 h6 {
   color: $off-black;
-  font-family: $font-0;
+  font-family: $font-1;
   font-weight: 400;
   line-height: 1em;
   margin: 0 0 (#{_size(element-margin)} * 0.5) 0;

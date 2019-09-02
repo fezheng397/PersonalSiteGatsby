@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
+import { Layout } from 'layouts';
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import 'styles/core.scss';
 import { lightMode } from 'vars/light-mode';
@@ -36,15 +36,9 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
     return (
       <ThemeProvider theme={lightMode}>
-        <SiteContainer>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>Felix Zheng</title>
-            <link rel="canonical" href="http://felixzheng.com" />
-          </Helmet>
-
+        <Layout>
           <Homepage />
-        </SiteContainer>
+        </Layout>
       </ThemeProvider>
     );
   }

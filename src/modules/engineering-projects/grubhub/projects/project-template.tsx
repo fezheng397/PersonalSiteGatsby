@@ -81,7 +81,7 @@ const ProjectSectionTextContainer = styled.div`
 `;
 
 const ProjectTextSection = styled.div`
-  padding-bottom: ${Styles.Spaces.spacing8}
+  padding-bottom: ${Styles.Spaces.spacing8};
   border-bottom: 2px solid #e6e6e6;
 `;
 

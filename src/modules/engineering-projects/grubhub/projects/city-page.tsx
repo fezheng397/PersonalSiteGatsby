@@ -21,7 +21,7 @@ const CityPageComponent = styled(Container)``;
 const cityPageTemplate: IProjectTemplateProps = {
   imageAlt: 'City Page Illustration',
   imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
-  imagePosition: 'right',
+  imagePosition: 'left',
   objective: `To create a new page, highlighting all the top restaurants at a certain city.`,
   roles: [
     {

@@ -1,4 +1,5 @@
 import { CenteredSectionHeader } from 'components/core/headers/headers';
+import { TransitionItem } from 'components/core/transition/transition';
 import { EngineeringTemplateContainer } from 'modules/engineering-projects/engineering-template/engineering-template';
 import React from 'react';
 import styled from 'styled-components';
@@ -34,22 +35,37 @@ export function EngineeringOverview({
     <EngineeringTemplateContainer size="lg">
       <OverviewContainer>
         <OverviewDescContainer>
-          <OverviewHeader>Overview</OverviewHeader>
-          <OverviewSection>
-            <OverviewSectionHeader>
-              <h2>Background</h2>
-            </OverviewSectionHeader>
-            <p>
-              Over the summer, I worked with the Growth & Lifecycle (G&L) team
-              on the commercial, front-end web platform. Hello this is a text
-              description Hello this is a text description Hello this is a text
-              description Hello this is a text description Hello this is a text
-              description Hello this is a text description Hello this is a text
-              description Hello this is a text description Hello this is a text
-              description Hello this is a text description Hello this is a text
-              description Hello this is a text description
-            </p>
-          </OverviewSection>
+          <TransitionItem
+            timeout={400}
+            delay={50}
+            transitionType="fade-translate"
+            translateY={100}
+          >
+            <OverviewHeader>Overview</OverviewHeader>
+          </TransitionItem>
+          <TransitionItem
+            timeout={400}
+            delay={150}
+            transitionType="fade-translate"
+            translateY={100}
+          >
+            <OverviewSection>
+              <OverviewSectionHeader>
+                <h2>Background</h2>
+              </OverviewSectionHeader>
+              <p>
+                Over the summer, I worked with the Growth & Lifecycle (G&L) team
+                on the commercial, front-end web platform. Hello this is a text
+                description Hello this is a text description Hello this is a
+                text description Hello this is a text description Hello this is
+                a text description Hello this is a text description Hello this
+                is a text description Hello this is a text description Hello
+                this is a text description Hello this is a text description
+                Hello this is a text description Hello this is a text
+                description
+              </p>
+            </OverviewSection>
+          </TransitionItem>
         </OverviewDescContainer>
       </OverviewContainer>
     </EngineeringTemplateContainer>

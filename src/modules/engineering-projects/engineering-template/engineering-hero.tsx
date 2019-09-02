@@ -36,6 +36,7 @@ const TemplateBannerContainer = styled.div`
 
   ${Styles.MediaQuery.sm} {
     margin-top: 0;
+    border-radius: 0;
   }
 `;
 
@@ -53,7 +54,7 @@ const ProjectBanner = styled.div`
   ${Styles.MediaQuery.sm} {
     width: 100%;
     box-shadow: none;
-    border-radius: 0;
+    border-radius: ${Styles.Sizes.radius4};
   }
 `;
 
@@ -100,28 +101,56 @@ export function EngineeringHero({
 }: IEngineeringHeroProps) {
   return (
     <EngineeringTemplateContainer noMobilePadding={true} size="lg">
-      <TransitionItem timeout={300} transitionType="fade-translate">
+      <TransitionItem timeout={300} transitionType="fade">
         <TemplateBannerContainer bannerImageSrc={bannerImageSrc} />
       </TransitionItem>
 
       <ProjectBanner>
         <TemplateLogo logo={require('assets/logos/gh-1200.png')} />
         <ProjectBannerContent>
-          <HeroProjectHeader>Grubhub</HeroProjectHeader>
-          <SubHeader>Software Engineering Intern</SubHeader>
+          <TransitionItem
+            timeout={400}
+            transitionType="fade-translate"
+            translateX={100}
+          >
+            <HeroProjectHeader>Grubhub</HeroProjectHeader>
+          </TransitionItem>
+          <TransitionItem
+            timeout={400}
+            delay={150}
+            transitionType="fade-translate"
+            translateY={100}
+          >
+            <SubHeader>Software Engineering Intern</SubHeader>
+          </TransitionItem>
+
           <Specifications>
             <ProjectDetailsContainer>
               {projectDetails.map((detail, index) => {
                 return index === projectDetails.length - 1 ? (
-                  <ProjectDetail noBorder={true}>
-                    <SectionSubHeader5>{detail.header}</SectionSubHeader5>
-                    <DetailDesc>{detail.subHeader}</DetailDesc>
-                  </ProjectDetail>
+                  <TransitionItem
+                    timeout={400}
+                    delay={(index + 1) * 100 + 150}
+                    transitionType="fade-translate"
+                    translateY={100}
+                  >
+                    <ProjectDetail noBorder={true}>
+                      <SectionSubHeader5>{detail.header}</SectionSubHeader5>
+                      <DetailDesc>{detail.subHeader}</DetailDesc>
+                    </ProjectDetail>
+                  </TransitionItem>
                 ) : (
-                  <ProjectDetail>
-                    <SectionSubHeader5>{detail.header}</SectionSubHeader5>
-                    <DetailDesc>{detail.subHeader}</DetailDesc>
-                  </ProjectDetail>
+                  <TransitionItem
+                    timeout={400}
+                    delay={(index + 1) * 50 + 50}
+                    transitionType="fade-translate"
+                    translateY={100}
+                  >
+                    <ProjectDetail>
+                      <SectionSubHeader5>{detail.header}</SectionSubHeader5>
+                      <DetailDesc>{detail.subHeader}</DetailDesc>
+                    </ProjectDetail>
+                  </TransitionItem>
                 );
               })}
             </ProjectDetailsContainer>

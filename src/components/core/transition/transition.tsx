@@ -31,7 +31,7 @@ export const TransitionContainer = styled.div`
 `;
 
 export const Translate = styled(TransitionContainer)`
-  transition: ${(props: IAnimationProps) => props.timeout}ms;
+  transition: ${(props: IAnimationProps) => props.timeout}ms ease-out;
   transition-delay: ${(props: IAnimationProps) => props.delay}ms;
   transform: ${(props: IAnimationProps) =>
     props.animationState === 'entered'
@@ -40,14 +40,14 @@ export const Translate = styled(TransitionContainer)`
 `;
 
 export const Fade = styled(TransitionContainer)`
-  transition: ${(props: IAnimationProps) => props.timeout}ms;
+  transition: ${(props: IAnimationProps) => props.timeout}ms ease-out;
   transition-delay: ${(props: IAnimationProps) => props.delay}ms;
   opacity: ${(props: IAnimationProps) =>
     props.animationState === 'entered' ? 1 : 0};
 `;
 
 export const FadeTranslate = styled(TransitionContainer)`
-  transition: ${(props: IAnimationProps) => props.timeout}ms;
+  transition: ${(props: IAnimationProps) => props.timeout}ms ease-out;
   transition-delay: ${(props: IAnimationProps) => props.delay}ms;
   opacity: ${(props: IAnimationProps) =>
     props.animationState === 'entered' ? 1 : 0};

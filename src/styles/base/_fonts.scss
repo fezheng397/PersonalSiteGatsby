@@ -21,7 +21,7 @@ $font-path: "./base/fonts" !default;
 
 /* Nunito */
 @font-face {
-  font-family: "Nunito-Light";
+  font-family: "Nunito";
   src: url("#{$font-path}/Nunito/Nunito-Light/Nunito-Light.eot"); /* IE9 Compat Modes */
   src: url("#{$font-path}/Nunito/Nunito-Light/Nunito-Light.eot?#iefix")
       format("embedded-opentype"),
@@ -36,12 +36,12 @@ $font-path: "./base/fonts" !default;
     /* Modern Browsers */
       url("#{$font-path}/Nunito/Nunito-Light/Nunito-Light.woff2")
       format("woff2"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Nunito-Regular";
+  font-family: "Nunito";
   src: url("#{$font-path}/Nunito/Nunito-Regular/Nunito-Regular.eot"); /* IE9 Compat Modes */
   src: url("#{$font-path}/Nunito/Nunito-Regular/Nunito-Regular.eot?#iefix")
       format("embedded-opentype"),
@@ -64,7 +64,7 @@ $font-path: "./base/fonts" !default;
 }
 
 @font-face {
-  font-family: "Nunito-SemiBold";
+  font-family: "Nunito";
   src: url("#{$font-path}/Nunito/Nunito-SemiBold/Nunito-SemiBold.eot"); /* IE9 Compat Modes */
   src: url("#{$font-path}/Nunito/Nunito-SemiBold/Nunito-SemiBold.eot?#iefix")
       format("embedded-opentype"),
@@ -83,12 +83,12 @@ $font-path: "./base/fonts" !default;
     /* Modern Browsers */
       url("#{$font-path}/Nunito/Nunito-SemiBold/Nunito-SemiBold.woff2")
       format("woff2"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Nunito-Bold";
+  font-family: "Nunito";
   src: url("#{$font-path}/Nunito/Nunito-Bold/Nunito-Bold.eot"); /* IE9 Compat Modes */
   src: url("#{$font-path}/Nunito/Nunito-Bold/Nunito-Bold.eot?#iefix")
       format("embedded-opentype"),
@@ -102,7 +102,7 @@ $font-path: "./base/fonts" !default;
       url("#{$font-path}/Nunito/Nunito-Bold/Nunito-Bold.woff") format("woff"),
     /* Modern Browsers */
       url("#{$font-path}/Nunito/Nunito-Bold/Nunito-Bold.woff2") format("woff2"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
 }
 

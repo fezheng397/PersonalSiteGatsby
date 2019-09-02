@@ -25,7 +25,7 @@ const GetTheAppComponent = styled(Container)``;
 const getTheAppTemplate: IProjectTemplateProps = {
   imageAlt: 'Get The App Illustration',
   imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
-  imagePosition: 'right',
+  imagePosition: 'left',
   objective: `To encourage users landing on the logged out homepage to download the mobile app without
   blocking their natural experience with a fullscreen pullover. The incentive for this is because app owners
   tend to have greater loyalty for a brand and as a result, provide a longer LTV (Lifetime Value).`,
