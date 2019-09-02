@@ -1,11 +1,6 @@
 import { Button } from 'components/core/button/button';
 import { CenteredSectionHeader } from 'components/core/headers/headers';
-import { IconProvider } from 'components/core/icon-provider/icon-provider';
-import { Icon } from 'components/core/icon/icon';
 import { SVGComponent } from 'components/core/icon/svgComponents';
-import { SvgAutocompleteIconRotated } from 'components/core/icon/svgComponents/autocomplete-icon-rotated';
-import { SvgGetTheAppIcon } from 'components/core/icon/svgComponents/get-the-app-icon';
-import { StyledLink } from 'components/core/link/link-styles';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import {
@@ -219,7 +214,6 @@ const AnimatedIcon = styled(SVGComponent)`
 export class ProjectNav extends React.Component<IProjectNavProps, {}> {
   public state = {
     fixPosition: false,
-    projectNavOffsetY: 0,
   };
 
   private projectNavRef;
@@ -234,64 +228,60 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
     const { selectNewProject } = this.props;
     const { fixPosition } = this.state;
     const { projectNavRef } = this;
-    console.log('fix position:', fixPosition);
+
     return (
-      <div id="project-nav-component-container">
-        <CenteredSectionHeader>Projects</CenteredSectionHeader>
-        <ProjectNavComponent
-          id="project-nav-component"
-          ref={projectNavRef}
-          fixPosition={fixPosition}
-        >
-          <NavItems>
-            <NavItem>
-              <NavButton
-                onClick={() => {
-                  selectNewProject(1);
-                }}
-              >
-                <AnimatedIcon icon="GatsbyIcon" />
-                <div>Dashi-Gatsby</div>
-              </NavButton>
-            </NavItem>
-            <NavItem>
-              <NavButton
-                onClick={() => {
-                  selectNewProject(2);
-                }}
-              >
-                <AnimatedIcon icon="CityIcon" />
-                <div>City Page</div>
-              </NavButton>
-            </NavItem>
-            <NavItem>
-              <NavButton
-                onClick={() => {
-                  selectNewProject(3);
-                }}
-              >
-                <AnimatedIcon icon="AutocompleteIcon" />
-                <div>Autocomplete</div>
-              </NavButton>
-            </NavItem>
-            <NavItem>
-              <NavButton
-                onClick={() => {
-                  selectNewProject(4);
-                }}
-              >
-                <AnimatedIcon icon="GetTheAppIcon" />
-                <div>Get the App</div>
-              </NavButton>
-            </NavItem>
-          </NavItems>
-        </ProjectNavComponent>
-      </div>
+      <ProjectNavComponent
+        id="project-nav-component"
+        ref={projectNavRef}
+        fixPosition={fixPosition}
+      >
+        <NavItems>
+          <NavItem>
+            <NavButton
+              onClick={() => {
+                selectNewProject(1);
+              }}
+            >
+              <AnimatedIcon icon="GatsbyIcon" />
+              <div>Dashi-Gatsby</div>
+            </NavButton>
+          </NavItem>
+          <NavItem>
+            <NavButton
+              onClick={() => {
+                selectNewProject(2);
+              }}
+            >
+              <AnimatedIcon icon="CityIcon" />
+              <div>City Page</div>
+            </NavButton>{' '}
+          </NavItem>
+          <NavItem>
+            <NavButton
+              onClick={() => {
+                selectNewProject(3);
+              }}
+            >
+              <AnimatedIcon icon="AutocompleteIcon" />
+              <div>Autocomplete</div>
+            </NavButton>{' '}
+          </NavItem>
+          <NavItem>
+            <NavButton
+              onClick={() => {
+                selectNewProject(4);
+              }}
+            >
+              <AnimatedIcon icon="GetTheAppIcon" />
+              <div>Get the App</div>
+            </NavButton>{' '}
+          </NavItem>
+        </NavItems>
+      </ProjectNavComponent>
     );
   }
 
   public componentDidMount() {
-    console.log('Didmount projectnav ref', this.projectNavRef);
     window.addEventListener('scroll', this.handleScroll, true);
     this.projectNavOffsetY = document.getElementById(
       'project-nav-component',
@@ -304,12 +294,9 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
 
   public handleScroll = (event) => {
     const scrollTop = window.pageYOffset;
-    const projectNavOffset = document.getElementById('project-nav-component')
-      .offsetTop;
-    console.log('Scrolltop:', scrollTop);
-    console.log('state project nav offset', this.projectNavOffsetY);
+
     if (scrollTop >= this.projectNavOffsetY) {
-      this.setState({ fixPosition: true, projectNavOffsetY: projectNavOffset });
+      this.setState({ fixPosition: true });
     } else {
       this.setState({ fixPosition: false });
     }

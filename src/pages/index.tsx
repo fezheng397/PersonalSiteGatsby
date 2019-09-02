@@ -33,7 +33,6 @@ const SiteContainer = styled.div``;
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     const { name, tagline } = this.props.data.site.siteMetadata;
-    console.log(this.props.data.site.siteMetadata);
 
     return (
       <ThemeProvider theme={lightMode}>

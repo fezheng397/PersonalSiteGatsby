@@ -98,7 +98,6 @@ export function EngineeringHero({
   bannerImageSrc,
   projectDetails,
 }: IEngineeringHeroProps) {
-  console.log('project details in hero:', projectDetails.length);
   return (
     <EngineeringTemplateContainer noMobilePadding={true} size="lg">
       <TemplateBannerContainer bannerImageSrc={bannerImageSrc} />

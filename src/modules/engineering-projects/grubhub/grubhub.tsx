@@ -1,4 +1,5 @@
 import { CenteredSectionHeader } from 'components/core/headers/headers';
+import { TransitionItem } from 'components/core/transition/transition';
 import { EngineeringTemplate } from 'modules/engineering-projects/engineering-template/engineering-template';
 import { Autocomplete } from 'modules/engineering-projects/grubhub/projects/autocomplete';
 import { CityPage } from 'modules/engineering-projects/grubhub/projects/city-page';
@@ -44,21 +45,28 @@ export class GrubhubProject extends React.Component {
     const { currentProject } = this.state;
 
     return (
-      <EngineeringTemplate
-        bannerImageSrc={require('assets/grubhub/grubhub-hq.png')}
-      >
-        <ProjectNav selectNewProject={this.selectNewProject.bind(this)} />
-        <ProjectsContainer id="projects-container" ref={this.projectsRef}>
-          {this.getCurrentProject(currentProject)}
-        </ProjectsContainer>
-      </EngineeringTemplate>
+      <div>
+        <TransitionItem timeout={500}>
+          <EngineeringTemplate
+            bannerImageSrc={require('assets/grubhub/grubhub-hq.png')}
+          >
+            <div id="project-nav-component-container">
+              <CenteredSectionHeader>Projects</CenteredSectionHeader>
+              <ProjectNav selectNewProject={this.selectNewProject.bind(this)} />
+            </div>
+            <ProjectsContainer id="projects-container" ref={this.projectsRef}>
+              {this.getCurrentProject(currentProject)}
+            </ProjectsContainer>
+          </EngineeringTemplate>
+        </TransitionItem>
+      </div>
     );
   }
 
   public async selectNewProject(newProject: number) {
-    await delay(150);
+    scrollTo(document.getElementById('project-nav-component-container'));
+    // await delay(200);
     this.setState({ currentProject: newProject });
-    // scrollTo(this.projectsRef);
   }
 
   private getCurrentProject(currentProject) {

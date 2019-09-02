@@ -36,7 +36,7 @@ export class EngineeringTemplate extends React.Component<
 > {
   public render() {
     const { bannerImageSrc, children } = this.props;
-    console.log('project details:', projectDetails);
+
     return (
       <div>
         <EngineeringHero
