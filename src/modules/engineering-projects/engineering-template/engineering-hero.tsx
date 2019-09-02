@@ -130,9 +130,9 @@ export function EngineeringHero({
                 return index === projectDetails.length - 1 ? (
                   <TransitionItem
                     timeout={400}
-                    delay={(index + 1) * 100 + 150}
+                    delay={(index + 1) * 150 + 75}
                     transitionType="fade-translate"
-                    translateY={100}
+                    translateY={75}
                   >
                     <ProjectDetail noBorder={true}>
                       <SectionSubHeader5>{detail.header}</SectionSubHeader5>
@@ -142,9 +142,9 @@ export function EngineeringHero({
                 ) : (
                   <TransitionItem
                     timeout={400}
-                    delay={(index + 1) * 50 + 50}
+                    delay={(index + 1) * 150 + 75}
                     transitionType="fade-translate"
-                    translateY={100}
+                    translateY={75}
                   >
                     <ProjectDetail>
                       <SectionSubHeader5>{detail.header}</SectionSubHeader5>
