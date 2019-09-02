@@ -43,7 +43,7 @@ const getTheAppTemplate: IProjectTemplateProps = {
 
 export function GetTheApp({  }: IGetTheAppProps) {
   return (
-    <TransitionItem timeout={300}>
+    <TransitionItem timeout={300} transitionType="fade">
       <GetTheAppComponent>
         <SectionHeaderMajor>Get The App</SectionHeaderMajor>
         <Container id="get-the-app-project-header" size="lg">

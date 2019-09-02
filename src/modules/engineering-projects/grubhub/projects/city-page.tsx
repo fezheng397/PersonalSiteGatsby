@@ -37,7 +37,7 @@ const cityPageTemplate: IProjectTemplateProps = {
 
 export function CityPage({  }: ICityPageProps) {
   return (
-    <TransitionItem timeout={300}>
+    <TransitionItem timeout={300} transitionType="fade">
       <CityPageComponent>
         <SectionHeaderMajor>City Page</SectionHeaderMajor>
         <Container id="city-page-project-header" size="lg">

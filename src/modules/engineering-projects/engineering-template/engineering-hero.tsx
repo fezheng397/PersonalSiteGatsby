@@ -1,5 +1,6 @@
 import { SectionSubHeader5, SubHeader } from 'components/core/headers/headers';
 import { Logo } from 'components/core/logo/logo';
+import { TransitionItem } from 'components/core/transition/transition';
 import { EngineeringTemplateContainer } from 'modules/engineering-projects/engineering-template/engineering-template';
 import React from 'react';
 import styled from 'styled-components';
@@ -31,7 +32,6 @@ const TemplateBannerContainer = styled.div`
 
   border-radius: ${Styles.Sizes.radius2};
   position: relative;
-  transition: opacity 200ms ease-in;
   margin-top: ${Styles.Spaces.section8};
 
   ${Styles.MediaQuery.sm} {
@@ -100,7 +100,13 @@ export function EngineeringHero({
 }: IEngineeringHeroProps) {
   return (
     <EngineeringTemplateContainer noMobilePadding={true} size="lg">
-      <TemplateBannerContainer bannerImageSrc={bannerImageSrc} />
+      <TransitionItem
+        timeout={300}
+        transitionType="fade-translate"
+        translateY={50}
+      >
+        <TemplateBannerContainer bannerImageSrc={bannerImageSrc} />
+      </TransitionItem>
 
       <ProjectBanner>
         <TemplateLogo logo={require('assets/logos/gh-1200.png')} />

@@ -39,7 +39,7 @@ const dashiGatsbyTemplate: IProjectTemplateProps = {
 
 export function DashiGatsby({  }: IDashiGatsbyProps) {
   return (
-    <TransitionItem timeout={300}>
+    <TransitionItem timeout={300} transitionType="fade">
       <DashiGatsbyComponent>
         <SectionHeaderMajor>Dashi - Gatsby</SectionHeaderMajor>
         <Container id="dashi-gatsby-project-header" size="lg">

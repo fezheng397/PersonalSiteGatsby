@@ -47,7 +47,7 @@ const autocompleteTemplate: IProjectTemplateProps = {
 
 export function Autocomplete({  }: IAutocompleteProps) {
   return (
-    <TransitionItem timeout={300}>
+    <TransitionItem timeout={300} transitionType="fade">
       <AutocompleteComponent id="autocomplete-component">
         <Container id="autocomplete-project-header" size="lg">
           <SectionHeaderMajor>Search Autocomplete</SectionHeaderMajor>
