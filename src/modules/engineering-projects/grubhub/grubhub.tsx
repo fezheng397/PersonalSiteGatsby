@@ -19,6 +19,7 @@ import { Styles } from 'vars';
 
 export interface IGrubhubProjectState {
   currentProject: number;
+  projectInState: boolean;
 }
 
 if (typeof window !== 'undefined') {
@@ -31,6 +32,7 @@ const ProjectsContainer = styled.div``;
 export class GrubhubProject extends React.Component {
   public state = {
     currentProject: 1,
+    projectInState: true,
   };
   public windowUtil = new WindowUtil();
 
@@ -46,27 +48,27 @@ export class GrubhubProject extends React.Component {
 
     return (
       <div>
-        <TransitionItem timeout={500}>
-          <EngineeringTemplate
-            bannerImageSrc={require('assets/grubhub/grubhub-hq.png')}
-          >
-            <div id="project-nav-component-container">
-              <CenteredSectionHeader>Projects</CenteredSectionHeader>
-              <ProjectNav selectNewProject={this.selectNewProject.bind(this)} />
-            </div>
-            <ProjectsContainer id="projects-container" ref={this.projectsRef}>
-              {this.getCurrentProject(currentProject)}
-            </ProjectsContainer>
-          </EngineeringTemplate>
-        </TransitionItem>
+        <EngineeringTemplate
+          bannerImageSrc={require('assets/grubhub/grubhub-hq.png')}
+        >
+          <div id="project-nav-component-container">
+            <CenteredSectionHeader>Projects</CenteredSectionHeader>
+            <ProjectNav selectNewProject={this.selectNewProject.bind(this)} />
+          </div>
+
+          <ProjectsContainer id="projects-container" ref={this.projectsRef}>
+            {this.getCurrentProject(currentProject)}
+          </ProjectsContainer>
+        </EngineeringTemplate>
       </div>
     );
   }
 
   public async selectNewProject(newProject: number) {
+    this.setState({ projectInState: false });
     scrollTo(document.getElementById('project-nav-component-container'));
     // await delay(200);
-    this.setState({ currentProject: newProject });
+    this.setState({ currentProject: newProject, projectInState: true });
   }
 
   private getCurrentProject(currentProject) {

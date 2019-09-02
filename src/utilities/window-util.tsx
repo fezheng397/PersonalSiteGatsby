@@ -9,7 +9,7 @@ export function scrollTo(element) {
       behavior: 'smooth',
     });
     */
-    element.scrollIntoView({});
+    element.scrollIntoView({ behavior: 'smooth' });
   }
 }
 

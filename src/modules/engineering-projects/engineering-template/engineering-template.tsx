@@ -1,6 +1,7 @@
 import { Container } from 'components/core/container/container';
 import { SubHeader } from 'components/core/headers/headers';
 import { PhoneFrame } from 'components/core/phone-frame/phone-frame';
+import { TransitionItem } from 'components/core/transition/transition';
 import {
   EngineeringHero,
   ProjectDetails,

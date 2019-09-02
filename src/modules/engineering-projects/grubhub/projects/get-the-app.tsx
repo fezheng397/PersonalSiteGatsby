@@ -4,6 +4,7 @@ import {
   PhoneFrame,
   PhoneFrameRow,
 } from 'components/core/phone-frame/phone-frame';
+import { TransitionItem } from 'components/core/transition/transition';
 import {
   IProjectTemplateProps,
   ProjectTemplate,
@@ -42,64 +43,66 @@ const getTheAppTemplate: IProjectTemplateProps = {
 
 export function GetTheApp({  }: IGetTheAppProps) {
   return (
-    <GetTheAppComponent>
-      <SectionHeaderMajor>Get The App</SectionHeaderMajor>
-      <Container id="get-the-app-project-header" size="lg">
-        <ProjectTemplate
-          imageAlt={getTheAppTemplate.imageAlt}
-          imageSrc={getTheAppTemplate.imageSrc}
-          imagePosition={getTheAppTemplate.imagePosition}
-          objective={getTheAppTemplate.objective}
-          roles={getTheAppTemplate.roles}
-        />
-      </Container>
-      <Container id="get-the-app-project-analysis" size="lg">
-        <TextSectionContainer>
-          <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
-          <TextSectionDesc>
-            On entering the current Grubhub landing page, you are prompted to
-            click on the input to begin entering your address and discover
-            delivery near your location. However, on mobile web, the
-            autocomplete results are blocked by the keyboard unless you scroll
-            down, presenting an inconvenient user experience on the most
-            important page for new customer acquisition.
-          </TextSectionDesc>
-        </TextSectionContainer>
-        <PhoneFrameRow>
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}
-            caption="IPhone Option 1"
+    <TransitionItem timeout={300}>
+      <GetTheAppComponent>
+        <SectionHeaderMajor>Get The App</SectionHeaderMajor>
+        <Container id="get-the-app-project-header" size="lg">
+          <ProjectTemplate
+            imageAlt={getTheAppTemplate.imageAlt}
+            imageSrc={getTheAppTemplate.imageSrc}
+            imagePosition={getTheAppTemplate.imagePosition}
+            objective={getTheAppTemplate.objective}
+            roles={getTheAppTemplate.roles}
           />
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png')}
-            caption="Android Option 2"
-          />
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option3.png')}
-            caption="IPhone Option 3"
-          />
-        </PhoneFrameRow>
-        <PhoneFrameRow>
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option1.png')}
-            caption="Android Option 1"
-          />
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png')}
-            caption="Android Option 2"
-          />
-          <PhoneFrame
-            imageAlt="iphone frame"
-            imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option3.png')}
-            caption="Android Option 3"
-          />
-        </PhoneFrameRow>
-      </Container>
-    </GetTheAppComponent>
+        </Container>
+        <Container id="get-the-app-project-analysis" size="lg">
+          <TextSectionContainer>
+            <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
+            <TextSectionDesc>
+              On entering the current Grubhub landing page, you are prompted to
+              click on the input to begin entering your address and discover
+              delivery near your location. However, on mobile web, the
+              autocomplete results are blocked by the keyboard unless you scroll
+              down, presenting an inconvenient user experience on the most
+              important page for new customer acquisition.
+            </TextSectionDesc>
+          </TextSectionContainer>
+          <PhoneFrameRow>
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}
+              caption="IPhone Option 1"
+            />
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png')}
+              caption="Android Option 2"
+            />
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option3.png')}
+              caption="IPhone Option 3"
+            />
+          </PhoneFrameRow>
+          <PhoneFrameRow>
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option1.png')}
+              caption="Android Option 1"
+            />
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png')}
+              caption="Android Option 2"
+            />
+            <PhoneFrame
+              imageAlt="iphone frame"
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option3.png')}
+              caption="Android Option 3"
+            />
+          </PhoneFrameRow>
+        </Container>
+      </GetTheAppComponent>
+    </TransitionItem>
   );
 }
