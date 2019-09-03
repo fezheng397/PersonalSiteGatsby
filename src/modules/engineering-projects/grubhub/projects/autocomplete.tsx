@@ -82,7 +82,7 @@ export function Autocomplete({  }: IAutocompleteProps) {
             <PhoneFrame
               imageAlt="iphone frame"
               imageSrc={require('assets/grubhub/projects/autocomplete/homepage-problem-noscroll-cropped.png')}
-              caption="After Focusing on Address Input"
+              caption="After Focusing on Address Input (Results are blocked)"
             />
             <PhoneFrame
               imageAlt="iphone frame"
@@ -167,13 +167,21 @@ export function Autocomplete({  }: IAutocompleteProps) {
               review, ensuring both the designers and the product managers
               involved throughout the process were satisfied with the engineered
               feature. Typically, this step was pretty straightforward during my
-              3 months at Grubhub. However, for this project there was a scope
-              change midway through.
+              time at Grubhub. However, this project involved a scope change
+              midway through. Challenges included: typography, fullscreen modal
+              on mobile web, smoother transitions between loading states
             </TextSectionDesc>
 
             <TextSectionSubHeader>Testing</TextSectionSubHeader>
             <TextSectionDesc>
-              Once the stakeholders were satisfied, I moved on to testing.
+              Once the stakeholders were satisfied, I moved on to testing. Unit
+              testing was relatively straight forward. Challenges included
+              mocking the variants/modal helpers and getting that to work.
+              Altering the previous address input's tests (which there were a
+              ton of) to add in my functionalities, and maintaining test
+              coverage percentile. ATs/Smoke tests - Had to be careful with
+              ensuring I didn't break anything site-wide bc the address input
+              was such a widely used component.
             </TextSectionDesc>
           </TextSectionContainer>
           <BackgroundSection bgColor={Styles.Colors.bgGray}>

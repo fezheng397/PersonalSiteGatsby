@@ -23,7 +23,9 @@ export interface IProjectNavState {
 
 const ProjectNavComponent = styled.div`
   ${(props: { fixPosition?: boolean }) =>
-    props.fixPosition ? 'position: fixed; top: 0;' : 'position: relative'}
+    props.fixPosition
+      ? `position: fixed; top: 0; box-shadow: ${Styles.Shadows.imageShadow};`
+      : 'position: relative'}
   background: ${Styles.Colors.primaryWhite};
   height: 124px;
   width: 100%;
@@ -31,6 +33,9 @@ const ProjectNavComponent = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 9000;
+
+
+
 `;
 
 const NavItems = styled.ul`
@@ -50,16 +55,16 @@ const NavItems = styled.ul`
 const NavItem = styled.li``;
 
 const NavButton = styled(Button)`
-  height: 124px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: ${Styles.Spaces.spacing2} ${Styles.Spaces.spacing16};
+  padding: 0 ${Styles.Spaces.spacing16};
   color: ${Styles.Colors.textLightBlack};
 
   ${Styles.MediaQuery.md} {
-    padding: ${Styles.Spaces.spacing2} ${Styles.Spaces.spacing10};
+    margin-top: 10px;
+    padding: 0 ${Styles.Spaces.spacing10};
   }
 
   &:hover,
