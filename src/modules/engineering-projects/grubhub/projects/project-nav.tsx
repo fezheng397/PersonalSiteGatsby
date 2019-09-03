@@ -63,7 +63,7 @@ const NavButton = styled(Button)`
   color: ${Styles.Colors.textLightBlack};
 
   ${Styles.MediaQuery.md} {
-    margin-top: 10px;
+    margin-top: 9.5px;
     padding: 0 ${Styles.Spaces.spacing10};
   }
 

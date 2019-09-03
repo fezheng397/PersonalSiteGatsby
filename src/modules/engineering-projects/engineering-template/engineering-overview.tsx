@@ -1,21 +1,27 @@
-import { CenteredSectionHeader } from 'components/core/headers/headers';
+import {
+  CenteredSectionHeader,
+  SectionSubHeader4,
+} from 'components/core/headers/headers';
 import { TransitionItem } from 'components/core/transition/transition';
 import { EngineeringTemplateContainer } from 'modules/engineering-projects/engineering-template/engineering-template';
 import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
-
 export interface IEngineeringOverviewProps {
   overviewDescription?: string;
 }
 
 const OverviewContainer = styled.div`
   width: 90%;
-  margin-bottom: ${Styles.Spaces.section16};
+  margin-bottom: ${Styles.Spaces.section4};
 `;
 
 const OverviewHeader = styled(CenteredSectionHeader)`
   margin: ${Styles.Spaces.spacing16} 0;
+
+  ${Styles.MediaQuery.md} {
+    margin: ${Styles.Spaces.spacing8} 0;
+  }
 `;
 
 const OverviewDescContainer = styled.div``;
@@ -24,8 +30,10 @@ const OverviewSection = styled.div`
   margin-bottom: ${Styles.Spaces.spacing4};
 `;
 
-const OverviewSectionHeader = styled.div`
-  margin-bottom: ${Styles.Spaces.spacing2};
+const OverviewSectionHeader = styled.h3`
+  text-align: center;
+  color: ${Styles.Colors.textLightBlack};
+  margin-bottom: ${Styles.Spaces.spacing8};
 `;
 
 export function EngineeringOverview({
@@ -50,9 +58,7 @@ export function EngineeringOverview({
             translateY={100}
           >
             <OverviewSection>
-              <OverviewSectionHeader>
-                <h2>Background</h2>
-              </OverviewSectionHeader>
+              <OverviewSectionHeader>Background</OverviewSectionHeader>
               <p>
                 Over the summer, I worked with the Growth & Lifecycle (G&L) team
                 on the commercial, front-end web platform. Hello this is a text

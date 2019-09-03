@@ -71,12 +71,17 @@ export function GetTheApp({  }: IGetTheAppProps) {
 
             <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
             <TextSectionDesc>
-              On entering the current Grubhub landing page, you are prompted to
-              click on the input to begin entering your address and discover
-              delivery near your location. However, on mobile web, the
-              autocomplete results are blocked by the keyboard unless you scroll
-              down, presenting an inconvenient user experience on the most
-              important page for new customer acquisition.
+              Despite the simplicity of the feature, there were a few things my
+              lead wanted me to watch out for. The first was to ensure the
+              variant doesn't flicker on the homepage. Because we were bringing
+              the feature in as an A/B test run through variants on Google
+              Optimize, when serving the page, it would serve the initial
+              default HTML first, then process whether the variant should be
+              turned on for the user, and finally switch it over to the new
+              variant's content. As a result, there's the danger of a slight
+              flicker prior to showing the correct content, providing a poor
+              user experience we wanted to avoid. 2. design variants so that
+              they are easy to understand for stakeholders to turn on/off
             </TextSectionDesc>
           </TextSectionContainer>
         </Container>
@@ -130,7 +135,7 @@ export function GetTheApp({  }: IGetTheAppProps) {
 
             <TextSectionSubHeader>Testing</TextSectionSubHeader>
             <TextSectionDesc>
-              Once the stakeholders were satisfied, I moved on to testing. For 
+              Once the stakeholders were satisfied, I moved on to testing. For
             </TextSectionDesc>
           </TextSectionContainer>
           <BackgroundSection bgColor={Styles.Colors.bgGray}>

@@ -1,3 +1,3 @@
 declare module 'console' {
-  export = console;
+  export = typeof import('console');
 }

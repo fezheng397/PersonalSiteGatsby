@@ -21,6 +21,10 @@ export function Layout(props: ILayoutProps) {
           href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Prompt:300,400,400i,500,600,700&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
       {children}
     </SiteContainer>
