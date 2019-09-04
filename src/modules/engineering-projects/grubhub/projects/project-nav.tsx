@@ -1,3 +1,4 @@
+import { Backdrop } from 'components/core/backdrop/backdrop';
 import { Button } from 'components/core/button/button';
 import { CenteredSectionHeader } from 'components/core/headers/headers';
 import { Icon } from 'components/core/icon/icon';
@@ -211,12 +212,14 @@ const ProjectNavFab = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: ${Styles.Dimensions.modalZ};
 `;
 
 const ProjectNavFabList = styled.ul`
   position: fixed;
   bottom: 100px;
   right: 20px;
+  z-index: ${Styles.Dimensions.modalZ};
 `;
 
 const ProjectNavFabItem = styled.li`
@@ -268,7 +271,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
             </TransitionItem>
           ) : null}
 
-          {projectNavFabOpen
+          {projectNavFabOpen && fixPosition
             ? this.renderProjectNavFabList(selectNewProject)
             : null}
         </div>
@@ -338,28 +341,38 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
     selectNewProject: (newProject: number) => void,
   ) {
     return (
-      <ProjectNavFabList>
-        <ProjectNavFabItem>
-          <ProjectNavFabItemLabel>Dashi-Gatsby</ProjectNavFabItemLabel>
-          <NavButton
-            onClick={() => {
-              selectNewProject(1);
-            }}
-          >
-            <AnimatedIcon icon="GatsbyIcon" />
-          </NavButton>
-        </ProjectNavFabItem>
-        <ProjectNavFabItem>
-          <ProjectNavFabItemLabel>City Page</ProjectNavFabItemLabel>
-          <NavButton
-            onClick={() => {
-              selectNewProject(2);
-            }}
-          >
-            <AnimatedIcon icon="CityIcon" />
-          </NavButton>
-        </ProjectNavFabItem>
-      </ProjectNavFabList>
+      <div>
+        <Backdrop
+          color={Styles.Colors.primaryWhite}
+          onClick={(e) => {
+            this.setState({
+              projectNavFabOpen: false,
+            });
+          }}
+        />
+        <ProjectNavFabList>
+          <ProjectNavFabItem>
+            <ProjectNavFabItemLabel>Dashi-Gatsby</ProjectNavFabItemLabel>
+            <NavButton
+              onClick={() => {
+                selectNewProject(1);
+              }}
+            >
+              <AnimatedIcon icon="GatsbyIcon" />
+            </NavButton>
+          </ProjectNavFabItem>
+          <ProjectNavFabItem>
+            <ProjectNavFabItemLabel>City Page</ProjectNavFabItemLabel>
+            <NavButton
+              onClick={() => {
+                selectNewProject(2);
+              }}
+            >
+              <AnimatedIcon icon="CityIcon" />
+            </NavButton>
+          </ProjectNavFabItem>
+        </ProjectNavFabList>
+      </div>
     );
   }
 
@@ -370,7 +383,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
       this.setState({ fixPosition: true });
       this.props.navPosFixed(true);
     } else {
-      this.setState({ fixPosition: false });
+      this.setState({ fixPosition: false, projectNavFabOpen: false });
       this.props.navPosFixed(false);
     }
   }
