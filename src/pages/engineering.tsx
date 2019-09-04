@@ -6,7 +6,7 @@ import 'styles/core.scss';
 
 export default function EngineeringPage() {
   return (
-    <Layout>
+    <Layout offsetContent={true}>
       <Engineering />
     </Layout>
   );

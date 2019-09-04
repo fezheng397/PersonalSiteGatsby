@@ -49,7 +49,7 @@ const ProjectBanner = styled.div`
   background-color: ${Styles.Colors.primaryWhite};
   margin-top: -50px;
   text-align: center;
-  z-index: 8000;
+  z-index: ${Styles.Dimensions.baseZ};
 
   ${Styles.MediaQuery.sm} {
     width: 100%;

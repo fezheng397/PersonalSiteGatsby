@@ -1,17 +1,26 @@
+import { IconProvider } from 'components/core/icon-provider/icon-provider';
+import { Navbar } from 'components/custom/navbar/navbar';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 export interface ILayoutProps {
-  children: any;
+  children?: any;
+  offsetContent?: boolean;
+  hideNav?: boolean;
 }
 
 const SiteContainer = styled.div``;
 
+const SiteContent = styled.div`
+  ${(props: ILayoutProps) => (props.offsetContent ? 'margin-top: 72px;' : '')}
+`;
+
 export function Layout(props: ILayoutProps) {
-  const { children } = props;
+  const { children, hideNav } = props;
   return (
     <SiteContainer>
+      <IconProvider />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Felix Zheng</title>
@@ -22,11 +31,12 @@ export function Layout(props: ILayoutProps) {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css?family=Prompt:300,400,400i,500,600,700&display=swap"
+          href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap"
           rel="stylesheet"
         />
       </Helmet>
-      {children}
+      {!hideNav ? <Navbar /> : null}
+      <SiteContent {...props}>{children}</SiteContent>
     </SiteContainer>
   );
 }

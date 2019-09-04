@@ -5,7 +5,7 @@ import 'styles/core.scss';
 
 export default function GrubhubPage() {
   return (
-    <Layout>
+    <Layout offsetContent={true}>
       <GrubhubProject />
     </Layout>
   );

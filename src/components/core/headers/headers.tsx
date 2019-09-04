@@ -48,10 +48,10 @@ export const SectionSubHeader3 = styled.h3`
 
 export const SectionSubHeader4 = styled.h4`
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: ${Styles.Fonts.weightBold};
 `;
 
 export const SectionSubHeader5 = styled.h5`
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: ${Styles.Fonts.weightBold};
 `;

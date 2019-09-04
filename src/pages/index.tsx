@@ -36,7 +36,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
     return (
       <ThemeProvider theme={lightMode}>
-        <Layout>
+        <Layout hideNav={true}>
           <Homepage />
         </Layout>
       </ThemeProvider>

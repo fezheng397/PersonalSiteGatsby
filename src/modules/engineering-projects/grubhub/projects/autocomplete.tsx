@@ -108,14 +108,12 @@ export function Autocomplete({  }: IAutocompleteProps) {
             <TextSectionDesc>
               One of the most challenging aspects of implementing the new
               autocomplete component was taking into consideration the current
-              address input implementation. This is because the current address
-              input was the most widespread component throughout the entire
-              website, filled with excessive conditional rendering and business
-              logic. As a result, I set out to try and split up the component
-              while creating the new fullscreen autocomplete modal, to create a
-              better foundational structure for the component in the future. The
-              first page to feature this change was the logged-out homepage in
-              the address input, which would autocomplete your location.
+              address input implementation. Due to the current address input
+              component's usage, it's filled with excessive conditional
+              rendering and business logic. As a result, I set out to try and
+              split up and better organize the component while creating the new
+              fullscreen autocomplete modal, to create a better foundational
+              structure for the component in the future.
             </TextSectionDesc>
           </TextSectionContainer>
         </Container>
@@ -163,13 +161,18 @@ export function Autocomplete({  }: IAutocompleteProps) {
           <TextSectionContainer>
             <TextSectionSubHeader>Stakeholder Review</TextSectionSubHeader>
             <TextSectionDesc>
-              After the implementation was complete, I moved onto stakeholder
-              review, ensuring both the designers and the product managers
-              involved throughout the process were satisfied with the engineered
-              feature. Typically, this step was pretty straightforward during my
-              time at Grubhub. However, this project involved a scope change
-              midway through. Challenges included: typography, fullscreen modal
-              on mobile web, smoother transitions between loading states
+              Stakeholder review involved ensuring both the designers and the
+              product managers (PMs) involved throughout the process were
+              satisfied with the engineered feature. The review process for this
+              project was unique because it involved a scope change midway
+              through, complicating the timeline and deliverables. Looking at
+              the finished product, there are two parts - the redesigned address
+              input and 'Find Food' button, immediately seen in the homepage
+              hero, and the fullscreen autocomplete modal that is triggered upon
+              click/focus of the address input. The first of the two was the
+              change added halfway through. Challenges included: typography,
+              fullscreen modal on mobile web, smoother transitions between
+              loading states
             </TextSectionDesc>
 
             <TextSectionSubHeader>Testing</TextSectionSubHeader>

@@ -37,7 +37,7 @@ export const PhoneFrameContainer = styled.div`
 
 export const PhoneFrameCaption = styled.h5`
   color: ${Styles.Colors.textLightBlack};
-  font-weight: 700;
+  font-weight: ${Styles.Fonts.weightBold};
 `;
 
 export const PhoneFrameRow = styled.div`

@@ -28,15 +28,7 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
-const ProjectsContainer = styled.div`
-  padding-top: ${(props: { navPosFixed: boolean }) =>
-    props.navPosFixed ? '120px' : '0'};
-
-  ${Styles.MediaQuery.md} {
-    padding-top: ${(props: { navPosFixed: boolean }) =>
-      props.navPosFixed ? '120px' : '0'};
-  }
-`;
+const ProjectsContainer = styled.div``;
 
 export class GrubhubProject extends React.Component {
   public state = {
@@ -68,12 +60,13 @@ export class GrubhubProject extends React.Component {
               selectNewProject={this.selectNewProject.bind(this)}
             />
           </div>
+          <ProjectNav
+            fab={true}
+            navPosFixed={this.navPosFixed}
+            selectNewProject={this.selectNewProject.bind(this)}
+          />
 
-          <ProjectsContainer
-            id="projects-container"
-            navPosFixed={navPosFixed}
-            ref={this.projectsRef}
-          >
+          <ProjectsContainer id="projects-container" ref={this.projectsRef}>
             {this.getCurrentProject(currentProject)}
           </ProjectsContainer>
         </EngineeringTemplate>
@@ -84,7 +77,7 @@ export class GrubhubProject extends React.Component {
   public async selectNewProject(newProject: number) {
     this.setState({ projectInState: false });
     scrollTo(document.getElementById('project-nav-component-container'));
-    // await delay(200);
+
     this.setState({ currentProject: newProject, projectInState: true });
   }
 

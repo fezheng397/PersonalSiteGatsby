@@ -17,7 +17,7 @@ const OverviewContainer = styled.div`
 `;
 
 const OverviewHeader = styled(CenteredSectionHeader)`
-  margin: ${Styles.Spaces.spacing16} 0;
+  margin: ${Styles.Spaces.spacing16} 0 ${Styles.Spaces.spacing4} 0;
 
   ${Styles.MediaQuery.md} {
     margin: ${Styles.Spaces.spacing8} 0;
@@ -31,7 +31,6 @@ const OverviewSection = styled.div`
 `;
 
 const OverviewSectionHeader = styled.h3`
-  text-align: center;
   color: ${Styles.Colors.textLightBlack};
   margin-bottom: ${Styles.Spaces.spacing8};
 `;
