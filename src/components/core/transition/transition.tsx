@@ -84,7 +84,7 @@ export class TransitionItem extends React.PureComponent<
       translateY,
     } = this.props;
     const { animate } = this.state;
-    console.log('instate:', inState);
+
     return (
       <Transition
         in={inState ? inState : animate}

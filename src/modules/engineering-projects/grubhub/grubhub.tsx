@@ -61,12 +61,6 @@ export class GrubhubProject extends React.Component {
               selectNewProject={this.selectNewProject.bind(this)}
             />
           </div>
-          <ProjectNav
-            currentProject={currentProject}
-            fab={true}
-            navPosFixed={this.navPosFixed}
-            selectNewProject={this.selectNewProject.bind(this)}
-          />
 
           <ProjectsContainer id="projects-container" ref={this.projectsRef}>
             {this.getCurrentProject(currentProject)}

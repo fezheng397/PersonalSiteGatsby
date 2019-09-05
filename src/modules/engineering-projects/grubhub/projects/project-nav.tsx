@@ -257,7 +257,7 @@ const ProjectNavFabItem = styled.li`
   margin: ${Styles.Spaces.spacing2} 0;
 `;
 
-const ProjectNavFabItemLabel = styled.p`
+const ProjectNavFabItemLabel = styled.div`
   text-align: center;
   vertical-align: middle;
   line-height: 1;
@@ -288,111 +288,87 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
     const { fixPosition, projectNavFabOpen, projectNavFabVisible } = this.state;
     const { projectNavRef } = this;
 
-    if (fab) {
-      return (
-        <div>
-          {fixPosition ? (
-            <TransitionItem timeout={250} transitionType="fade">
-              <ProjectNavFab onClick={this.toggleProjectNavFabList}>
-                {projectNavFabOpen ? (
-                  <TransitionItem timeout={275} transitionType="fade">
-                    <ProjectNavFabIconContainer>
-                      <Icon
-                        icon="close"
-                        width={26}
-                        height={26}
-                        fill={Styles.Colors.primaryWhite}
-                      />
-                    </ProjectNavFabIconContainer>
-                  </TransitionItem>
-                ) : (
-                  <TransitionItem timeout={275} transitionType="fade">
-                    <ProjectNavFabIconContainer>
-                      <Icon
-                        icon="buffer"
-                        width={26}
-                        height={26}
-                        fill={Styles.Colors.primaryWhite}
-                      />
-                    </ProjectNavFabIconContainer>
-                  </TransitionItem>
-                )}
-              </ProjectNavFab>
-            </TransitionItem>
-          ) : null}
-
-          {projectNavFabOpen && fixPosition
-            ? this.renderProjectNavFabList(selectNewProject)
-            : null}
-        </div>
-      );
-    }
-
     return (
-      <ProjectNavComponent id="project-nav-component" ref={projectNavRef}>
-        <NavItems>
-          <NavItem>
-            <NavButton
-              onClick={() => {
-                selectNewProject(1);
-              }}
-            >
-              <AnimatedIcon
-                noMargin={true}
-                width={75}
-                height={75}
-                icon="GatsbyIcon"
-              />
-              <div>Dashi-Gatsby</div>
-            </NavButton>
-          </NavItem>
-          <NavItem>
-            <NavButton
-              onClick={() => {
-                selectNewProject(2);
-              }}
-            >
-              <AnimatedIcon
-                noMargin={true}
-                width={75}
-                height={75}
-                icon="CityIcon"
-              />
-              <div>City Page</div>
-            </NavButton>
-          </NavItem>
-          <NavItem>
-            <NavButton
-              onClick={() => {
-                selectNewProject(3);
-              }}
-            >
-              <AnimatedIcon
-                noMargin={true}
-                width={75}
-                height={75}
-                icon="AutocompleteIcon"
-              />
-              <div>Autocomplete</div>
-            </NavButton>
-          </NavItem>
-          <NavItem>
-            <NavButton
-              onClick={() => {
-                selectNewProject(4);
-              }}
-            >
-              <AnimatedIcon
-                noMargin={true}
-                width={75}
-                height={75}
-                icon="GetTheAppIcon"
-              />
-              <div>Get the App</div>
-            </NavButton>
-          </NavItem>
-        </NavItems>
-      </ProjectNavComponent>
+      <div>
+        <ProjectNavComponent id="project-nav-component" ref={projectNavRef}>
+          <NavItems>
+            <NavItem>
+              <NavButton
+                onClick={() => {
+                  selectNewProject(1);
+                }}
+              >
+                <AnimatedIcon width={75} height={75} icon="GatsbyIcon" />
+                <div>Dashi-Gatsby</div>
+              </NavButton>
+            </NavItem>
+            <NavItem>
+              <NavButton
+                onClick={() => {
+                  selectNewProject(2);
+                }}
+              >
+                <AnimatedIcon width={75} height={75} icon="CityIcon" />
+                <div>City Page</div>
+              </NavButton>
+            </NavItem>
+            <NavItem>
+              <NavButton
+                onClick={() => {
+                  selectNewProject(3);
+                }}
+              >
+                <AnimatedIcon width={75} height={75} icon="AutocompleteIcon" />
+                <div>Autocomplete</div>
+              </NavButton>
+            </NavItem>
+            <NavItem>
+              <NavButton
+                onClick={() => {
+                  selectNewProject(4);
+                }}
+              >
+                <AnimatedIcon width={75} height={75} icon="GetTheAppIcon" />
+                <div>Get the App</div>
+              </NavButton>
+            </NavItem>
+          </NavItems>
+        </ProjectNavComponent>
+
+        {fixPosition ? (
+          <TransitionItem timeout={250} transitionType="fade">
+            <ProjectNavFab onClick={this.toggleProjectNavFabList}>
+              {projectNavFabOpen ? (
+                <TransitionItem timeout={275} transitionType="fade">
+                  <ProjectNavFabIconContainer>
+                    <Icon
+                      icon="close"
+                      width={26}
+                      height={26}
+                      fill={Styles.Colors.primaryWhite}
+                    />
+                  </ProjectNavFabIconContainer>
+                </TransitionItem>
+              ) : (
+                <TransitionItem timeout={275} transitionType="fade">
+                  <ProjectNavFabIconContainer>
+                    <Icon
+                      icon="buffer"
+                      width={26}
+                      height={26}
+                      fill={Styles.Colors.primaryWhite}
+                    />
+                  </ProjectNavFabIconContainer>
+                </TransitionItem>
+              )}
+            </ProjectNavFab>
+          </TransitionItem>
+        ) : null}
+
+        {projectNavFabOpen && fixPosition
+          ? this.renderProjectNavFabList(selectNewProject)
+          : null}
+      </div>
     );
   }
 
