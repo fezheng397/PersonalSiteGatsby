@@ -14,7 +14,6 @@ export interface ISVGComponentProps {
 const IconContainer = styled.div`
   width: 75px;
   height: 75px;
-  margin-bottom: ${Styles.Spaces.spacing2};
 `;
 
 export class SVGComponent extends React.Component<ISVGComponentProps, {}> {

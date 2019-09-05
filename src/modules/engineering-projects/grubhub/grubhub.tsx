@@ -56,11 +56,13 @@ export class GrubhubProject extends React.Component {
           <div id="project-nav-component-container">
             <CenteredSectionHeader>Projects</CenteredSectionHeader>
             <ProjectNav
+              currentProject={currentProject}
               navPosFixed={this.navPosFixed}
               selectNewProject={this.selectNewProject.bind(this)}
             />
           </div>
           <ProjectNav
+            currentProject={currentProject}
             fab={true}
             navPosFixed={this.navPosFixed}
             selectNewProject={this.selectNewProject.bind(this)}

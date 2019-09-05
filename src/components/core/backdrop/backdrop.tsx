@@ -1,3 +1,4 @@
+import { TransitionItem } from 'components/core/transition/transition';
 import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
@@ -9,8 +10,8 @@ export interface IBackdropProps {
 
 const BackdropComponent = styled.div`
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -23,13 +24,17 @@ const BackdropComponent = styled.div`
 
 export class Backdrop extends React.Component<IBackdropProps> {
   public render() {
-    return <BackdropComponent {...this.props} />;
+    return (
+      <TransitionItem timeout={150} transitionType="fade">
+        <BackdropComponent {...this.props} />
+      </TransitionItem>
+    );
   }
   public componentDidMount() {
-    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'none';
   }
 
   public componentWillUnmount() {
-    document.documentElement.style.overflow = 'scroll';
+    document.documentElement.style.overflow = 'default';
   }
 }

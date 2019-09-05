@@ -105,15 +105,30 @@ export function Autocomplete({  }: IAutocompleteProps) {
         <Container id="autocomplete-project-ideation" size="lg">
           <TextSectionContainer>
             <TextSectionSubHeader>Feature Architecture</TextSectionSubHeader>
-            <TextSectionDesc>
+            <p>
               One of the most challenging aspects of implementing the new
-              autocomplete component was taking into consideration the current
-              address input implementation. Due to the current address input
-              component's usage, it's filled with excessive conditional
-              rendering and business logic. As a result, I set out to try and
-              split up and better organize the component while creating the new
-              fullscreen autocomplete modal, to create a better foundational
-              structure for the component in the future.
+              fullscreen autocomplete was taking into consideration the current
+              address input implementation. Due to the current address input's
+              usage, it's filled with excessive, intermingled conditional
+              rendering and business logic occupying over 1500 lines. As a
+              result, I set out to create a better foundational structure for
+              the future. I planned to do so through the following:
+            </p>
+            <p>
+              <strong>1) Container Component Architecture - </strong>I wanted to
+              utilize this common React design pattern to split the business
+              logic involved in the address input from all the render logic.
+              This step would involve separating functionality that included
+              geolocating, calling backend APIs to retrieve location results
+              based on the input value, and more.
+            </p>
+            <TextSectionDesc>
+              <strong>2) Separating Autocomplete/Typeahead Logic - </strong>
+              In addition to business logic, much of the typeahead logic that
+              drives the autocomplete feature resides within the address input
+              component as well. I wanted to differentiate this logic as well,
+              leaving just a render layer/subcomponent at the bottom of the
+              chain to handle conditional rendering.
             </TextSectionDesc>
           </TextSectionContainer>
         </Container>

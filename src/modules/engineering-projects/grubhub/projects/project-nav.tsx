@@ -15,6 +15,7 @@ import {
 import { Styles } from 'vars';
 
 export interface IProjectNavProps {
+  currentProject: number;
   navPosFixed: (fixed: boolean) => void;
   fab?: boolean;
   selectNewProject: (newProject: number) => void;
@@ -53,17 +54,25 @@ const NavItems = styled.ul`
 
 const NavItem = styled.li``;
 
+export interface IProjectNavButtonProps {
+  noPadding?: boolean;
+}
+
 const NavButton = styled(Button)`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 ${Styles.Spaces.spacing16};
+  padding: 0
+    ${(props: IProjectNavButtonProps) =>
+      props.noPadding ? '' : Styles.Spaces.spacing16};
   color: ${Styles.Colors.textLightBlack};
 
   ${Styles.MediaQuery.md} {
     margin-top: 9.5px;
-    padding: 0 ${Styles.Spaces.spacing10};
+    padding: 0
+      ${(props: IProjectNavButtonProps) =>
+        props.noPadding ? '' : Styles.Spaces.spacing10};
   }
 
   &:hover,
@@ -133,10 +142,22 @@ const NavButton = styled(Button)`
   }
 `;
 
+export interface IAnimatedIconProps {
+  width: number;
+  height: number;
+  noMargin?: boolean;
+  showShadow?: boolean;
+}
+
 const AnimatedIcon = styled(SVGComponent)`
-  width: 75px;
-  height: 75px;
-  margin-bottom: ${Styles.Spaces.spacing2};
+  width: ${(props: IAnimatedIconProps) => props.width}px;
+  height: ${(props: IAnimatedIconProps) => props.height}px;
+  border-radius: 50%;
+  margin-bottom: ${(props: IAnimatedIconProps) =>
+    props.noMargin ? '' : Styles.Spaces.spacing2};
+  ${(props: IAnimatedIconProps) =>
+    props.showShadow ? `box-shadow: ${Styles.Shadows.imageShadow};` : ''};
+  background: transparent;
 
   #autocomplete-icon-rotated_svg__IPhone {
     transform: rotate(0) scale(1);
@@ -203,16 +224,22 @@ const ProjectNavFab = styled.div`
   cursor: pointer;
   bottom: 24px;
   right: 20px;
-  height: 70px;
-  width: 70px;
+  height: 64px;
+  width: 64px;
   background-color: ${Styles.Colors.textGHPurple};
   fill: ${Styles.Colors.primaryWhite};
   border-radius: 50%;
   box-shadow: ${Styles.Shadows.imageShadow};
+
+  z-index: ${Styles.Dimensions.modalZ};
+`;
+
+const ProjectNavFabIconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: ${Styles.Dimensions.modalZ};
+  height: 64px;
+  width: 64px;
 `;
 
 const ProjectNavFabList = styled.ul`
@@ -220,19 +247,25 @@ const ProjectNavFabList = styled.ul`
   bottom: 100px;
   right: 20px;
   z-index: ${Styles.Dimensions.modalZ};
+  margin-bottom: ${Styles.Spaces.spacing2};
 `;
 
 const ProjectNavFabItem = styled.li`
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  margin: ${Styles.Spaces.spacing2} 0;
 `;
 
-const ProjectNavFabItemLabel = styled.div`
+const ProjectNavFabItemLabel = styled.p`
   text-align: center;
   vertical-align: middle;
+  line-height: 1;
   padding: ${Styles.Spaces.spacing2};
+  border-radius: ${Styles.Sizes.radius2};
   background: ${Styles.Colors.primaryWhite};
   margin-right: ${Styles.Spaces.spacing4};
+  box-shadow: ${Styles.Shadows.imageShadow};
 `;
 
 export class ProjectNav extends React.Component<IProjectNavProps, {}> {
@@ -261,12 +294,29 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
           {fixPosition ? (
             <TransitionItem timeout={250} transitionType="fade">
               <ProjectNavFab onClick={this.toggleProjectNavFabList}>
-                <Icon
-                  icon="buffer"
-                  width={32}
-                  height={32}
-                  fill={Styles.Colors.primaryWhite}
-                />
+                {projectNavFabOpen ? (
+                  <TransitionItem timeout={275} transitionType="fade">
+                    <ProjectNavFabIconContainer>
+                      <Icon
+                        icon="close"
+                        width={26}
+                        height={26}
+                        fill={Styles.Colors.primaryWhite}
+                      />
+                    </ProjectNavFabIconContainer>
+                  </TransitionItem>
+                ) : (
+                  <TransitionItem timeout={275} transitionType="fade">
+                    <ProjectNavFabIconContainer>
+                      <Icon
+                        icon="buffer"
+                        width={26}
+                        height={26}
+                        fill={Styles.Colors.primaryWhite}
+                      />
+                    </ProjectNavFabIconContainer>
+                  </TransitionItem>
+                )}
               </ProjectNavFab>
             </TransitionItem>
           ) : null}
@@ -287,7 +337,12 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                 selectNewProject(1);
               }}
             >
-              <AnimatedIcon icon="GatsbyIcon" />
+              <AnimatedIcon
+                noMargin={true}
+                width={75}
+                height={75}
+                icon="GatsbyIcon"
+              />
               <div>Dashi-Gatsby</div>
             </NavButton>
           </NavItem>
@@ -297,7 +352,12 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                 selectNewProject(2);
               }}
             >
-              <AnimatedIcon icon="CityIcon" />
+              <AnimatedIcon
+                noMargin={true}
+                width={75}
+                height={75}
+                icon="CityIcon"
+              />
               <div>City Page</div>
             </NavButton>
           </NavItem>
@@ -307,7 +367,12 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                 selectNewProject(3);
               }}
             >
-              <AnimatedIcon icon="AutocompleteIcon" />
+              <AnimatedIcon
+                noMargin={true}
+                width={75}
+                height={75}
+                icon="AutocompleteIcon"
+              />
               <div>Autocomplete</div>
             </NavButton>
           </NavItem>
@@ -317,7 +382,12 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                 selectNewProject(4);
               }}
             >
-              <AnimatedIcon icon="GetTheAppIcon" />
+              <AnimatedIcon
+                noMargin={true}
+                width={75}
+                height={75}
+                icon="GetTheAppIcon"
+              />
               <div>Get the App</div>
             </NavButton>
           </NavItem>
@@ -351,26 +421,96 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
           }}
         />
         <ProjectNavFabList>
-          <ProjectNavFabItem>
-            <ProjectNavFabItemLabel>Dashi-Gatsby</ProjectNavFabItemLabel>
-            <NavButton
-              onClick={() => {
-                selectNewProject(1);
-              }}
-            >
-              <AnimatedIcon icon="GatsbyIcon" />
-            </NavButton>
-          </ProjectNavFabItem>
-          <ProjectNavFabItem>
-            <ProjectNavFabItemLabel>City Page</ProjectNavFabItemLabel>
-            <NavButton
-              onClick={() => {
-                selectNewProject(2);
-              }}
-            >
-              <AnimatedIcon icon="CityIcon" />
-            </NavButton>
-          </ProjectNavFabItem>
+          <TransitionItem timeout={300} transitionType="fade">
+            <ProjectNavFabItem>
+              <ProjectNavFabItemLabel>Dashi-Gatsby</ProjectNavFabItemLabel>
+              <NavButton
+                noPadding={true}
+                onClick={() => {
+                  this.setState({
+                    fixPosition: false,
+                    projectNavFabOpen: false,
+                  });
+                  selectNewProject(1);
+                }}
+              >
+                <AnimatedIcon
+                  showShadow={true}
+                  width={60}
+                  height={60}
+                  icon="GatsbyIcon"
+                />
+              </NavButton>
+            </ProjectNavFabItem>
+          </TransitionItem>
+          <TransitionItem timeout={250} transitionType="fade">
+            <ProjectNavFabItem>
+              <ProjectNavFabItemLabel>City Page</ProjectNavFabItemLabel>
+              <NavButton
+                noPadding={true}
+                onClick={() => {
+                  this.setState({
+                    fixPosition: false,
+                    projectNavFabOpen: false,
+                  });
+                  selectNewProject(2);
+                }}
+              >
+                <AnimatedIcon
+                  showShadow={true}
+                  width={60}
+                  height={60}
+                  icon="CityIcon"
+                />
+              </NavButton>
+            </ProjectNavFabItem>
+          </TransitionItem>
+          <TransitionItem timeout={200} transitionType="fade">
+            <ProjectNavFabItem>
+              <ProjectNavFabItemLabel>
+                Search Autocomplete
+              </ProjectNavFabItemLabel>
+              <NavButton
+                noPadding={true}
+                onClick={() => {
+                  this.setState({
+                    fixPosition: false,
+                    projectNavFabOpen: false,
+                  });
+                  selectNewProject(3);
+                }}
+              >
+                <AnimatedIcon
+                  showShadow={true}
+                  width={60}
+                  height={60}
+                  icon="AutocompleteIcon"
+                />
+              </NavButton>
+            </ProjectNavFabItem>
+          </TransitionItem>
+          <TransitionItem timeout={150} transitionType="fade">
+            <ProjectNavFabItem>
+              <ProjectNavFabItemLabel>Get The App</ProjectNavFabItemLabel>
+              <NavButton
+                noPadding={true}
+                onClick={() => {
+                  this.setState({
+                    fixPosition: false,
+                    projectNavFabOpen: false,
+                  });
+                  selectNewProject(4);
+                }}
+              >
+                <AnimatedIcon
+                  showShadow={true}
+                  width={60}
+                  height={60}
+                  icon="GetTheAppIcon"
+                />
+              </NavButton>
+            </ProjectNavFabItem>
+          </TransitionItem>
         </ProjectNavFabList>
       </div>
     );
