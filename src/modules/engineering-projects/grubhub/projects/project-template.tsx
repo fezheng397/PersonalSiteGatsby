@@ -1,4 +1,5 @@
 import { SectionSubHeader4 } from 'components/core/headers/headers';
+import { string } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
@@ -31,7 +32,7 @@ export const TextSectionSubHeader = styled(SectionSubHeader4)`
 export const BackgroundSectionSubHeader = styled(TextSectionSubHeader)`
   text-transform: initial;
   margin-top: 0;
-  margin-bottom: ${Styles.Spaces.spacing2};
+  margin-bottom: ${Styles.Spaces.spacing4};
 `;
 
 export const TextSectionDesc = styled.p`
@@ -49,6 +50,15 @@ export const BackgroundSectionContent = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+`;
+
+export const BackgroundSectionList = styled.ul`
+  list-style: disc;
+  max-width: 400px;
+`;
+
+export const BackgroundSectionListItem = styled.li`
+  margin-bottom: ${Styles.Spaces.spacing2};
 `;
 
 const ProjectTemplateSection = styled.div`
@@ -123,7 +133,7 @@ export function ProjectTemplate(props: IProjectTemplateProps) {
         <ul>
           {roles.map((role, idx) => {
             return (
-              <li>
+              <li key={'role'.concat(idx.toString())}>
                 <strong>
                   {idx + 1}) {role.roleHeader} - {}
                 </strong>

@@ -11,6 +11,8 @@ import { TransitionItem } from 'components/core/transition/transition';
 import {
   BackgroundSection,
   BackgroundSectionContent,
+  BackgroundSectionList,
+  BackgroundSectionListItem,
   BackgroundSectionSubHeader,
   TextSectionContainer,
   TextSectionDesc,
@@ -175,52 +177,109 @@ export function Autocomplete({  }: IAutocompleteProps) {
         <Container id="autocomplete-project-review" size="lg">
           <TextSectionContainer>
             <TextSectionSubHeader>Stakeholder Review</TextSectionSubHeader>
-            <TextSectionDesc>
+            <p>
               Stakeholder review involved ensuring both the designers and the
               product managers (PMs) involved throughout the process were
-              satisfied with the engineered feature. The review process for this
-              project was unique because it involved a scope change midway
-              through, complicating the timeline and deliverables. Looking at
-              the finished product, there are two parts - the redesigned address
-              input and 'Find Food' button, immediately seen in the homepage
-              hero, and the fullscreen autocomplete modal that is triggered upon
-              click/focus of the address input. The first of the two was the
-              change added halfway through. Challenges included: typography,
-              fullscreen modal on mobile web, smoother transitions between
-              loading states
+              satisfied with the engineered feature. Although generally
+              straightforward, this project presented a few unique challenges
+              during review:
+            </p>
+            <p>
+              <strong>1) Project Scope Change - </strong>We had originally
+              assumed the fullscreen autocomplete was the only feature to
+              implement. However, after handing the feature off to the PM, she
+              informed us that she had forgotten to mention that the redesigned
+              address input would be apart of this experiment. Although the
+              additional changes weren't too complex (mainly UI alterations with
+              conditional rendering), the pure size of the growing pull request
+              along with midway context switching made the scope change a
+              challenge.
+            </p>
+            <TextSectionDesc>
+              <strong>2) A/B Testing with Variants - </strong> The search
+              autocomplete feature was my first chance to work with variants.
+              These were implemented so PMs could toggle new changes/features
+              and target smaller percentages of the user base during A/B testing
+              using Google Optimize. Although the learning curve wasn't too
+              steep, I had to maintain constant communication with stakeholders
+              during review to ensure my variants were intuitive to customize
+              and use outside of the codebase.
             </TextSectionDesc>
 
             <TextSectionSubHeader>Testing</TextSectionSubHeader>
             <TextSectionDesc>
-              Once the stakeholders were satisfied, I moved on to testing. Unit
-              testing was relatively straight forward. Challenges included
-              mocking the variants/modal helpers and getting that to work.
-              Altering the previous address input's tests (which there were a
-              ton of) to add in my functionalities, and maintaining test
-              coverage percentile. ATs/Smoke tests - Had to be careful with
-              ensuring I didn't break anything site-wide bc the address input
-              was such a widely used component.
+              Once the stakeholders were satisfied, I moved on to testing.
+              Because the address input was used in so many places, I had to be
+              extra careful when ensuring none of my changes broke any other
+              features. In addition, this was a period where many of our
+              automated smoke tests were migrated to a new platform, TestCafe.
+              Because our prior automated tests in Protractor (Angular) were so
+              flaky and complex, this was a great opportunity to learn the new
+              testing technology in depth. Here's a breakdown of functionalities
+              I had to alter/write tests for:
             </TextSectionDesc>
           </TextSectionContainer>
           <BackgroundSection bgColor={Styles.Colors.bgGray}>
             <BackgroundSectionContent>
-              <ul>
-                <BackgroundSectionSubHeader>Header</BackgroundSectionSubHeader>
-                <li>list item 1</li>
-                <li>list item 2</li>
-              </ul>
-              <ul>
-                <BackgroundSectionSubHeader>Header</BackgroundSectionSubHeader>
-                <li>list item 1</li>
-                <li>list item 2</li>
-              </ul>
+              <BackgroundSectionList>
+                <BackgroundSectionSubHeader>
+                  Unit Tests
+                </BackgroundSectionSubHeader>
+                <BackgroundSectionListItem>
+                  Maintaining prior address input tests
+                </BackgroundSectionListItem>
+                <BackgroundSectionListItem>
+                  Ensuring correct UI elements rendered
+                </BackgroundSectionListItem>
+                <BackgroundSectionListItem>
+                  Conceptualizing tests for new fullscreen autocomplete
+                  functionality
+                </BackgroundSectionListItem>
+                <BackgroundSectionListItem>
+                  Mocking variants and modals to avoid global state bleeding
+                  into other tests and causing failures.
+                </BackgroundSectionListItem>
+              </BackgroundSectionList>
+
+              <BackgroundSectionList>
+                <BackgroundSectionSubHeader>
+                  Automated Tests
+                </BackgroundSectionSubHeader>
+                <BackgroundSectionListItem>
+                  Guaranteeing smoke tests all passed.
+                </BackgroundSectionListItem>
+                <BackgroundSectionListItem>
+                  Assuring address input UI variations didn't break.
+                </BackgroundSectionListItem>
+                <BackgroundSectionListItem>
+                  Confirming core Grubhub features function correctly.
+                </BackgroundSectionListItem>
+              </BackgroundSectionList>
             </BackgroundSectionContent>
           </BackgroundSection>
           <TextSectionContainer>
             <TextSectionSubHeader>Code Review</TextSectionSubHeader>
+            <p>
+              Although I list code review at the end, I always tried to check in
+              with engineering leads or senior throughout the process to ensure
+              my conceptual design and implemenation were optimal.
+            </p>
+            <p>
+              <strong>Feature Design - </strong>Throughout this project's
+              timeline, I constantly revisited this topic with more experienced
+              engineers. Although we didn't stray too far from the original
+              concept, there were various times where we agreed on shuffling the
+              overall implementation plan, only to find more incorrect
+              assumptions due to intricate component complexities and the need
+              to further iterate.
+            </p>
             <TextSectionDesc>
-              The code-review process for this particular project dragged on for
-              a long time.
+              <strong>Large Code Diff - </strong>Due to the organizational
+              restructure of the address input/autocomplete and the scope
+              change, the code diff for this project was difficult to consider
+              thoroughly without extended attention. This caused the review
+              process to drag on for a long time and really taught me the
+              importance of defining a reasonable project scope.
             </TextSectionDesc>
           </TextSectionContainer>
         </Container>

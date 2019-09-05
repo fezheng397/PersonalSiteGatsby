@@ -31,10 +31,10 @@ export class Backdrop extends React.Component<IBackdropProps> {
     );
   }
   public componentDidMount() {
-    document.documentElement.style.overflow = 'none';
+    document.documentElement.style.overflowY = 'hidden';
   }
 
   public componentWillUnmount() {
-    document.documentElement.style.overflow = 'default';
+    document.documentElement.style.overflowY = 'scroll';
   }
 }

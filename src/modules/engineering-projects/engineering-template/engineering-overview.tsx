@@ -52,7 +52,7 @@ export function EngineeringOverview({
           </TransitionItem>
           <TransitionItem
             timeout={500}
-            delay={400}
+            delay={200}
             transitionType="fade-translate"
             translateY={100}
           >
