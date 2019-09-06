@@ -232,8 +232,7 @@ const ProjectNavFab = styled.div`
   right: 20px;
   height: 64px;
   width: 64px;
-  background-color: ${Styles.Colors.textGHPurple};
-  fill: ${Styles.Colors.primaryWhite};
+  background-color: ${Styles.Colors.primaryWhite};
   border-radius: 50%;
   box-shadow: ${Styles.Shadows.imageShadow};
 
@@ -351,7 +350,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                       icon="close"
                       width={26}
                       height={26}
-                      fill={Styles.Colors.primaryWhite}
+                      fill={Styles.Colors.textLightBlack}
                     />
                   </ProjectNavFabIconContainer>
                 </TransitionItem>
@@ -362,7 +361,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                       icon="buffer"
                       width={26}
                       height={26}
-                      fill={Styles.Colors.primaryWhite}
+                      fill={Styles.Colors.textLightBlack}
                     />
                   </ProjectNavFabIconContainer>
                 </TransitionItem>

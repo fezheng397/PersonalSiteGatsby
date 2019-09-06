@@ -60,7 +60,7 @@ export function GetTheApp({  }: IGetTheAppProps) {
             <TextSectionSubHeader>Problem Statement</TextSectionSubHeader>
             <TextSectionDesc>
               For this feature, there wasn't necessarily a existing problem, but
-              rather potential improvement that coudl be made. In the food
+              rather potential improvement that could be made. In the food
               delivery space, because customers typically show greater loyalty
               to a brand after downloading their app, our PMs wanted to create a
               call to action to download the app right on the front page of our

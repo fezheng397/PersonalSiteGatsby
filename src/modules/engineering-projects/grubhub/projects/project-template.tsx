@@ -32,7 +32,7 @@ export const TextSectionSubHeader = styled(SectionSubHeader4)`
 export const BackgroundSectionSubHeader = styled(TextSectionSubHeader)`
   text-transform: initial;
   margin-top: 0;
-  margin-bottom: ${Styles.Spaces.spacing4};
+  margin-bottom: ${Styles.Spaces.spacing6};
 `;
 
 export const TextSectionDesc = styled.p`
@@ -49,7 +49,7 @@ export const BackgroundSection = styled.div`
 export const BackgroundSectionContent = styled.div`
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 
   ${Styles.MediaQuery.md} {
     flex-direction: column;
