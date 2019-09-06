@@ -1,44 +1,44 @@
-import { Container } from 'components/core/container/container';
-import { SectionHeaderMajor } from 'components/core/headers/headers';
+import { Container } from "components/core/container/container";
+import { SectionHeaderMajor } from "components/core/headers/headers";
 import {
   PhoneFrame,
-  PhoneFrameRow,
-} from 'components/core/phone-frame/phone-frame';
-import { TransitionItem } from 'components/core/transition/transition';
+  PhoneFrameRow
+} from "components/core/phone-frame/phone-frame";
+import { TransitionItem } from "components/core/transition/transition";
 import {
   BackgroundSection,
   IProjectTemplateProps,
-  ProjectTemplate,
-} from 'modules/engineering-projects/grubhub/projects/project-template';
+  ProjectTemplate
+} from "modules/engineering-projects/grubhub/projects/project-template";
 import {
   TextSectionContainer,
   TextSectionDesc,
-  TextSectionSubHeader,
-} from 'modules/engineering-projects/grubhub/projects/project-template';
-import React from 'react';
-import styled from 'styled-components';
-import { Styles } from 'vars';
+  TextSectionSubHeader
+} from "modules/engineering-projects/grubhub/projects/project-template";
+import React from "react";
+import styled from "styled-components";
+import { Styles } from "vars";
 
 export interface IGetTheAppProps {}
 
-const GetTheAppComponent = styled(Container)``;
+const GetTheAppComponent = styled.div``;
 
 const getTheAppTemplate: IProjectTemplateProps = {
-  imageAlt: 'Get The App Illustration',
-  imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
-  imagePosition: 'left',
+  imageAlt: "Get The App Illustration",
+  imageSrc: require("assets/grubhub/projects/autocomplete/autocomplete-icon.png"),
+  imagePosition: "left",
   objective: `To encourage users landing on the logged out homepage to download the mobile app without
   blocking their natural experience with a fullscreen pullover.`,
   roles: [
     {
-      roleHeader: 'Implementation',
-      roleDesc: 'Responsible for implementing the feature end to end.',
+      roleHeader: "Implementation",
+      roleDesc: "Responsible for implementing the feature end to end."
     },
     {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
-    },
-  ],
+      roleHeader: "Role Header",
+      roleDesc: "This is a text description"
+    }
+  ]
 };
 
 export function GetTheApp({  }: IGetTheAppProps) {
@@ -89,34 +89,34 @@ export function GetTheApp({  }: IGetTheAppProps) {
           <PhoneFrameRow>
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}
+              imageSrc={require("assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png")}
               caption="IPhone Option 1"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png')}
+              imageSrc={require("assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png")}
               caption="Android Option 2"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option3.png')}
+              imageSrc={require("assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option3.png")}
               caption="IPhone Option 3"
             />
           </PhoneFrameRow>
           <PhoneFrameRow>
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option1.png')}
+              imageSrc={require("assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option1.png")}
               caption="Android Option 1"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png')}
+              imageSrc={require("assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png")}
               caption="Android Option 2"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option3.png')}
+              imageSrc={require("assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option3.png")}
               caption="Android Option 3"
             />
           </PhoneFrameRow>

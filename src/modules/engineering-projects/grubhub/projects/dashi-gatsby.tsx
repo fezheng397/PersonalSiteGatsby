@@ -1,39 +1,39 @@
-import { Container } from 'components/core/container/container';
-import { SectionHeaderMajor } from 'components/core/headers/headers';
-import { TransitionItem } from 'components/core/transition/transition';
+import { Container } from "components/core/container/container";
+import { SectionHeaderMajor } from "components/core/headers/headers";
+import { TransitionItem } from "components/core/transition/transition";
 import {
   IProjectTemplateProps,
-  ProjectTemplate,
-} from 'modules/engineering-projects/grubhub/projects/project-template';
+  ProjectTemplate
+} from "modules/engineering-projects/grubhub/projects/project-template";
 import {
   TextSectionContainer,
   TextSectionDesc,
-  TextSectionSubHeader,
-} from 'modules/engineering-projects/grubhub/projects/project-template';
-import React from 'react';
-import styled from 'styled-components';
-import { Styles } from 'vars';
+  TextSectionSubHeader
+} from "modules/engineering-projects/grubhub/projects/project-template";
+import React from "react";
+import styled from "styled-components";
+import { Styles } from "vars";
 
 export interface IDashiGatsbyProps {}
 
-const DashiGatsbyComponent = styled(Container)``;
+const DashiGatsbyComponent = styled.div``;
 
 const dashiGatsbyTemplate: IProjectTemplateProps = {
-  imageAlt: 'Dashi Gatsby Illustration',
-  imageSrc: require('assets/grubhub/projects/dashi-gatsby/Gatsby_Contentful.jpg'),
-  imagePosition: 'left',
+  imageAlt: "Dashi Gatsby Illustration",
+  imageSrc: require("assets/grubhub/projects/dashi-gatsby/Gatsby_Contentful.jpg"),
+  imagePosition: "left",
   objective: `To architect a proof of concept (POC) migration for the diner platform's
   static-site generator repository from legacy technologies to GatsbyJS.`,
   roles: [
     {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
+      roleHeader: "Role Header",
+      roleDesc: "This is a text description"
     },
     {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
-    },
-  ],
+      roleHeader: "Role Header",
+      roleDesc: "This is a text description"
+    }
+  ]
 };
 
 export function DashiGatsby({  }: IDashiGatsbyProps) {
