@@ -14,6 +14,12 @@ import {
 } from 'utilities/window-util';
 import { Styles } from 'vars';
 
+/**
+ * TODO: Figure out mobile bug
+ * Organize window util possibly
+ * Organize this component better
+ */
+
 export interface IProjectNavProps {
   currentProject: number;
   navPosFixed: (fixed: boolean) => void;

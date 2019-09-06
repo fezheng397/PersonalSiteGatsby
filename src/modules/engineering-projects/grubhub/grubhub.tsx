@@ -6,7 +6,6 @@ import { CityPage } from 'modules/engineering-projects/grubhub/projects/city-pag
 import { DashiGatsby } from 'modules/engineering-projects/grubhub/projects/dashi-gatsby';
 import { GetTheApp } from 'modules/engineering-projects/grubhub/projects/get-the-app';
 import { ProjectNav } from 'modules/engineering-projects/grubhub/projects/project-nav';
-import { delay } from 'q';
 import React from 'react';
 import styled from 'styled-components';
 import {

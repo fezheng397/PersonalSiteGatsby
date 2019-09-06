@@ -50,11 +50,19 @@ export const BackgroundSectionContent = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  ${Styles.MediaQuery.md} {
+    flex-direction: column;
+  }
 `;
 
 export const BackgroundSectionList = styled.ul`
   list-style: disc;
   max-width: 400px;
+
+  ${Styles.MediaQuery.md} {
+    margin-bottom: ${Styles.Spaces.spacing6};
+  }
 `;
 
 export const BackgroundSectionListItem = styled.li`
