@@ -1,7 +1,7 @@
-import { Card } from 'components/core/card/card';
-import React from 'react';
-import styled from 'styled-components';
-import { Styles } from 'vars';
+import { Card } from "components/core/card/card";
+import React from "react";
+import styled from "styled-components";
+import { Styles } from "vars";
 
 export interface IProjectCardProps {
   imageDesc: string;
@@ -13,20 +13,19 @@ export interface IProjectCardProps {
 }
 
 const ProjectCardComponent = styled(Card)`
-  width: 300px;
-  height: 100%;
+  max-width: 800px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
 `;
 
-const ProjectImagecontainer = styled.div`
-  width: 300px;
-  height: 175px;
+const ProjectCardFlexItem = styled.div`
+  flex-basis: 50%;
+`;
+
+const ProjectImagecontainer = styled(ProjectCardFlexItem)`
   border-radius: ${Styles.Sizes.radius5};
   background: ${Styles.Colors.bgGray};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: ${Styles.Spaces.spacing2};
   transition: ${Styles.Transitions.boxShadow};
 
   &:hover {
@@ -35,8 +34,9 @@ const ProjectImagecontainer = styled.div`
 `;
 
 const ProjectCardImage = styled.img`
-  width: 220px;
-  height: 129px;
+  width: 100%;
+  height: 100%;
+  border-radius: ${Styles.Sizes.radius5};
 `;
 
 const ProjectName = styled.h2``;
@@ -57,19 +57,20 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
       location,
       projectName,
       role,
-      timePeriod,
+      timePeriod
     } = this.props;
     return (
       <ProjectCardComponent>
         <ProjectImagecontainer>
           <ProjectCardImage alt={imageDesc} src={imageSrc} />
         </ProjectImagecontainer>
-
-        <ProjectName>{projectName}</ProjectName>
-        <ProjectRole>{role}</ProjectRole>
-        <ProjectSetting>
-          {timePeriod} - {location}
-        </ProjectSetting>
+        <ProjectCardFlexItem>
+          <ProjectName>{projectName}</ProjectName>
+          <ProjectRole>{role}</ProjectRole>
+          <ProjectSetting>
+            {timePeriod} - {location}
+          </ProjectSetting>
+        </ProjectCardFlexItem>
       </ProjectCardComponent>
     );
   }
