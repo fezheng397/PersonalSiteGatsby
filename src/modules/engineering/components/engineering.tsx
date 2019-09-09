@@ -25,7 +25,7 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
           <StyledLink to="/engineering/grubhub">
             <ProjectCard
               imageDesc="Grubhub Project"
-              imageSrc={require("assets/logos/gh-1200.png")}
+              imageSrc={require("assets/logos/GrubHub_Logo_2016.svg")}
               location="New York, NY"
               projectName="Grubhub"
               role="Software Engineer Intern"

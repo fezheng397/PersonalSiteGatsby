@@ -13,33 +13,50 @@ export interface IProjectCardProps {
 }
 
 const ProjectCardComponent = styled(Card)`
-  max-width: 800px;
+  width: 800px;
+  min-width: 272px;
   cursor: pointer;
   display: flex;
   flex-direction: row;
-`;
-
-const ProjectCardFlexItem = styled.div`
-  flex-basis: 50%;
-`;
-
-const ProjectImagecontainer = styled(ProjectCardFlexItem)`
-  border-radius: ${Styles.Sizes.radius5};
-  background: ${Styles.Colors.bgGray};
   transition: ${Styles.Transitions.boxShadow};
 
   &:hover {
+    box-shadow: ${Styles.Shadows.imageShadowHover};
+  }
+
+  ${Styles.MediaQuery.md} {
+    flex-direction: column;
     box-shadow: ${Styles.Shadows.imageShadow};
   }
 `;
 
-const ProjectCardImage = styled.img`
+const ProjectCardFlexItem = styled.div`
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ProjectImagecontainer = styled(ProjectCardFlexItem)`
+  flex-basis: 55%;
+  height: 400px;
   width: 100%;
-  height: 100%;
+  border-radius: ${Styles.Sizes.radius5};
+  background: ${Styles.Colors.bgGray};
+`;
+
+const ProjectDescContainer = styled.div`
+  padding: ${Styles.Spaces.spacing4};
+`;
+
+const ProjectCardImage = styled.img`
+  width: 60%;
+  height: 60%;
   border-radius: ${Styles.Sizes.radius5};
 `;
 
-const ProjectName = styled.h2``;
+const ProjectName = styled.h1``;
 
 const ProjectRole = styled.h4`
   color: ${Styles.Colors.textGreen};
@@ -65,11 +82,13 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
           <ProjectCardImage alt={imageDesc} src={imageSrc} />
         </ProjectImagecontainer>
         <ProjectCardFlexItem>
-          <ProjectName>{projectName}</ProjectName>
-          <ProjectRole>{role}</ProjectRole>
-          <ProjectSetting>
-            {timePeriod} - {location}
-          </ProjectSetting>
+          <ProjectDescContainer>
+            <ProjectName>{projectName}</ProjectName>
+            <ProjectRole>{role}</ProjectRole>
+            <ProjectSetting>
+              {timePeriod} - {location}
+            </ProjectSetting>
+          </ProjectDescContainer>
         </ProjectCardFlexItem>
       </ProjectCardComponent>
     );

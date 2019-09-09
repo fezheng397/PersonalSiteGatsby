@@ -5,7 +5,7 @@ export const Fonts = {
   nunitoSemibold: '"Nunito-Semibold", sans-serif',
   nunitoBold: '"Nunito-Bold", sans-serif',
   fontRegular: '"Varela Round", sans-serif',
-  fontLogo: '"Varela Round", sans-serif',
+  fontLogo: '"Nunito", sans-serif',
 
   // Font Weights
   weightLight: 300,

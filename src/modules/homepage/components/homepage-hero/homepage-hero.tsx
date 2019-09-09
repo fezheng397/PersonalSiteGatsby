@@ -1,16 +1,16 @@
-import { HeroHeader, SubHeader } from 'components/core/headers/headers';
-import { IconProvider } from 'components/core/icon-provider/icon-provider';
-import { Icon } from 'components/core/icon/icon';
+import { HeroHeader, SubHeader } from "components/core/headers/headers";
+import { IconProvider } from "components/core/icon-provider/icon-provider";
+import { Icon } from "components/core/icon/icon";
 
 import {
   HeadshotImg,
   HeadshotImgContainer,
   HeroBanner,
   HomepageHeroContainer,
-  Titles,
-} from 'modules/homepage/components/homepage-hero/homepage-hero-styles';
-import React from 'react';
-import styled from 'styled-components';
+  Titles
+} from "modules/homepage/components/homepage-hero/homepage-hero-styles";
+import React from "react";
+import styled from "styled-components";
 
 const LogoContainer = styled.div`
   height: 50px;
@@ -27,7 +27,7 @@ export class HomepageHero extends React.Component {
         <IconProvider />
         <HeroBanner>
           <HeadshotImgContainer>
-            <HeadshotImg src={require('assets/pro-pic-min.png')} />
+            <HeadshotImg src={require("assets/pro-pic-min.png")} />
           </HeadshotImgContainer>
           <SubHeader>Hey, I'm</SubHeader>
           <HeroHeader>Felix Zheng</HeroHeader>
@@ -39,12 +39,12 @@ export class HomepageHero extends React.Component {
           <LogoContainer>
             <img
               alt="grubhub-logo"
-              src={require('assets/logos/gh-1200.png')}
+              src={require("assets/logos/gh-1200.png")}
               style={{
-                height: '100%',
-                width: '100%',
-                borderRadius: '10px',
-                transform: 'rotate(-15deg)',
+                height: "100%",
+                width: "100%",
+                borderRadius: "10px",
+                transform: "rotate(-15deg)"
               }}
             />
           </LogoContainer>
