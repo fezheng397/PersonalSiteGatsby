@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 export interface IIconProps {
   className?: string;
@@ -7,6 +7,8 @@ export interface IIconProps {
   icon?: string;
   width?: number;
   height?: number;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 export interface IIconState {}

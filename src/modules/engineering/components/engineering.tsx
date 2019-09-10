@@ -10,12 +10,16 @@ export interface IEngineeringProps {}
 
 const EngineeringComponent = styled(Container)`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  padding: ${Styles.Spaces.spacing8};
+  padding: ${Styles.Spaces.spacing8} 0;
 `;
 
-const ProjectContainer = styled.div``;
+const ProjectContainer = styled.div`
+  padding: ${Styles.Spaces.spacing8} 0;
+`;
 
 export class Engineering extends React.Component<IEngineeringProps, {}> {
   public render() {

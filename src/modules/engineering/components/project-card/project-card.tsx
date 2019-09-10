@@ -49,7 +49,7 @@ const ProjectDescContainer = styled.div`
 `;
 
 const ProjectCardImage = styled.img`
-  width: 60%;
+  width: 50%;
 `;
 
 const ProjectName = styled.h1``;
