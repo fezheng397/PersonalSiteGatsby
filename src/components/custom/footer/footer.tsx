@@ -36,7 +36,7 @@ const FooterIconContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: transparent;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   margin: 0 ${Styles.Spaces.spacing4};
 
   &:hover {
@@ -53,6 +53,11 @@ const iconDefaultFills = {
   instagram: "#e1306c"
 };
 
+const FooterHeader = styled.h2`
+  color: ${Styles.Colors.textLightBlack};
+  margin-bottom: ${Styles.Spaces.spacing8};
+`;
+
 export class Footer extends React.Component<IFooterProps, IFooterState> {
   state = {
     linkedInIconFill: iconDefaultFills.linkedIn,
@@ -65,6 +70,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
     return (
       <FooterComponent>
         <FooterContainer>
+          <FooterHeader>In case you need me</FooterHeader>
           <FooterIconRow>
             <li>
               <a href="https://www.linkedin.com/in/felixzheng3/">

@@ -3,6 +3,7 @@ import { Navbar } from "components/custom/navbar/navbar";
 import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
+import { Footer } from "components/custom/footer/footer";
 
 export interface ILayoutProps {
   children?: any;
@@ -49,6 +50,7 @@ export function Layout(props: ILayoutProps) {
       </Helmet>
       {!hideNav ? <Navbar /> : null}
       <SiteContent {...props}>{children}</SiteContent>
+      <Footer />
     </SiteContainer>
   );
 }
