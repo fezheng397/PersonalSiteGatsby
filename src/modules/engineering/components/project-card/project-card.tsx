@@ -13,11 +13,25 @@ export interface IProjectCardProps {
 }
 
 const ProjectCardComponent = styled(Card)`
-  width: 800px;
+  width: 100%;
   min-width: 272px;
   cursor: pointer;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+`;
+
+const ProjectCardFlexItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const ProjectImagecontainer = styled(ProjectCardFlexItem)`
+  height: 350px;
+  width: 480px;
+  align-items: center;
+  border-radius: ${Styles.Sizes.radius5};
+  background: ${Styles.Colors.bgGray};
   transition: ${Styles.Transitions.boxShadow};
 
   &:hover {
@@ -30,30 +44,12 @@ const ProjectCardComponent = styled(Card)`
   }
 `;
 
-const ProjectCardFlexItem = styled.div`
-  flex-basis: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ProjectImagecontainer = styled(ProjectCardFlexItem)`
-  flex-basis: 55%;
-  height: 400px;
-  width: 100%;
-  border-radius: ${Styles.Sizes.radius5};
-  background: ${Styles.Colors.bgGray};
-`;
-
 const ProjectDescContainer = styled.div`
-  padding: ${Styles.Spaces.spacing4};
+  padding: ${Styles.Spaces.spacing4} 0;
 `;
 
 const ProjectCardImage = styled.img`
   width: 60%;
-  height: 60%;
-  border-radius: ${Styles.Sizes.radius5};
 `;
 
 const ProjectName = styled.h1``;

@@ -1,8 +1,10 @@
-import { StyledLink } from 'components/core/link/link-styles';
-import { CatalogCard } from 'modules/homepage/components/catalog/catalog-card';
-import React from 'react';
-import styled from 'styled-components';
-import { Styles } from 'vars';
+import { StyledLink } from "components/core/link/link-styles";
+import { CatalogCard } from "modules/homepage/components/catalog/catalog-card";
+import React from "react";
+import styled from "styled-components";
+import { Styles } from "vars";
+import { SectionHeader } from "components/core/headers/headers";
+import { Engineering } from "modules/engineering/components/engineering";
 
 const HomepageCatalogComponent = styled.div`
   align-items: center;
@@ -25,14 +27,15 @@ export class HomepageCatalog extends React.Component {
     return (
       <HomepageCatalogComponent>
         <CatalogHeader>
-          <h1>Check out what I do!</h1>
+          <SectionHeader>Check out what I do!</SectionHeader>
         </CatalogHeader>
-
+        <Engineering />
+        {/* 
         <CardContainer>
           <StyledLink to="/engineering">
             <CatalogCard
               imageDesc="Engineering Image"
-              imageSrc={require('assets/categories/softeng/active-stock.jpg')}
+              imageSrc={require("assets/categories/softeng/active-stock.jpg")}
               header="Engineering"
               subHeader="Development"
             />
@@ -40,7 +43,7 @@ export class HomepageCatalog extends React.Component {
           <StyledLink to="/music">
             <CatalogCard
               imageDesc="Engineering Image"
-              imageSrc={require('assets/categories/music/active-stock.jpg')}
+              imageSrc={require("assets/categories/music/active-stock.jpg")}
               header="Music"
               subHeader="Development"
             />
@@ -51,7 +54,7 @@ export class HomepageCatalog extends React.Component {
           <StyledLink to="/blog">
             <CatalogCard
               imageDesc="Engineering Image"
-              imageSrc={require('assets/categories/blog/active-stock.jpg')}
+              imageSrc={require("assets/categories/blog/active-stock.jpg")}
               header="Blog"
               subHeader="Development"
             />
@@ -59,12 +62,13 @@ export class HomepageCatalog extends React.Component {
           <StyledLink to="/design">
             <CatalogCard
               imageDesc="Engineering Image"
-              imageSrc={require('assets/categories/design/active-stock.jpg')}
+              imageSrc={require("assets/categories/design/active-stock.jpg")}
               header="Design"
               subHeader="Development"
             />
           </StyledLink>
         </CardContainer>
+        */}
       </HomepageCatalogComponent>
     );
   }

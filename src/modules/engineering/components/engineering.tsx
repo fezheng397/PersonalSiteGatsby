@@ -4,6 +4,7 @@ import { StyledLink } from "components/core/link/link-styles";
 import { ProjectCard } from "modules/engineering/components/project-card/project-card";
 import React from "react";
 import styled from "styled-components";
+import { Styles } from "vars";
 
 export interface IEngineeringProps {}
 
@@ -11,6 +12,7 @@ const EngineeringComponent = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: ${Styles.Spaces.spacing8};
 `;
 
 const ProjectContainer = styled.div``;
@@ -19,8 +21,6 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
   public render() {
     return (
       <EngineeringComponent size="lg">
-        <SectionHeader>Projects</SectionHeader>
-
         <ProjectContainer>
           <StyledLink to="/engineering/grubhub">
             <ProjectCard

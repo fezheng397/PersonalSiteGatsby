@@ -1,13 +1,14 @@
-import styled from 'styled-components';
-import { Styles } from 'vars';
+import styled from "styled-components";
+import { Styles } from "vars";
+import { Container } from "components/core/container/container";
 
 export const HeadshotImg = styled.img`
   height: 100%;
 `;
 
 export const HeadshotImgContainer = styled.div`
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -16,7 +17,7 @@ export const HeadshotImgContainer = styled.div`
   border: 4px rgba(0, 0, 0, 0.02) solid;
 `;
 
-export const HeroBanner = styled.div`
+export const HeroBanner = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +30,7 @@ export const HomepageHeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: ${Styles.Colors.bgGray};
 `;
 
 export const Titles = styled.div`

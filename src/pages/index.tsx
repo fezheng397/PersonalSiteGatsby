@@ -1,10 +1,11 @@
-import { graphql } from 'gatsby';
-import { Layout } from 'layouts';
-import * as React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import 'styles/core.scss';
-import { lightMode } from 'vars/light-mode';
-import { Homepage } from '../modules/homepage/components/homepage';
+import { graphql } from "gatsby";
+import { Layout } from "layouts";
+import * as React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import "styles/core.scss";
+import { lightMode } from "vars/light-mode";
+import { Homepage } from "../modules/homepage/components/homepage";
+import { Footer } from "components/custom/footer/footer";
 
 interface IndexPageProps {
   data: {
@@ -38,6 +39,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
       <ThemeProvider theme={lightMode}>
         <Layout hideNav={true}>
           <Homepage />
+          <Footer />
         </Layout>
       </ThemeProvider>
     );
