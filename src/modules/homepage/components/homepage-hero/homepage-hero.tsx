@@ -27,8 +27,8 @@ export class HomepageHero extends React.Component {
           <HeroHeader>Felix Zheng</HeroHeader>
           <Titles>
             <HeroDescription>
-              Hey, I'm Felix. I'm Software Engineer based in New York area,
-              currently working with Front-end at Grubhub.
+              Hey, I'm Felix. I'm a Software Engineer based in the New York
+              area, currently working with Front-end at Grubhub.
             </HeroDescription>
             <HeroDescription>
               Previously, I've worn many hats. Retired breakdancer, mediocre
