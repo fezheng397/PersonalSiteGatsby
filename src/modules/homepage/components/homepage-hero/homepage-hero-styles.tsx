@@ -22,6 +22,7 @@ export const HeroBanner = styled(Container)`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: ${Styles.Spaces.spacing8} ${Styles.Spaces.spacing6};
 `;
 
 export const HomepageHeroContainer = styled.div`

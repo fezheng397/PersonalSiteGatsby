@@ -14,7 +14,8 @@ const EngineeringComponent = styled(Container)`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: ${Styles.Spaces.spacing8} 0;
+  padding-top: ${Styles.Spaces.spacing8};
+  padding-bottom: ${Styles.Spaces.spacing8};
 `;
 
 const ProjectContainer = styled.div`

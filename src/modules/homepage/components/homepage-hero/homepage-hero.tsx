@@ -13,6 +13,10 @@ import { Styles } from "vars";
 const HeroDescription = styled.p`
   font-size: 20px;
   color: ${Styles.Colors.textLightBlack};
+
+  ${Styles.MediaQuery.md} {
+    font-size: 18px;
+  }
 `;
 
 export class HomepageHero extends React.Component {
