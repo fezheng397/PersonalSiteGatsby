@@ -52,8 +52,8 @@ export class HomepageHero extends React.Component {
               translateY={50}
             >
               <HeroDescription>
-                Hey, I'm Felix. I'm a Software Engineer based in the New York
-                area, currently working with Front-end at Grubhub.
+                I'm a Software Engineer based in the New York area, currently
+                working with Front-end at Grubhub.
               </HeroDescription>
             </TransitionItem>
             <br />

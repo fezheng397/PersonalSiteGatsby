@@ -70,18 +70,29 @@ export function GetTheApp({  }: IGetTheAppProps) {
             </TextSectionDesc>
 
             <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
+            <p>
+              Despite the simplicity of the feature, there were a few details
+              stakeholders and managers wanted done correctly.
+            </p>
+            <p>
+              <strong>1) Ensuring Variant Doesn't Flicker - </strong>Because the
+              new design needed to be tested before it was rolled out to all
+              users, it needed to be implemented as a variant for Google
+              Optimize. The problem with variants, especially on a page like the
+              logged-out homepage, is that the default content will be initially
+              served. Afterwards, based on whether or not the variant is active,
+              it will either switch to the variant's content, or maintain the
+              default. During this second step, the user may see a slight
+              flicker on the screen, resulting in a poor user experience that we
+              intended to avoid.
+            </p>
             <TextSectionDesc>
-              Despite the simplicity of the feature, there were a few things my
-              lead wanted me to watch out for. The first was to ensure the
-              variant doesn't flicker on the homepage. Because we were bringing
-              the feature in as an A/B test run through variants on Google
-              Optimize, when serving the page, it would serve the initial
-              default HTML first, then process whether the variant should be
-              turned on for the user, and finally switch it over to the new
-              variant's content. As a result, there's the danger of a slight
-              flicker prior to showing the correct content, providing a poor
-              user experience we wanted to avoid. 2. design variants so that
-              they are easy to understand for stakeholders to turn on/off
+              <strong>2) Designing Intuitive Variants - </strong>
+              In addition to business logic, much of the typeahead logic that
+              drives the autocomplete feature resides within the address input
+              component as well. I wanted to differentiate this logic as well,
+              leaving just a render layer/subcomponent at the bottom of the
+              chain to handle conditional rendering.
             </TextSectionDesc>
           </TextSectionContainer>
         </Container>
@@ -128,24 +139,15 @@ export function GetTheApp({  }: IGetTheAppProps) {
               After the implementation was complete, I moved onto stakeholder
               review, ensuring both the designers and the product managers
               involved throughout the process were satisfied with the engineered
-              feature. Typically, this step was pretty straightforward during my
-              3 months at Grubhub. However, for this project there was a scope
-              change midway through.
+              feature. For the get the app feature, review was a relatively
+              straightforward process. There were a few small UI changes
+              requested, but otherwise, the engineered product exceeded
+              expectations.
             </TextSectionDesc>
 
-            <TextSectionSubHeader>Testing</TextSectionSubHeader>
+            <TextSectionSubHeader>Testing & Code Review</TextSectionSubHeader>
             <TextSectionDesc>
-              Once the stakeholders were satisfied, I moved on to testing. For
-            </TextSectionDesc>
-          </TextSectionContainer>
-          <BackgroundSection bgColor={Styles.Colors.bgGray}>
-            <p>This is a text description</p>
-          </BackgroundSection>
-          <TextSectionContainer>
-            <TextSectionSubHeader>Code Review</TextSectionSubHeader>
-            <TextSectionDesc>
-              The code-review process for this particular project dragged on for
-              a long time.
+              Never really got to these steps due to the end of my internship :(
             </TextSectionDesc>
           </TextSectionContainer>
         </Container>

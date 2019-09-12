@@ -1,13 +1,13 @@
-import { SectionSubHeader4 } from 'components/core/headers/headers';
-import { string } from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import { Styles } from 'vars';
+import { SectionSubHeader4 } from "components/core/headers/headers";
+import { string } from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import { Styles } from "vars";
 
 export interface IProjectTemplateProps {
   imageSrc: string;
   imageAlt: string;
-  imagePosition: 'left' | 'right';
+  imagePosition: "left" | "right";
   objective: string;
   roles: Role[];
 }
@@ -44,6 +44,7 @@ export const BackgroundSection = styled.div`
   border-radius: ${Styles.Sizes.radius5};
   color: #fff;
   padding: ${Styles.Spaces.section8} ${Styles.Spaces.section8};
+  margin-bottom: ${Styles.Spaces.spacing16};
 `;
 
 export const BackgroundSectionContent = styled.div`
@@ -101,7 +102,7 @@ const AutocompleteImage = styled.img`
 
 const ProjectSectionTextContainer = styled.div`
   ${(props: IProjectTemplateProps) =>
-    props.imagePosition === 'left'
+    props.imagePosition === "left"
       ? `margin-left: ${Styles.Spaces.section32};`
       : `margin-right: ${Styles.Spaces.section32};`}
 
@@ -121,7 +122,7 @@ export function ProjectTemplate(props: IProjectTemplateProps) {
 
   return (
     <ProjectTemplateSection>
-      {imagePosition === 'left' ? (
+      {imagePosition === "left" ? (
         <AutocompleteImageContainer>
           <AutocompleteImage alt={imageAlt} src={imageSrc} />
         </AutocompleteImageContainer>
@@ -141,7 +142,7 @@ export function ProjectTemplate(props: IProjectTemplateProps) {
         <ul>
           {roles.map((role, idx) => {
             return (
-              <li key={'role'.concat(idx.toString())}>
+              <li key={"role".concat(idx.toString())}>
                 <strong>
                   {idx + 1}) {role.roleHeader} - {}
                 </strong>
@@ -151,7 +152,7 @@ export function ProjectTemplate(props: IProjectTemplateProps) {
           })}
         </ul>
       </ProjectSectionTextContainer>
-      {imagePosition === 'right' ? (
+      {imagePosition === "right" ? (
         <AutocompleteImageContainer>
           <AutocompleteImage alt={imageAlt} src={imageSrc} />
         </AutocompleteImageContainer>

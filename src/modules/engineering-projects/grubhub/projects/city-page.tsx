@@ -51,12 +51,12 @@ export function CityPage({  }: ICityPageProps) {
         </Container>
         <Container id="city-page-project-analysis" size="lg">
           <TextSectionContainer>
-            <TextSectionSubHeader>The Problem</TextSectionSubHeader>
+            <TextSectionSubHeader>Problem Statement</TextSectionSubHeader>
             <TextSectionDesc>
               The city carousel was a new pattern. No locking when swiping on
               mobile, leading to an unintuitive and disruptive user experience.
             </TextSectionDesc>
-            <TextSectionSubHeader>The Problem</TextSectionSubHeader>
+            <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
             <TextSectionDesc>
               The city carousel was a new pattern. No locking when swiping on
               mobile, leading to an unintuitive and disruptive user experience.
