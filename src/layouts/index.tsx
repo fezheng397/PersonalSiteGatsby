@@ -4,6 +4,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { Footer } from "components/custom/footer/footer";
+import { TransitionItem } from "components/core/transition/transition";
 
 export interface ILayoutProps {
   children?: any;
@@ -48,9 +49,11 @@ export function Layout(props: ILayoutProps) {
           rel="stylesheet"
         ></link>
       </Helmet>
-      {!hideNav ? <Navbar /> : null}
-      <SiteContent {...props}>{children}</SiteContent>
-      <Footer />
+      <TransitionItem timeout={200} transitionType="fade">
+        {!hideNav ? <Navbar /> : null}
+        <SiteContent {...props}>{children}</SiteContent>
+        <Footer />
+      </TransitionItem>
     </SiteContainer>
   );
 }

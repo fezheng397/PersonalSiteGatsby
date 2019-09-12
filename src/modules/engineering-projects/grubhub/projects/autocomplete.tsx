@@ -39,11 +39,11 @@ const autocompleteTemplate: IProjectTemplateProps = {
   order.`,
   roles: [
     {
-      roleHeader: "Role Header",
+      roleHeader: "Feature Architecture",
       roleDesc: "This is a text description"
     },
     {
-      roleHeader: "Role Header",
+      roleHeader: "Implementation",
       roleDesc: "This is a text description"
     }
   ]

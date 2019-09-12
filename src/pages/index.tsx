@@ -5,6 +5,7 @@ import styled, { ThemeProvider } from "styled-components";
 import "styles/core.scss";
 import { lightMode } from "vars/light-mode";
 import { Homepage } from "../modules/homepage/components/homepage";
+import { TransitionItem } from "components/core/transition/transition";
 
 interface IndexPageProps {
   data: {
