@@ -61,9 +61,13 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
               different third-party technologies, which both made the project
               hard to maintain, and time-consuming to onboard to new members.
             </TextSectionDesc>
-            <TextSectionSubHeader>
-              Reviewing Team Lead Expectations
-            </TextSectionSubHeader>
+            <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
+            <TextSectionDesc>
+              Since this was a project that was solely based on the engineering
+              side, I would be giving the finished deliverable to G&L's team
+              lead.
+            </TextSectionDesc>
+            <TextSectionSubHeader>Project Architecture</TextSectionSubHeader>
             <TextSectionDesc>
               Since this was a project that was solely based on the engineering
               side, I would be giving the finished deliverable to G&L's team

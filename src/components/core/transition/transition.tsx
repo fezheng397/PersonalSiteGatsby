@@ -1,14 +1,15 @@
-import React from 'react';
-import { Transition } from 'react-transition-group';
-import styled from 'styled-components';
+import React from "react";
+import { Transition } from "react-transition-group";
+import styled from "styled-components";
 
 export interface ITransitionItemProps {
   appear?: boolean;
   className?: string;
   delay?: number;
   inState?: boolean;
+  scaleSize?: number;
   timeout: number;
-  transitionType: 'fade' | 'fade-translate' | 'translate';
+  transitionType: "fade" | "fade-scale" | "fade-translate" | "translate";
   translateX?: number;
   translateY?: number;
 }
@@ -20,6 +21,7 @@ export interface ITransitionItemState {
 export interface IAnimationProps {
   animationState: string;
   delay?: number;
+  scaleSize?: number;
   timeout: number;
   translateX?: number;
   translateY?: number;
@@ -34,7 +36,7 @@ export const Translate = styled(TransitionContainer)`
   transition: ${(props: IAnimationProps) => props.timeout}ms ease-out;
   transition-delay: ${(props: IAnimationProps) => props.delay}ms;
   transform: ${(props: IAnimationProps) =>
-    props.animationState === 'entered'
+    props.animationState === "entered"
       ? `translate(0, 0)`
       : `translate(${props.translateX}px, ${props.translateY}px)`};
 `;
@@ -43,18 +45,27 @@ export const Fade = styled(TransitionContainer)`
   transition: ${(props: IAnimationProps) => props.timeout}ms ease-out;
   transition-delay: ${(props: IAnimationProps) => props.delay}ms;
   opacity: ${(props: IAnimationProps) =>
-    props.animationState === 'entered' ? 1 : 0};
+    props.animationState === "entered" ? 1 : 0};
 `;
 
 export const FadeTranslate = styled(TransitionContainer)`
   transition: ${(props: IAnimationProps) => props.timeout}ms ease-out;
   transition-delay: ${(props: IAnimationProps) => props.delay}ms;
   opacity: ${(props: IAnimationProps) =>
-    props.animationState === 'entered' ? 1 : 0};
+    props.animationState === "entered" ? 1 : 0};
   transform: ${(props: IAnimationProps) =>
-    props.animationState === 'entered'
+    props.animationState === "entered"
       ? `translate(0, 0)`
       : `translate(${props.translateX}px, ${props.translateY}px)`};
+`;
+
+export const FadeScale = styled(TransitionContainer)`
+  transition: ${(props: IAnimationProps) => props.timeout}ms ease-out;
+  transition-delay: ${(props: IAnimationProps) => props.delay}ms;
+  opacity: ${(props: IAnimationProps) =>
+    props.animationState === "entered" ? 1 : 0};
+  transform: ${(props: IAnimationProps) =>
+    `scale(${props.animationState === "entered" ? 1 : props.scaleSize})`};
 `;
 
 export class TransitionItem extends React.PureComponent<
@@ -65,11 +76,11 @@ export class TransitionItem extends React.PureComponent<
     appear: true,
     delay: 0,
     translateX: 0,
-    translateY: 0,
+    translateY: 0
   };
 
   public state = {
-    animate: true,
+    animate: true
   };
 
   public render() {
@@ -78,10 +89,11 @@ export class TransitionItem extends React.PureComponent<
       children,
       delay,
       inState,
+      scaleSize,
       timeout,
       transitionType,
       translateX,
-      translateY,
+      translateY
     } = this.props;
     const { animate } = this.state;
 
@@ -93,14 +105,14 @@ export class TransitionItem extends React.PureComponent<
         unmountOnExit={true}
         mountOnEnter={true}
       >
-        {(state) => {
-          if (transitionType === 'fade') {
+        {state => {
+          if (transitionType === "fade") {
             return (
               <Fade animationState={state} delay={delay} timeout={timeout}>
                 {children}
               </Fade>
             );
-          } else if (transitionType === 'translate') {
+          } else if (transitionType === "translate") {
             return (
               <Translate
                 animationState={state}
@@ -112,7 +124,7 @@ export class TransitionItem extends React.PureComponent<
                 {children}
               </Translate>
             );
-          } else if (transitionType === 'fade-translate') {
+          } else if (transitionType === "fade-translate") {
             return (
               <FadeTranslate
                 animationState={state}
@@ -123,6 +135,17 @@ export class TransitionItem extends React.PureComponent<
               >
                 {children}
               </FadeTranslate>
+            );
+          } else if (transitionType === "fade-scale") {
+            return (
+              <FadeScale
+                animationState={state}
+                delay={delay}
+                timeout={timeout}
+                scaleSize={scaleSize}
+              >
+                {children}
+              </FadeScale>
             );
           }
         }}

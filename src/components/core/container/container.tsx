@@ -1,24 +1,31 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Styles } from 'vars';
+import React from "react";
+import styled from "styled-components";
+import { Styles } from "vars";
 
 export interface IContainerProps {
   className?: string;
   id?: string;
   noMobilePadding?: boolean;
-  size?: 'sm' | 'md' | 'lg' | 'fluid';
+  size?: "sm" | "md" | "lg" | "fluid";
 }
 
 const sizes = {
-  sm: '600px',
-  md: '800px',
-  lg: '1040px',
-  fluid: '100%',
+  sm: "600px",
+  md: "800px",
+  lg: "1040px",
+  fluid: "100%"
 };
 
 const ContainerComponent = styled.div`
   max-width: ${(props: IContainerProps) => sizes[props.size]};
   margin: 0 auto;
+  ${(props: IContainerProps) =>
+    !props.noMobilePadding
+      ? `
+  padding: 0 ${Styles.Spaces.mobileSmall};
+`
+      : null}
+
   ${(props: IContainerProps) =>
     !props.noMobilePadding
       ? `${Styles.MediaQuery.md} {

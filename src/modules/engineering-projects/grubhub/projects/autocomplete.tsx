@@ -1,13 +1,13 @@
-import { Container } from 'components/core/container/container';
+import { Container } from "components/core/container/container";
 import {
   CenteredSectionHeader2,
-  SectionHeaderMajor,
-} from 'components/core/headers/headers';
+  SectionHeaderMajor
+} from "components/core/headers/headers";
 import {
   PhoneFrame,
-  PhoneFrameRow,
-} from 'components/core/phone-frame/phone-frame';
-import { TransitionItem } from 'components/core/transition/transition';
+  PhoneFrameRow
+} from "components/core/phone-frame/phone-frame";
+import { TransitionItem } from "components/core/transition/transition";
 import {
   BackgroundSection,
   BackgroundSectionContent,
@@ -16,37 +16,37 @@ import {
   BackgroundSectionSubHeader,
   TextSectionContainer,
   TextSectionDesc,
-  TextSectionSubHeader,
-} from 'modules/engineering-projects/grubhub/projects/project-template';
+  TextSectionSubHeader
+} from "modules/engineering-projects/grubhub/projects/project-template";
 import {
   IProjectTemplateProps,
-  ProjectTemplate,
-} from 'modules/engineering-projects/grubhub/projects/project-template';
-import React from 'react';
-import styled from 'styled-components';
-import { Styles } from 'vars';
+  ProjectTemplate
+} from "modules/engineering-projects/grubhub/projects/project-template";
+import React from "react";
+import styled from "styled-components";
+import { Styles } from "vars";
 
 export interface IAutocompleteProps {}
 
 const AutocompleteComponent = styled.div``;
 
 const autocompleteTemplate: IProjectTemplateProps = {
-  imageAlt: 'Autocomplete Illustration',
-  imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
-  imagePosition: 'left',
+  imageAlt: "Autocomplete Illustration",
+  imageSrc: require("assets/grubhub/projects/autocomplete/autocomplete-icon.png"),
+  imagePosition: "left",
   objective: `To create an intuitive and efficient experience for users landing on
   the logged out homepage looking to quickly find food near them and
   order.`,
   roles: [
     {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
+      roleHeader: "Role Header",
+      roleDesc: "This is a text description"
     },
     {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
-    },
-  ],
+      roleHeader: "Role Header",
+      roleDesc: "This is a text description"
+    }
+  ]
 };
 
 export function Autocomplete({  }: IAutocompleteProps) {
@@ -78,17 +78,17 @@ export function Autocomplete({  }: IAutocompleteProps) {
           <PhoneFrameRow>
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/autocomplete/homepage-default-cropped.png')}
+              imageSrc={require("assets/grubhub/projects/autocomplete/homepage-default-cropped.png")}
               caption="Current Logged-out Homepage Entry"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/autocomplete/homepage-problem-noscroll-cropped.png')}
+              imageSrc={require("assets/grubhub/projects/autocomplete/homepage-problem-noscroll-cropped.png")}
               caption="After Focusing on Address Input (Results are blocked)"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/autocomplete/homepage-problem-scrolled-cropped.png')}
+              imageSrc={require("assets/grubhub/projects/autocomplete/homepage-problem-scrolled-cropped.png")}
               caption="After Scrolling to See Results"
             />
           </PhoneFrameRow>
@@ -140,34 +140,34 @@ export function Autocomplete({  }: IAutocompleteProps) {
             <PhoneFrameRow>
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require('assets/grubhub/projects/autocomplete/homepage.png')}
+                imageSrc={require("assets/grubhub/projects/autocomplete/homepage.png")}
                 caption="Logged-out Homepage Entry - Redesigned Address Input"
               />
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require('assets/grubhub/projects/autocomplete/entry.png')}
+                imageSrc={require("assets/grubhub/projects/autocomplete/entry.png")}
                 caption="After Focusing on Address Input - Fullscreen Modal for Autocomplete"
               />
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require('assets/grubhub/projects/autocomplete/search-results.png')}
+                imageSrc={require("assets/grubhub/projects/autocomplete/search-results.png")}
                 caption="After Typing to See Results"
               />
             </PhoneFrameRow>
             <PhoneFrameRow>
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require('assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif')}
+                imageSrc={require("assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif")}
                 caption="Basic Autocomplete Functionality"
               />
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require('assets/grubhub/projects/autocomplete/geolocate.gif')}
+                imageSrc={require("assets/grubhub/projects/autocomplete/geolocate.gif")}
                 caption="Geolocate Button Functionality"
               />
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require('assets/grubhub/projects/autocomplete/use-my-location.gif')}
+                imageSrc={require("assets/grubhub/projects/autocomplete/use-my-location.gif")}
                 caption="Use My Location Functionality"
               />
             </PhoneFrameRow>
@@ -188,18 +188,18 @@ export function Autocomplete({  }: IAutocompleteProps) {
               <strong>1) Project Scope Change - </strong>We had originally
               assumed the fullscreen autocomplete was the only feature to
               implement. However, after handing the feature off to the PM, she
-              informed us that she had forgotten to mention that the redesigned
-              address input would be apart of this experiment. Although the
-              additional changes weren't too complex (mainly UI alterations with
-              conditional rendering), the pure size of the growing pull request
-              along with midway context switching made the scope change a
-              challenge.
+              informed us that she had forgotten to mention that a visual
+              redesign of the address input would be apart of this experiment.
+              The additional changes weren't too complex (mainly UI alterations
+              with conditional rendering), but the pure size of the growing pull
+              request along with midway context switching taught me a lesson on
+              the importance of defining a reasonable scope for a project.
             </p>
             <TextSectionDesc>
-              <strong>2) A/B Testing with Variants - </strong> The search
-              autocomplete feature was my first chance to work with variants.
-              These were implemented so PMs could toggle new changes/features
-              and target smaller percentages of the user base during A/B testing
+              <strong>2) A/B Testing with Variants - </strong> The project was
+              my first chance to work with variants. These were implemented so
+              PMs could toggle new changes/features without altering code and
+              target smaller percentages of the user base during A/B testing
               using Google Optimize. Although the learning curve wasn't too
               steep, I had to maintain constant communication with stakeholders
               during review to ensure my variants were intuitive to customize
@@ -211,12 +211,8 @@ export function Autocomplete({  }: IAutocompleteProps) {
               Once the stakeholders were satisfied, I moved on to testing.
               Because the address input was used in so many places, I had to be
               extra careful when ensuring none of my changes broke any other
-              features. In addition, this was a period where many of our
-              automated smoke tests were migrated to a new platform, TestCafe.
-              Because our prior automated tests in Protractor (Angular) were so
-              flaky and complex, this was a great opportunity to learn the new
-              testing technology in depth. Here's a breakdown of functionalities
-              I had to alter/write tests for:
+              features. Here's a breakdown of functionalities I had to
+              write/alter tests for:
             </TextSectionDesc>
           </TextSectionContainer>
           <BackgroundSection bgColor={Styles.Colors.bgGray}>
@@ -260,9 +256,9 @@ export function Autocomplete({  }: IAutocompleteProps) {
           <TextSectionContainer>
             <TextSectionSubHeader>Code Review</TextSectionSubHeader>
             <p>
-              Although I list code review at the end, I always tried to check in
-              with engineering leads or senior throughout the process to ensure
-              my conceptual design and implemenation were optimal.
+              Although I list code review at the end, I always checked in with
+              engineering leads or senior throughout the process to ensure my
+              conceptual design and implemenation were optimal.
             </p>
             <p>
               <strong>Feature Design - </strong>Throughout this project's

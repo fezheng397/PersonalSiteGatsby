@@ -16,6 +16,12 @@ const EngineeringComponent = styled(Container)`
   align-items: center;
   padding-top: ${Styles.Spaces.spacing8};
   padding-bottom: ${Styles.Spaces.spacing8};
+
+  ${Styles.MediaQuery.md} {
+    flex-direction: column;
+    justify-content: center;
+    align-item: center;
+  }
 `;
 
 const ProjectContainer = styled.div`
