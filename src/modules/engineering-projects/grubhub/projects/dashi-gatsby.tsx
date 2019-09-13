@@ -85,7 +85,7 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
               internal implementation of GraphQL
             </p>
             <p>
-              <strong>4) Building Pages</strong>Working with Gatsby's Node
+              <strong>4) Building Pages - </strong>Working with Gatsby's Node
               implementation to inject queried data into React templates
             </p>
             <TextSectionSubHeader>Project Architecture</TextSectionSubHeader>
@@ -102,9 +102,9 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
               changed by the migration.
             </p>
             <p>
-              <strong>2) Migrating Reptar</strong>Using Gatsby packages such as
-              gatsby-markdown-remark and a few custom-written scripts, I planned
-              to replace Reptar with Gatsby's GraphQL data layer.
+              <strong>2) Migrating Reptar - </strong>Using Gatsby packages such
+              as gatsby-markdown-remark and a few custom-written scripts, I
+              planned to replace Reptar with Gatsby's GraphQL data layer.
             </p>
             <p>
               <strong>3) Migrating Other part that converts templates</strong>
