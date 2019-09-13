@@ -61,7 +61,18 @@ export function CityPage({  }: ICityPageProps) {
               The city carousel was a new pattern. No locking when swiping on
               mobile, leading to an unintuitive and disruptive user experience.
             </TextSectionDesc>
-            <TextSectionSubHeader>The Problem</TextSectionSubHeader>
+            <TextSectionSubHeader>Feature Architecture</TextSectionSubHeader>
+            <TextSectionDesc>
+              The city carousel was a new pattern. No locking when swiping on
+              mobile, leading to an unintuitive and disruptive user experience.
+            </TextSectionDesc>
+
+            <TextSectionSubHeader>Implementation</TextSectionSubHeader>
+            <TextSectionDesc>
+              The city carousel was a new pattern. No locking when swiping on
+              mobile, leading to an unintuitive and disruptive user experience.
+            </TextSectionDesc>
+            <TextSectionSubHeader>Stakeholder Review</TextSectionSubHeader>
             <TextSectionDesc>
               The city carousel was a new pattern. No locking when swiping on
               mobile, leading to an unintuitive and disruptive user experience.
