@@ -100,7 +100,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/felixzheng3/">
+              <a href="https://github.com/fezheng397">
                 <FooterIconContainer
                   iconBGColor={iconDefaultFills.github}
                   onMouseEnter={() => {
