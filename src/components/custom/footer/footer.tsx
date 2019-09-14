@@ -1,13 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { Styles } from "vars";
-import { Icon } from "components/core/icon/icon";
+import { Icon } from 'components/core/icon/icon';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export interface IFooterProps {}
 
 export interface IFooterState {
   linkedInIconFill: string;
   instagramIconFill: string;
+  githubIconFill: string;
 }
 
 const FooterComponent = styled.div`
@@ -49,8 +50,9 @@ const FooterIcon = styled(Icon)`
 `;
 
 const iconDefaultFills = {
-  linkedIn: "#0077b5",
-  instagram: "#e1306c"
+  linkedIn: '#0077b5',
+  instagram: '#e1306c',
+  github: '#24292e',
 };
 
 const FooterHeader = styled.h2`
@@ -59,13 +61,14 @@ const FooterHeader = styled.h2`
 `;
 
 export class Footer extends React.Component<IFooterProps, IFooterState> {
-  state = {
+  public state = {
+    githubIconFill: iconDefaultFills.github,
     linkedInIconFill: iconDefaultFills.linkedIn,
-    instagramIconFill: iconDefaultFills.instagram
+    instagramIconFill: iconDefaultFills.instagram,
   };
 
   public render() {
-    const { instagramIconFill, linkedInIconFill } = this.state;
+    const { githubIconFill, instagramIconFill, linkedInIconFill } = this.state;
 
     return (
       <FooterComponent>
@@ -75,15 +78,15 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
             <li>
               <a href="https://www.linkedin.com/in/felixzheng3/">
                 <FooterIconContainer
-                  iconBGColor="#0077b5"
+                  iconBGColor={iconDefaultFills.linkedIn}
                   onMouseEnter={() => {
                     this.setState({
-                      linkedInIconFill: Styles.Colors.primaryWhite
+                      linkedInIconFill: Styles.Colors.primaryWhite,
                     });
                   }}
                   onMouseLeave={() => {
                     this.setState({
-                      linkedInIconFill: iconDefaultFills.linkedIn
+                      linkedInIconFill: iconDefaultFills.linkedIn,
                     });
                   }}
                 >
@@ -97,17 +100,41 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/ferix397/">
+              <a href="https://www.linkedin.com/in/felixzheng3/">
                 <FooterIconContainer
-                  iconBGColor="#e1306c"
+                  iconBGColor={iconDefaultFills.github}
                   onMouseEnter={() => {
                     this.setState({
-                      instagramIconFill: Styles.Colors.primaryWhite
+                      githubIconFill: Styles.Colors.primaryWhite,
                     });
                   }}
                   onMouseLeave={() => {
                     this.setState({
-                      instagramIconFill: iconDefaultFills.instagram
+                      githubIconFill: iconDefaultFills.github,
+                    });
+                  }}
+                >
+                  <FooterIcon
+                    icon="github"
+                    height={24}
+                    width={24}
+                    fill={githubIconFill}
+                  />
+                </FooterIconContainer>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ferix397/">
+                <FooterIconContainer
+                  iconBGColor={iconDefaultFills.instagram}
+                  onMouseEnter={() => {
+                    this.setState({
+                      instagramIconFill: Styles.Colors.primaryWhite,
+                    });
+                  }}
+                  onMouseLeave={() => {
+                    this.setState({
+                      instagramIconFill: iconDefaultFills.instagram,
                     });
                   }}
                 >
