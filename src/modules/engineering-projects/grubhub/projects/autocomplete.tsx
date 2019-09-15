@@ -31,8 +31,9 @@ export interface IAutocompleteProps {}
 const AutocompleteComponent = styled.div``;
 
 const autocompleteTemplate: IProjectTemplateProps = {
+  bgColor: '#C7EDE6',
   imageAlt: 'Autocomplete Illustration',
-  imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
+  imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-cover.png'),
   imagePosition: 'left',
   objective: `To create an intuitive and efficient experience for users landing on
   the logged out homepage looking to quickly find food near them and
@@ -56,6 +57,7 @@ export function Autocomplete({  }: IAutocompleteProps) {
         <Container id="autocomplete-project-header" size="lg">
           <SectionHeaderMajor>Search Autocomplete</SectionHeaderMajor>
           <ProjectTemplate
+            bgColor={autocompleteTemplate.bgColor}
             imageAlt={autocompleteTemplate.imageAlt}
             imageSrc={autocompleteTemplate.imageSrc}
             imagePosition={autocompleteTemplate.imagePosition}

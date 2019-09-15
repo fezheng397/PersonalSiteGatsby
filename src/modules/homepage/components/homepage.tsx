@@ -15,7 +15,10 @@ const ComingSoonContainer = styled.div`
 
 const ComingSoonIllo = styled.img`
   width: 640px;
-  height: 400px;
+
+  ${Styles.MediaQuery.sm} {
+    width: 100%;
+  }
 `;
 
 const ComingSoonHeader = styled.h1`

@@ -24,8 +24,9 @@ export interface IGetTheAppProps {}
 const GetTheAppComponent = styled.div``;
 
 const getTheAppTemplate: IProjectTemplateProps = {
+  bgColor: '#c2e7f2',
   imageAlt: 'Get The App Illustration',
-  imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
+  imageSrc: require('assets/grubhub/projects/mweb-redesign/get-the-app-cover.png'),
   imagePosition: 'left',
   objective: `To encourage users landing on the logged out homepage to download the mobile app without
   blocking their natural experience with a fullscreen pullover.`,
@@ -48,6 +49,7 @@ export function GetTheApp({  }: IGetTheAppProps) {
         <SectionHeaderMajor>Get The App</SectionHeaderMajor>
         <Container id="get-the-app-project-header" size="lg">
           <ProjectTemplate
+            bgColor={getTheAppTemplate.bgColor}
             imageAlt={getTheAppTemplate.imageAlt}
             imageSrc={getTheAppTemplate.imageSrc}
             imagePosition={getTheAppTemplate.imagePosition}

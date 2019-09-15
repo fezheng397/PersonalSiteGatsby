@@ -27,8 +27,7 @@ const ProjectCardFlexItem = styled.div`
 `;
 
 const ProjectImagecontainer = styled(ProjectCardFlexItem)`
-  height: 350px;
-  width: 480px;
+  max-width: 480px;
   align-items: center;
   border-radius: ${Styles.Sizes.radius5};
   background: ${Styles.Colors.bgGray};

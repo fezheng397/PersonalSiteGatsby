@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Styles } from 'vars';
 
 export interface IProjectTemplateProps {
+  bgColor?: string;
   imageSrc: string;
   imageAlt: string;
   imagePosition: 'left' | 'right';
@@ -40,7 +41,7 @@ export const TextSectionDesc = styled.p`
 `;
 
 export const BackgroundSection = styled.div`
-  background: ${(props: { bgColor: string }) => props.bgColor};
+  background: ${(props: { bgColor?: string }) => props.bgColor};
   border-radius: ${Styles.Sizes.radius5};
   color: #fff;
   padding: ${Styles.Spaces.section8} ${Styles.Spaces.section8};
@@ -89,6 +90,8 @@ const AutocompleteImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${(props: { bgColor?: string }) => props.bgColor};
+  border-radius: ${Styles.Sizes.radius5};
 `;
 
 const AutocompleteImage = styled.img`
@@ -118,12 +121,19 @@ const ProjectTextSection = styled.div`
 `;
 
 export function ProjectTemplate(props: IProjectTemplateProps) {
-  const { imageAlt, imageSrc, imagePosition, objective, roles } = props;
+  const {
+    bgColor,
+    imageAlt,
+    imageSrc,
+    imagePosition,
+    objective,
+    roles,
+  } = props;
 
   return (
     <ProjectTemplateSection>
       {imagePosition === 'left' ? (
-        <AutocompleteImageContainer>
+        <AutocompleteImageContainer bgColor={bgColor}>
           <AutocompleteImage alt={imageAlt} src={imageSrc} />
         </AutocompleteImageContainer>
       ) : null}
@@ -153,7 +163,7 @@ export function ProjectTemplate(props: IProjectTemplateProps) {
         </ul>
       </ProjectSectionTextContainer>
       {imagePosition === 'right' ? (
-        <AutocompleteImageContainer>
+        <AutocompleteImageContainer bgColor={bgColor}>
           <AutocompleteImage alt={imageAlt} src={imageSrc} />
         </AutocompleteImageContainer>
       ) : null}
