@@ -1,11 +1,11 @@
-import { graphql } from "gatsby";
-import { Layout } from "layouts";
-import * as React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import "styles/core.scss";
-import { lightMode } from "vars/light-mode";
-import { Homepage } from "../modules/homepage/components/homepage";
-import { TransitionItem } from "components/core/transition/transition";
+import { TransitionItem } from 'components/core/transition/transition';
+import { graphql } from 'gatsby';
+import { Layout } from 'layouts';
+import * as React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import 'styles/core.scss';
+import { lightMode } from 'vars/light-mode';
+import { Homepage } from '../modules/homepage/components/homepage';
 
 interface IndexPageProps {
   data: {
@@ -37,7 +37,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
     return (
       <ThemeProvider theme={lightMode}>
-        <Layout hideNav={true}>
+        <Layout comingSoon={true} hideNav={true}>
           <Homepage />
         </Layout>
       </ThemeProvider>
