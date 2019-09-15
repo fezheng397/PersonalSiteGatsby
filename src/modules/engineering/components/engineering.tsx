@@ -1,10 +1,10 @@
-import { Container } from "components/core/container/container";
-import { SectionHeader } from "components/core/headers/headers";
-import { StyledLink } from "components/core/link/link-styles";
-import { ProjectCard } from "modules/engineering/components/project-card/project-card";
-import React from "react";
-import styled from "styled-components";
-import { Styles } from "vars";
+import { Container } from 'components/core/container/container';
+import { SectionHeader } from 'components/core/headers/headers';
+import { StyledLink } from 'components/core/link/link-styles';
+import { ProjectCard } from 'modules/engineering/components/project-card/project-card';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export interface IEngineeringProps {}
 
@@ -36,7 +36,7 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
           <StyledLink to="/engineering/grubhub">
             <ProjectCard
               imageDesc="Grubhub Project"
-              imageSrc={require("assets/logos/GrubHub_Logo_2016.svg")}
+              imageSrc={require('assets/grubhub/projects/grubhub-project.png')}
               location="New York, NY"
               projectName="Grubhub"
               role="Software Engineer Intern"

@@ -1,13 +1,13 @@
-import { Container } from "components/core/container/container";
+import { Container } from 'components/core/container/container';
 import {
   CenteredSectionHeader2,
-  SectionHeaderMajor
-} from "components/core/headers/headers";
+  SectionHeaderMajor,
+} from 'components/core/headers/headers';
 import {
   PhoneFrame,
-  PhoneFrameRow
-} from "components/core/phone-frame/phone-frame";
-import { TransitionItem } from "components/core/transition/transition";
+  PhoneFrameRow,
+} from 'components/core/phone-frame/phone-frame';
+import { TransitionItem } from 'components/core/transition/transition';
 import {
   BackgroundSection,
   BackgroundSectionContent,
@@ -16,37 +16,37 @@ import {
   BackgroundSectionSubHeader,
   TextSectionContainer,
   TextSectionDesc,
-  TextSectionSubHeader
-} from "modules/engineering-projects/grubhub/projects/project-template";
+  TextSectionSubHeader,
+} from 'modules/engineering-projects/grubhub/projects/project-template';
 import {
   IProjectTemplateProps,
-  ProjectTemplate
-} from "modules/engineering-projects/grubhub/projects/project-template";
-import React from "react";
-import styled from "styled-components";
-import { Styles } from "vars";
+  ProjectTemplate,
+} from 'modules/engineering-projects/grubhub/projects/project-template';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export interface IAutocompleteProps {}
 
 const AutocompleteComponent = styled.div``;
 
 const autocompleteTemplate: IProjectTemplateProps = {
-  imageAlt: "Autocomplete Illustration",
-  imageSrc: require("assets/grubhub/projects/autocomplete/autocomplete-icon.png"),
-  imagePosition: "left",
+  imageAlt: 'Autocomplete Illustration',
+  imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
+  imagePosition: 'left',
   objective: `To create an intuitive and efficient experience for users landing on
   the logged out homepage looking to quickly find food near them and
   order.`,
   roles: [
     {
-      roleHeader: "Feature Architecture",
-      roleDesc: "This is a text description"
+      roleHeader: 'Feature Architecture',
+      roleDesc: 'This is a text description',
     },
     {
-      roleHeader: "Implementation",
-      roleDesc: "This is a text description"
-    }
-  ]
+      roleHeader: 'Implementation',
+      roleDesc: 'This is a text description',
+    },
+  ],
 };
 
 export function Autocomplete({  }: IAutocompleteProps) {
@@ -78,17 +78,17 @@ export function Autocomplete({  }: IAutocompleteProps) {
           <PhoneFrameRow>
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require("assets/grubhub/projects/autocomplete/homepage-default-cropped.png")}
+              imageSrc={require('assets/grubhub/projects/autocomplete/homepage-default-cropped.png')}
               caption="Current Logged-out Homepage Entry"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require("assets/grubhub/projects/autocomplete/homepage-problem-noscroll-cropped.png")}
+              imageSrc={require('assets/grubhub/projects/autocomplete/homepage-problem-noscroll-cropped.png')}
               caption="After Focusing on Address Input (Results are blocked)"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require("assets/grubhub/projects/autocomplete/homepage-problem-scrolled-cropped.png")}
+              imageSrc={require('assets/grubhub/projects/autocomplete/homepage-problem-scrolled-cropped.png')}
               caption="After Scrolling to See Results"
             />
           </PhoneFrameRow>
@@ -140,37 +140,33 @@ export function Autocomplete({  }: IAutocompleteProps) {
             <PhoneFrameRow>
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require("assets/grubhub/projects/autocomplete/homepage.png")}
+                imageSrc={require('assets/grubhub/projects/autocomplete/homepage.png')}
                 caption="Logged-out Homepage Entry - Redesigned Address Input"
               />
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require("assets/grubhub/projects/autocomplete/entry.png")}
+                imageSrc={require('assets/grubhub/projects/autocomplete/entry.png')}
                 caption="After Focusing on Address Input - Fullscreen Modal for Autocomplete"
               />
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require("assets/grubhub/projects/autocomplete/search-results.png")}
+                imageSrc={require('assets/grubhub/projects/autocomplete/search-results.png')}
                 caption="After Typing to See Results"
               />
             </PhoneFrameRow>
             <PhoneFrameRow>
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require("assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif")}
+                imageSrc={require('assets/grubhub/projects/autocomplete/autocomplete-demo-basic.gif')}
                 caption="Basic Autocomplete Functionality"
-              />
+              />{' '}
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require("assets/grubhub/projects/autocomplete/geolocate.gif")}
-                caption="Geolocate Button Functionality"
-              />
-              <PhoneFrame
-                imageAlt="iphone frame"
-                imageSrc={require("assets/grubhub/projects/autocomplete/use-my-location.gif")}
-                caption="Use My Location Functionality"
+                imageSrc={require('assets/grubhub/projects/autocomplete/loading-state.png')}
+                caption="Loading State When Fetching Results"
               />
             </PhoneFrameRow>
+
             <TextSectionSubHeader />
           </TextSectionContainer>
         </Container>

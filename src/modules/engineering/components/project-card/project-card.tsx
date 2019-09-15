@@ -1,7 +1,7 @@
-import { Card } from "components/core/card/card";
-import React from "react";
-import styled from "styled-components";
-import { Styles } from "vars";
+import { Card } from 'components/core/card/card';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export interface IProjectCardProps {
   imageDesc: string;
@@ -49,7 +49,8 @@ const ProjectDescContainer = styled.div`
 `;
 
 const ProjectCardImage = styled.img`
-  width: 50%;
+  width: 100%;
+  border-radius: ${Styles.Sizes.radius5};
 `;
 
 const ProjectName = styled.h1``;
@@ -70,7 +71,7 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
       location,
       projectName,
       role,
-      timePeriod
+      timePeriod,
     } = this.props;
     return (
       <ProjectCardComponent>

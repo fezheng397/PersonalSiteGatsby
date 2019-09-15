@@ -105,8 +105,8 @@ export function GetTheApp({  }: IGetTheAppProps) {
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-android-option2.png')}
-              caption="Android Option 2"
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/image2.png')}
+              caption="IPhone Option 2"
             />
             <PhoneFrame
               imageAlt="iphone frame"
@@ -143,7 +143,10 @@ export function GetTheApp({  }: IGetTheAppProps) {
 
             <TextSectionSubHeader>Testing & Code Review</TextSectionSubHeader>
             <TextSectionDesc>
-              Never really got to these steps due to the end of my internship :(
+              Unfortunately, my internship ended before I was able to get to the
+              testing and code review stages of this feature. However, it will
+              be picked up by another engineer and will hopefully be A/B tested
+              and in production soon :)
             </TextSectionDesc>
           </TextSectionContainer>
         </Container>

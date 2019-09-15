@@ -61,11 +61,11 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
             <TextSectionDesc>
               Dashi, the repository responsible for the generation of the static
               pages (such as Careers, Terms and Conditions, etc.) on Grubhub's
-              domain, slowly became outdated and difficult to maintain. This was
-              partly due to the legacy technologies (such as Angular 1) that
-              hadn't been updated, as well as the need for 3 different
-              third-party technologies, which both made the project hard to
-              maintain, and time-consuming to onboard to new members.
+              domain, slowly became outdated. This was partly due to the legacy
+              technologies (such as Angular 1) that hadn't been updated, as well
+              as the need for 3 different third-party technologies. As a result,
+              these made the project hard to maintain, and time-consuming when
+              onboaring new members.
             </TextSectionDesc>
             <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
             <TextSectionDesc>
@@ -139,9 +139,10 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
             </p>
             <TextSectionSubHeader>Implementation</TextSectionSubHeader>
             <TextSectionDesc>
-              After understanding the structure of Gatsby's processes and
-              designing a strategy to implement the migration, it was time to
-              finally code it.
+              I was responsible for converting the templates of a few pages and
+              ensuring the built page was the same after Gatsby as it was
+              before. Once accomplished, this would prove the feasibility of a
+              fullscale migration in the future and provide a foundation.
             </TextSectionDesc>
             <TabletFrameRow>
               <TabletFrame
