@@ -24,7 +24,7 @@ export interface IGetTheAppProps {}
 const GetTheAppComponent = styled.div``;
 
 const getTheAppTemplate: IProjectTemplateProps = {
-  bgColor: '#c2e7f2',
+  bgColor: '#fff',
   imageAlt: 'Get The App Illustration',
   imageSrc: require('assets/grubhub/projects/mweb-redesign/get-the-app-cover.png'),
   imagePosition: 'left',

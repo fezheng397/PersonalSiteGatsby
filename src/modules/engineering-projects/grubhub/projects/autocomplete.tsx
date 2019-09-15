@@ -31,7 +31,7 @@ export interface IAutocompleteProps {}
 const AutocompleteComponent = styled.div``;
 
 const autocompleteTemplate: IProjectTemplateProps = {
-  bgColor: '#C7EDE6',
+  bgColor: '#fff',
   imageAlt: 'Autocomplete Illustration',
   imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-cover.png'),
   imagePosition: 'left',
