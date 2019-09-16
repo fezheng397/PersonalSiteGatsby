@@ -152,8 +152,8 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
               />
               <PhoneFrame
                 imageAlt="iphone frame"
-                imageSrc={require('assets/grubhub/projects/dashi-gatsby/grubhub-careers-m.png')}
-                caption="Grubhub Careers"
+                imageSrc={require('assets/grubhub/projects/dashi-gatsby/campus-m.png')}
+                caption="Grubhub For Students"
               />
             </TabletFrameRow>
           </TextSectionContainer>
