@@ -25,7 +25,7 @@ const DashiGatsbyComponent = styled.div``;
 
 const dashiGatsbyTemplate: IProjectTemplateProps = {
   imageAlt: 'Dashi Gatsby Illustration',
-  imageSrc: require('assets/grubhub/projects/dashi-gatsby/Gatsby_Contentful.jpg'),
+  imageSrc: require('assets/grubhub/projects/dashi-gatsby/dashi-gatsby-cover.png'),
   imagePosition: 'left',
   objective: `To architect a proof of concept (POC) migration for the diner platform's
   static-site generator repository from legacy technologies to GatsbyJS.`,
