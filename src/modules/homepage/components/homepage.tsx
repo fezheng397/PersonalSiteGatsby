@@ -4,6 +4,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Styles } from 'vars';
 
+export interface IHomepageProps {
+  comingSoon?: boolean;
+}
+
 const ComingSoonContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,9 +29,11 @@ const ComingSoonHeader = styled.h1`
   color: ${Styles.Colors.textLightBlack};
 `;
 
-export class Homepage extends React.Component {
+export class Homepage extends React.Component<IHomepageProps> {
   public render() {
-    if (true) {
+    const { comingSoon } = this.props;
+
+    if (comingSoon) {
       return (
         <ComingSoonContainer>
           <ComingSoonIllo

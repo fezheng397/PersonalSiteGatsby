@@ -1,5 +1,5 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 export interface IIconProps {
   className?: string;
@@ -7,6 +7,7 @@ export interface IIconProps {
   icon?: string;
   width?: number;
   height?: number;
+  rotate?: number;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
 }
@@ -17,6 +18,8 @@ const IconComponent = styled.svg`
   width: ${(props: IIconProps) => props.width}px;
   height: ${(props: IIconProps) => props.height}px;
   fill: ${(props: IIconProps) => props.fill};
+  ${(props: IIconProps) =>
+    props.rotate ? `transform: rotate(${props.rotate}deg)` : null}
 `;
 
 export class Icon extends React.Component<IIconProps, {}> {

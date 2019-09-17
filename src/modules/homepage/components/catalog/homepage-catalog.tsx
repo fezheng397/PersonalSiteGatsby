@@ -1,10 +1,10 @@
-import { StyledLink } from "components/core/link/link-styles";
-import { CatalogCard } from "modules/homepage/components/catalog/catalog-card";
-import React from "react";
-import styled from "styled-components";
-import { Styles } from "vars";
-import { SectionHeader } from "components/core/headers/headers";
-import { Engineering } from "modules/engineering/components/engineering";
+import { SectionHeader } from 'components/core/headers/headers';
+import { StyledLink } from 'components/core/link/link-styles';
+import { Engineering } from 'modules/engineering/components/engineering';
+import { CatalogCard } from 'modules/homepage/components/catalog/catalog-card';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 const HomepageCatalogComponent = styled.div`
   align-items: center;
@@ -25,12 +25,12 @@ const CardContainer = styled.div`
 export class HomepageCatalog extends React.Component {
   public render() {
     return (
-      <HomepageCatalogComponent>
+      <HomepageCatalogComponent id="homepage-catalog">
         <CatalogHeader>
           <SectionHeader>Check out what I do!</SectionHeader>
         </CatalogHeader>
         <Engineering />
-        {/* 
+        {/*
         <CardContainer>
           <StyledLink to="/engineering">
             <CatalogCard

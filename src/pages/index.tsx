@@ -30,6 +30,7 @@ export const indexPageQuery = graphql`
 `;
 
 const SiteContainer = styled.div``;
+const comingSoon = true;
 
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
@@ -37,8 +38,8 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
     return (
       <ThemeProvider theme={lightMode}>
-        <Layout comingSoon={true} hideNav={true}>
-          <Homepage />
+        <Layout comingSoon={comingSoon} hideNav={true}>
+          <Homepage comingSoon={comingSoon} />
         </Layout>
       </ThemeProvider>
     );

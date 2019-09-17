@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Styles } from "vars";
-import { Container } from "components/core/container/container";
+import { Container } from 'components/core/container/container';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export const HeadshotImg = styled.img`
   height: 100%;
@@ -32,6 +32,10 @@ export const HomepageHeroContainer = styled.div`
   align-items: center;
   height: 100vh;
   background: ${Styles.Colors.bgGray};
+
+  ${Styles.MediaQuery.sm} {
+    height: 100%;
+  }
 `;
 
 export const Titles = styled.div`

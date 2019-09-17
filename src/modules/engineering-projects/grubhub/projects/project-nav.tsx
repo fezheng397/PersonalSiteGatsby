@@ -1,18 +1,11 @@
-import { Backdrop } from "components/core/backdrop/backdrop";
-import { Button } from "components/core/button/button";
-import { CenteredSectionHeader } from "components/core/headers/headers";
-import { Icon } from "components/core/icon/icon";
-import { SVGComponent } from "components/core/icon/svgComponents";
-import { TransitionItem } from "components/core/transition/transition";
-import React from "react";
-import styled, { keyframes } from "styled-components";
-import {
-  checkRelativePosition,
-  getCurrentWindowPosition,
-  scrollTo,
-  WindowUtil
-} from "utilities/window-util";
-import { Styles } from "vars";
+import { Backdrop } from 'components/core/backdrop/backdrop';
+import { Button } from 'components/core/button/button';
+import { Icon } from 'components/core/icon/icon';
+import { SVGComponent } from 'components/core/icon/svgComponents';
+import { TransitionItem } from 'components/core/transition/transition';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 /**
  * TODO: Figure out mobile bug
@@ -71,14 +64,14 @@ const NavButton = styled(Button)`
   justify-content: center;
   padding: 0
     ${(props: IProjectNavButtonProps) =>
-      props.noPadding ? "" : Styles.Spaces.spacing16};
+      props.noPadding ? '' : Styles.Spaces.spacing16};
   color: ${Styles.Colors.textLightBlack};
 
   ${Styles.MediaQuery.md} {
     margin-top: 9.5px;
     padding: 0
       ${(props: IProjectNavButtonProps) =>
-        props.noPadding ? "" : Styles.Spaces.spacing10};
+        props.noPadding ? '' : Styles.Spaces.spacing8};
   }
 
   &:hover,
@@ -160,9 +153,9 @@ const AnimatedIcon = styled(SVGComponent)`
   height: ${(props: IAnimatedIconProps) => props.height}px;
   border-radius: 50%;
   margin-bottom: ${(props: IAnimatedIconProps) =>
-    props.noMargin ? "" : Styles.Spaces.spacing2};
+    props.noMargin ? '' : Styles.Spaces.spacing2};
   ${(props: IAnimatedIconProps) =>
-    props.showShadow ? `box-shadow: ${Styles.Shadows.imageShadow};` : ""};
+    props.showShadow ? `box-shadow: ${Styles.Shadows.imageShadow};` : ''};
   background: transparent;
 
   #autocomplete-icon-rotated_svg__IPhone {
@@ -287,11 +280,12 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
   public state = {
     fixPosition: false,
     projectNavFabOpen: false,
-    projectNavFabVisible: false
+    projectNavFabVisible: false,
   };
 
   private projectNavRef;
   private projectNavOffsetY: number;
+  private scrollingToProjectNav: boolean = false;
 
   constructor(props) {
     super(props);
@@ -388,26 +382,26 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
   }
 
   public componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll, true);
+    window.addEventListener('scroll', this.handleScroll, true);
     this.projectNavOffsetY = document.getElementById(
-      "project-nav-component"
+      'project-nav-component',
     ).offsetTop;
   }
 
   public componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll, true);
+    window.removeEventListener('scroll', this.handleScroll, true);
   }
 
   public renderProjectNavFabList(
-    selectNewProject: (newProject: number) => void
+    selectNewProject: (newProject: number) => void,
   ) {
     return (
       <div>
         <Backdrop
           color={Styles.Colors.primaryWhite}
-          onClick={e => {
+          onClick={(e) => {
             this.setState({
-              projectNavFabOpen: false
+              projectNavFabOpen: false,
             });
           }}
         />
@@ -418,11 +412,13 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
               <NavButton
                 noPadding={true}
                 onClick={() => {
+                  this.scrollingToProjectNav = true;
                   this.setState({
                     fixPosition: false,
-                    projectNavFabOpen: false
+                    projectNavFabOpen: false,
                   });
                   selectNewProject(1);
+                  this.scrollingToProjectNav = false;
                 }}
               >
                 <AnimatedIcon
@@ -442,7 +438,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                 onClick={() => {
                   this.setState({
                     fixPosition: false,
-                    projectNavFabOpen: false
+                    projectNavFabOpen: false,
                   });
                   selectNewProject(2);
                 }}
@@ -466,7 +462,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                 onClick={() => {
                   this.setState({
                     fixPosition: false,
-                    projectNavFabOpen: false
+                    projectNavFabOpen: false,
                   });
                   selectNewProject(3);
                 }}
@@ -488,7 +484,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                 onClick={() => {
                   this.setState({
                     fixPosition: false,
-                    projectNavFabOpen: false
+                    projectNavFabOpen: false,
                   });
                   selectNewProject(4);
                 }}
@@ -507,21 +503,23 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
     );
   }
 
-  public handleScroll = event => {
+  public handleScroll = (event) => {
     const scrollTop = window.pageYOffset;
 
     if (scrollTop >= this.projectNavOffsetY) {
       this.setState({ fixPosition: true });
-      this.props.navPosFixed(true);
+      if (!this.scrollingToProjectNav) {
+        this.props.navPosFixed(true);
+      }
     } else {
       this.setState({ fixPosition: false, projectNavFabOpen: false });
       this.props.navPosFixed(false);
     }
-  };
+  }
 
   public toggleProjectNavFabList = () => {
     this.setState((prevState: IProjectNavState) => ({
-      projectNavFabOpen: !prevState.projectNavFabOpen
+      projectNavFabOpen: !prevState.projectNavFabOpen,
     }));
-  };
+  }
 }
