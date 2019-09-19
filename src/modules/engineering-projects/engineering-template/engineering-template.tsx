@@ -1,15 +1,16 @@
-import { Container } from "components/core/container/container";
-import { SubHeader } from "components/core/headers/headers";
-import { PhoneFrame } from "components/core/phone-frame/phone-frame";
-import { TransitionItem } from "components/core/transition/transition";
+import { Container } from 'components/core/container/container';
+import { SubHeader } from 'components/core/headers/headers';
+import { CenteredSectionHeader } from 'components/core/headers/headers';
+import { PhoneFrame } from 'components/core/phone-frame/phone-frame';
+import { TransitionItem } from 'components/core/transition/transition';
 import {
   EngineeringHero,
-  ProjectDetails
-} from "modules/engineering-projects/engineering-template/engineering-hero";
-import { EngineeringOverview } from "modules/engineering-projects/engineering-template/engineering-overview";
-import React from "react";
-import styled from "styled-components";
-import { Styles } from "vars";
+  ProjectDetails,
+} from 'modules/engineering-projects/engineering-template/engineering-hero';
+import { EngineeringOverview } from 'modules/engineering-projects/engineering-template/engineering-overview';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export interface IEngineeringTemplateProps {
   bannerImageSrc?: string;
@@ -33,9 +34,9 @@ const EngineeringTemplateFooter = styled.div`
 `;
 
 const projectDetails: ProjectDetails[] = [
-  { header: "Duration", subHeader: "Summer 2019 (3 mos)" },
-  { header: "Team", subHeader: "Growth & Lifecycle" },
-  { header: "Platform", subHeader: "Web, Front-end" }
+  { header: 'Duration', subHeader: 'Summer 2019 (3 mos)' },
+  { header: 'Team', subHeader: 'Growth & Lifecycle' },
+  { header: 'Platform', subHeader: 'Web, Front-end' },
 ];
 
 export class EngineeringTemplate extends React.Component<
@@ -53,7 +54,9 @@ export class EngineeringTemplate extends React.Component<
         />
         <EngineeringOverview />
         {children}
-        <EngineeringTemplateFooter></EngineeringTemplateFooter>
+        <EngineeringTemplateFooter>
+          <CenteredSectionHeader>Reflection</CenteredSectionHeader>
+        </EngineeringTemplateFooter>
       </div>
     );
   }

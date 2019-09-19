@@ -1,3 +1,4 @@
+import { Container } from 'components/core/container/container';
 import { SectionSubHeader5, SubHeader } from 'components/core/headers/headers';
 import { Logo } from 'components/core/logo/logo';
 import { TransitionItem } from 'components/core/transition/transition';
@@ -21,6 +22,11 @@ export interface ProjectDetails {
 export interface IProjectDetailProps {
   noBorder?: boolean;
 }
+const TemplateBannerParent = styled(Container)`
+  ${Styles.MediaQuery.sm} {
+    padding: 0;
+  }
+`;
 
 const TemplateBannerContainer = styled.div`
   width: 100%;
@@ -29,7 +35,6 @@ const TemplateBannerContainer = styled.div`
     `url(${props.bannerImageSrc}) no-repeat`};
   background-size: cover;
   background-repeat: no-repeat;
-
   border-radius: ${Styles.Sizes.radius2};
   position: relative;
   margin-top: ${Styles.Spaces.section8};
