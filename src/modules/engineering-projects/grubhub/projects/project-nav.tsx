@@ -421,12 +421,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                   this.scrollingToProjectNav = false;
                 }}
               >
-                <AnimatedIcon
-                  showShadow={true}
-                  width={60}
-                  height={60}
-                  icon="GatsbyIcon"
-                />
+                <AnimatedIcon width={60} height={60} icon="GatsbyIcon" />
               </NavButton>
             </ProjectNavFabItem>
           </TransitionItem>
@@ -443,12 +438,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                   selectNewProject(2);
                 }}
               >
-                <AnimatedIcon
-                  showShadow={true}
-                  width={60}
-                  height={60}
-                  icon="CityIcon"
-                />
+                <AnimatedIcon width={60} height={60} icon="CityIcon" />
               </NavButton>
             </ProjectNavFabItem>
           </TransitionItem>
@@ -467,12 +457,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                   selectNewProject(3);
                 }}
               >
-                <AnimatedIcon
-                  showShadow={true}
-                  width={60}
-                  height={60}
-                  icon="AutocompleteIcon"
-                />
+                <AnimatedIcon width={60} height={60} icon="AutocompleteIcon" />
               </NavButton>
             </ProjectNavFabItem>
           </TransitionItem>
@@ -489,12 +474,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                   selectNewProject(4);
                 }}
               >
-                <AnimatedIcon
-                  showShadow={true}
-                  width={60}
-                  height={60}
-                  icon="GetTheAppIcon"
-                />
+                <AnimatedIcon width={60} height={60} icon="GetTheAppIcon" />
               </NavButton>
             </ProjectNavFabItem>
           </TransitionItem>

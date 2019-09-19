@@ -102,17 +102,17 @@ export function GetTheApp({  }: IGetTheAppProps) {
           <PhoneFrameRow>
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1.png')}
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option1-new.png')}
               caption="IPhone Option 1"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/image2.png')}
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option2-new.png')}
               caption="IPhone Option 2"
             />
             <PhoneFrame
               imageAlt="iphone frame"
-              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option3.png')}
+              imageSrc={require('assets/grubhub/projects/mweb-redesign/promotemweb-gh-iphone-option3-new.png')}
               caption="IPhone Option 3"
             />
           </PhoneFrameRow>
