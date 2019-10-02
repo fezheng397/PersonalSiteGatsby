@@ -29,7 +29,7 @@ const TemplateBannerContainer = styled.div`
     `url(${props.bannerImageSrc}) no-repeat`};
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: ${Styles.Sizes.radius2};
+  border-radius: ${Styles.Sizes.radius4};
   position: relative;
   margin-top: ${Styles.Spaces.section8};
 
@@ -43,7 +43,7 @@ const ProjectBanner = styled.div`
   position: relative;
   width: 90%;
   height: 100%;
-  border-radius: ${Styles.Sizes.radius2};
+  border-radius: ${Styles.Sizes.radius4};
   box-shadow: ${Styles.Shadows.standard};
   background-color: ${Styles.Colors.primaryWhite};
   margin-top: -50px;
@@ -58,7 +58,7 @@ const ProjectBanner = styled.div`
 `;
 
 const ProjectBannerContent = styled.div`
-  overflow-x: hidden;
+  overflow: hidden;
   padding: ${Styles.Spaces.section10};
 `;
 

@@ -50,7 +50,7 @@ export function Layout(props: ILayoutProps) {
           rel="stylesheet"
         />
       </Helmet>
-      <TransitionItem timeout={200} transitionType="fade">
+      <TransitionItem timeout={175} transitionType="fade">
         {!hideNav ? <Navbar /> : null}
         <SiteContent {...props}>{children}</SiteContent>
         {!comingSoon ? <Footer /> : null}

@@ -318,7 +318,7 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
                 }}
               >
                 <AnimatedIcon width={75} height={75} icon="CityIcon" />
-                <div>City Page</div>
+                <div>Best Restaurants</div>
               </NavButton>
             </NavItem>
             <NavItem>

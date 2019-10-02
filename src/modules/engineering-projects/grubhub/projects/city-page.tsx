@@ -1,45 +1,45 @@
-import { Container } from "components/core/container/container";
-import { SectionHeaderMajor } from "components/core/headers/headers";
-import { TransitionItem } from "components/core/transition/transition";
+import { Container } from 'components/core/container/container';
+import { SectionHeaderMajor } from 'components/core/headers/headers';
+import { TransitionItem } from 'components/core/transition/transition';
 import {
   IProjectTemplateProps,
-  ProjectTemplate
-} from "modules/engineering-projects/grubhub/projects/project-template";
+  ProjectTemplate,
+} from 'modules/engineering-projects/grubhub/projects/project-template';
 import {
   TextSectionContainer,
   TextSectionDesc,
-  TextSectionSubHeader
-} from "modules/engineering-projects/grubhub/projects/project-template";
-import React from "react";
-import styled from "styled-components";
-import { Styles } from "vars";
+  TextSectionSubHeader,
+} from 'modules/engineering-projects/grubhub/projects/project-template';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export interface ICityPageProps {}
 
 const CityPageComponent = styled.div``;
 
 const cityPageTemplate: IProjectTemplateProps = {
-  imageAlt: "City Page Illustration",
-  imageSrc: require("assets/grubhub/projects/autocomplete/autocomplete-icon.png"),
-  imagePosition: "left",
+  imageAlt: 'City Page Illustration',
+  imageSrc: require('assets/grubhub/projects/autocomplete/autocomplete-icon.png'),
+  imagePosition: 'left',
   objective: `To create a new page, highlighting all the top restaurants at a certain city.`,
   roles: [
     {
-      roleHeader: "Design Review",
-      roleDesc: "This is a text description"
+      roleHeader: 'Design Review',
+      roleDesc: 'This is a text description',
     },
     {
-      roleHeader: "Implementation",
-      roleDesc: "This is a text description"
-    }
-  ]
+      roleHeader: 'Implementation',
+      roleDesc: 'This is a text description',
+    },
+  ],
 };
 
 export function CityPage({  }: ICityPageProps) {
   return (
     <TransitionItem timeout={300} transitionType="fade">
       <CityPageComponent>
-        <SectionHeaderMajor>City Page</SectionHeaderMajor>
+        <SectionHeaderMajor>Best Restaurants</SectionHeaderMajor>
         <Container id="city-page-project-header" size="lg">
           <ProjectTemplate
             imageAlt={cityPageTemplate.imageAlt}

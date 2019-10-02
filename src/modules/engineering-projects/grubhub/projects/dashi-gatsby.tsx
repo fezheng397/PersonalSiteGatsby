@@ -142,7 +142,8 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
               I was responsible for converting the templates of a few pages and
               ensuring the built page was the same after Gatsby as it was
               before. Once accomplished, this would prove the feasibility of a
-              fullscale migration in the future and provide a foundation.
+              fullscale migration in the future and provide a foundation. Here
+              are a few samples...
             </TextSectionDesc>
             <TabletFrameRow>
               <TabletFrame

@@ -76,7 +76,10 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
           <FooterHeader>In case you need me</FooterHeader>
           <FooterIconRow>
             <li>
-              <a href="https://www.linkedin.com/in/felixzheng3/">
+              <a
+                href="https://www.linkedin.com/in/felixzheng3/"
+                target="_blank"
+              >
                 <FooterIconContainer
                   iconBGColor={iconDefaultFills.linkedIn}
                   onMouseEnter={() => {
@@ -100,7 +103,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
               </a>
             </li>
             <li>
-              <a href="https://github.com/fezheng397">
+              <a href="https://github.com/fezheng397" target="_blank">
                 <FooterIconContainer
                   iconBGColor={iconDefaultFills.github}
                   onMouseEnter={() => {
@@ -124,7 +127,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/ferix397/">
+              <a href="https://www.instagram.com/ferix397/" target="_blank">
                 <FooterIconContainer
                   iconBGColor={iconDefaultFills.instagram}
                   onMouseEnter={() => {
