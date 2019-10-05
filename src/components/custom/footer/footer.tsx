@@ -9,6 +9,7 @@ export interface IFooterState {
   linkedInIconFill: string;
   instagramIconFill: string;
   githubIconFill: string;
+  mailIconFill: string;
 }
 
 const FooterComponent = styled.div`
@@ -20,6 +21,7 @@ const FooterComponent = styled.div`
 `;
 
 const FooterContainer = styled.div`
+  text-align: center;
   padding: ${Styles.Spaces.section16} 0;
 `;
 
@@ -53,6 +55,7 @@ const iconDefaultFills = {
   linkedIn: '#0077b5',
   instagram: '#e1306c',
   github: '#24292e',
+  mail: '#5ec3df',
 };
 
 const FooterHeader = styled.h2`
@@ -65,15 +68,21 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
     githubIconFill: iconDefaultFills.github,
     linkedInIconFill: iconDefaultFills.linkedIn,
     instagramIconFill: iconDefaultFills.instagram,
+    mailIconFill: iconDefaultFills.mail,
   };
 
   public render() {
-    const { githubIconFill, instagramIconFill, linkedInIconFill } = this.state;
+    const {
+      githubIconFill,
+      instagramIconFill,
+      linkedInIconFill,
+      mailIconFill,
+    } = this.state;
 
     return (
       <FooterComponent>
         <FooterContainer>
-          <FooterHeader>In case you need me</FooterHeader>
+          <FooterHeader>Say hi!</FooterHeader>
           <FooterIconRow>
             <li>
               <a
@@ -122,6 +131,30 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                     height={24}
                     width={24}
                     fill={githubIconFill}
+                  />
+                </FooterIconContainer>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:fezheng397@gmail.com" target="_blank">
+                <FooterIconContainer
+                  iconBGColor={iconDefaultFills.mail}
+                  onMouseEnter={() => {
+                    this.setState({
+                      mailIconFill: Styles.Colors.primaryWhite,
+                    });
+                  }}
+                  onMouseLeave={() => {
+                    this.setState({
+                      mailIconFill: iconDefaultFills.mail,
+                    });
+                  }}
+                >
+                  <FooterIcon
+                    icon="envelope"
+                    height={24}
+                    width={24}
+                    fill={mailIconFill}
                   />
                 </FooterIconContainer>
               </a>

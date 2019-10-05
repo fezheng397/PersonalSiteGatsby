@@ -29,9 +29,14 @@ const TemplateBannerContainer = styled.div`
     `url(${props.bannerImageSrc}) no-repeat`};
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: ${Styles.Sizes.radius4};
   position: relative;
   margin-top: ${Styles.Spaces.section8};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: ${Styles.Shadows.lightShadow};
 
   ${Styles.MediaQuery.sm} {
     margin-top: 0;
@@ -93,6 +98,10 @@ const TemplateLogo = styled(Logo)`
 const HeroProjectHeader = styled.h1`
   font-size: 2.9em;
   line-height: 1.75em;
+`;
+
+const BannerTextContainer = styled.div`
+  margin-top: -25px;
 `;
 
 export function EngineeringHero({

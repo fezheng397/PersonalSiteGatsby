@@ -222,22 +222,17 @@ const ProjectNavFab = styled.div`
   position: fixed;
   cursor: pointer;
   bottom: 24px;
-  right: 20px;
+  right: 24px;
   height: 64px;
   width: 64px;
   background-color: ${Styles.Colors.primaryWhite};
   border-radius: 50%;
-  box-shadow: ${Styles.Shadows.imageShadow};
-  transform: scale(1);
-  transform-origin: 50% 50%;
+  box-shadow: ${Styles.Shadows.lightShadow};
   transition: all 0.25s ease-out;
 
   z-index: ${Styles.Dimensions.modalZ};
 
   &:hover {
-    transform: scale(1.03) translateY(-4px);
-    transform-origin: 50% 50%;
-    transition: all 0.25s ease-out;
     box-shadow: ${Styles.Shadows.imageShadowHover};
   }
 `;

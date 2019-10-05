@@ -5,10 +5,10 @@ export const Fonts = {
   nunitoSemibold: '"Nunito-Semibold", sans-serif',
   nunitoBold: '"Nunito-Bold", sans-serif',
   fontRegular: '"Varela Round", sans-serif',
-  fontLogo: '"Nunito", sans-serif',
+  fontLogo: '"circe", sans-serif',
 
   // Font Weights
   weightLight: 300,
   weightStd: 400,
-  weightBold: 700
+  weightBold: 700,
 };

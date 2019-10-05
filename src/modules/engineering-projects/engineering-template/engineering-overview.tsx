@@ -90,7 +90,7 @@ export function EngineeringOverview({
             <OverviewSection>
               <OverviewCoverImage
                 alt="blah"
-                src={require('assets/grubhub/grubhub-cover.jpg')}
+                src={require('assets/grubhub/grubhub-driver.jpg')}
               />
               <OverviewWordContainer>
                 <OverviewSectionHeader>Background</OverviewSectionHeader>

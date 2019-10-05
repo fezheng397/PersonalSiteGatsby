@@ -34,12 +34,12 @@ const ProjectImagecontainer = styled(ProjectCardFlexItem)`
   transition: ${Styles.Transitions.boxShadow};
 
   &:hover {
-    box-shadow: ${Styles.Shadows.imageShadowHover};
+    box-shadow: ${Styles.Shadows.imageShadow};
   }
 
   ${Styles.MediaQuery.md} {
     flex-direction: column;
-    box-shadow: ${Styles.Shadows.imageShadow};
+    box-shadow: ${Styles.Shadows.standard};
   }
 `;
 
@@ -80,9 +80,8 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
         <ProjectCardFlexItem>
           <ProjectDescContainer>
             <ProjectName>{projectName}</ProjectName>
-            <ProjectRole>{role}</ProjectRole>
             <ProjectSetting>
-              {timePeriod} - {location}
+              {role} - {timePeriod}
             </ProjectSetting>
           </ProjectDescContainer>
         </ProjectCardFlexItem>

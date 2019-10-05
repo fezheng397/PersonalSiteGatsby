@@ -47,7 +47,7 @@ export class GrubhubProject extends React.Component {
     return (
       <div>
         <EngineeringTemplate
-          bannerImageSrc={require('assets/grubhub/grubhub-hq.png')}
+          bannerImageSrc={require('assets/grubhub/grubhub-banner-phone-01.png')}
         >
           <div id="project-nav-component-container">
             <CenteredSectionHeader>Projects</CenteredSectionHeader>

@@ -1,8 +1,9 @@
-import { Container } from "components/core/container/container";
-import { StyledLink } from "components/core/link/link-styles";
-import React from "react";
-import styled from "styled-components";
-import { Styles } from "vars";
+import { Container } from 'components/core/container/container';
+import { Icon } from 'components/core/icon/icon';
+import { StyledLink } from 'components/core/link/link-styles';
+import React from 'react';
+import styled from 'styled-components';
+import { Styles } from 'vars';
 
 export interface INavbarProps {}
 
@@ -28,6 +29,11 @@ const NavbarLogo = styled(StyledLink)`
   display: flex;
   align-items: center;
   letter-spacing: 2.75px;
+`;
+
+const LogoImage = styled.img`
+  height: 40px;
+  width: 40px;
 `;
 
 export class Navbar extends React.Component {
