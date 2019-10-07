@@ -19,6 +19,12 @@ module.exports = {
     },
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-sass`,
-    "gatsby-plugin-remove-serviceworker"
+    "gatsby-plugin-remove-serviceworker",
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-134929946-1"
+      }
+    }
   ]
 };
