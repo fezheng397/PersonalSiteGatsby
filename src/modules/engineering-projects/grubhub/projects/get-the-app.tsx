@@ -35,10 +35,6 @@ const getTheAppTemplate: IProjectTemplateProps = {
       roleHeader: 'Implementation',
       roleDesc: 'Responsible for implementing the feature end to end.',
     },
-    {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
-    },
   ],
 };
 
@@ -99,6 +95,9 @@ export function GetTheApp({  }: IGetTheAppProps) {
           </TextSectionContainer>
         </Container>
         <Container id="get-the-app-project-implementation" size="lg">
+          <TextSectionContainer>
+            <TextSectionSubHeader>Implementation</TextSectionSubHeader>
+          </TextSectionContainer>
           <PhoneFrameRow>
             <PhoneFrame
               imageAlt="iphone frame"

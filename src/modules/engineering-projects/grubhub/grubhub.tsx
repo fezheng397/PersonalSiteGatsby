@@ -10,6 +10,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { scrollTo, WindowUtil } from 'utilities/window-util';
 import { Styles } from 'vars';
+import {
+  TextSectionContainer,
+  TextSectionDesc,
+  TextSectionSubHeader,
+} from './projects/project-template';
 
 export interface IGrubhubProjectState {
   currentProject: number;
@@ -86,5 +91,18 @@ export class GrubhubProject extends React.Component {
     };
 
     return projects[currentProject];
+  }
+
+  private renderReflection() {
+    return (
+      <TextSectionContainer>
+        <TextSectionSubHeader>Problem Statement</TextSectionSubHeader>
+        <TextSectionDesc>
+          I'm extremely thankful to Grubhub for providing me the opportunity to
+          work with such a talented, helpful, and inspiring team over the
+          summer. I learned an abundance of new
+        </TextSectionDesc>
+      </TextSectionContainer>
+    );
   }
 }

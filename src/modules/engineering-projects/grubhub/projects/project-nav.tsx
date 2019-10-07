@@ -127,14 +127,20 @@ const NavButton = styled(Button)`
       transition: all 0.25s ease-out;
     }
 
-    #city-icon_svg__restaurant {
-      transform: scale(1.3) translateY(7px);
+    #city-icon_svg_platter-base {
+      transform: scale(1.2) translateY(1px) rotate(-4deg);
       transform-origin: 50% 50%;
       transition: all 0.25s ease-out;
     }
 
-    #city-icon_svg__building {
+    #city-icon_svg_container {
       transform: scale(1.2);
+      transform-origin: 50% 50%;
+      transition: all 0.25s ease-out;
+    }
+
+    #city-icon_svg_platter-head {
+      transform: scale(1.5) rotate(30deg) translateY(-4px) translateX(-2px);
       transform-origin: 50% 50%;
       transition: all 0.25s ease-out;
     }
@@ -206,13 +212,20 @@ const AnimatedIcon = styled(SVGComponent)`
     transition: all 0.25s ease-out;
   }
 
-  #city-icon_svg__restaurant {
-    transform: scale(1) translateY(0);
+  #city-icon_svg_platter-base {
+    transform: scale(1);
     transform-origin: 50% 50%;
     transition: all 0.25s ease-out;
   }
-  #city-icon_svg__building {
+
+  #city-icon_svg_container {
     transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: all 0.25s ease-out;
+  }
+
+  #city-icon_svg_platter-head {
+    transform: scale(1) rotate(0) translateY(0);
     transform-origin: 50% 50%;
     transition: all 0.25s ease-out;
   }

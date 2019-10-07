@@ -15,7 +15,7 @@ export interface IProjectTemplateProps {
 
 export interface Role {
   roleHeader: string;
-  roleDesc: string;
+  roleDesc?: string;
 }
 
 export const TextSectionContainer = styled.div`

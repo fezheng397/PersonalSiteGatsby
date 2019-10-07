@@ -93,7 +93,9 @@ export function EngineeringOverview({
                 src={require('assets/grubhub/grubhub-driver.jpg')}
               />
               <OverviewWordContainer>
+                {/*
                 <OverviewSectionHeader>Background</OverviewSectionHeader>
+                */}
 
                 <OverviewDescription>
                   Over the summer, I worked with the Growth & Lifecycle (G&L)

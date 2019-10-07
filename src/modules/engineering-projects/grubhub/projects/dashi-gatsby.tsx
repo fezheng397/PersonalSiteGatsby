@@ -31,12 +31,12 @@ const dashiGatsbyTemplate: IProjectTemplateProps = {
   static-site generator repository from legacy technologies to GatsbyJS.`,
   roles: [
     {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
+      roleHeader: 'Proving Feasibility',
+      roleDesc: 'Ensuring the migration is possible and worth the time',
     },
     {
-      roleHeader: 'Role Header',
-      roleDesc: 'This is a text description',
+      roleHeader: 'Migration Architecture',
+      roleDesc: 'Planning how to migrate our static-site platform',
     },
   ],
 };

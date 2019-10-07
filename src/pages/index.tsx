@@ -30,7 +30,7 @@ export const indexPageQuery = graphql`
 `;
 
 const SiteContainer = styled.div``;
-const comingSoon = true;
+const comingSoon = false;
 
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {

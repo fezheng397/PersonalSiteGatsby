@@ -26,7 +26,7 @@ const ProjectCardFlexItem = styled.div`
   justify-content: center;
 `;
 
-const ProjectImagecontainer = styled(ProjectCardFlexItem)`
+export const ProjectImageContainer = styled(ProjectCardFlexItem)`
   max-width: 480px;
   align-items: center;
   border-radius: ${Styles.Sizes.radius5};
@@ -47,12 +47,12 @@ const ProjectDescContainer = styled.div`
   padding: ${Styles.Spaces.spacing4} 0;
 `;
 
-const ProjectCardImage = styled.img`
+export const ProjectCardImage = styled.img`
   width: 100%;
   border-radius: ${Styles.Sizes.radius5};
 `;
 
-const ProjectName = styled.h1``;
+const ProjectName = styled.h2``;
 
 const ProjectRole = styled.h4`
   color: ${Styles.Colors.textGreen};
@@ -74,9 +74,9 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
     } = this.props;
     return (
       <ProjectCardComponent>
-        <ProjectImagecontainer>
+        <ProjectImageContainer>
           <ProjectCardImage alt={imageDesc} src={imageSrc} />
-        </ProjectImagecontainer>
+        </ProjectImageContainer>
         <ProjectCardFlexItem>
           <ProjectDescContainer>
             <ProjectName>{projectName}</ProjectName>

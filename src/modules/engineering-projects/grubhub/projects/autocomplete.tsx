@@ -41,11 +41,11 @@ const autocompleteTemplate: IProjectTemplateProps = {
   roles: [
     {
       roleHeader: 'Feature Architecture',
-      roleDesc: 'This is a text description',
+      roleDesc: 'Planning how to best structure and organize the feature',
     },
     {
       roleHeader: 'Implementation',
-      roleDesc: 'This is a text description',
+      roleDesc: 'Responsible for implementing the feature end to end.',
     },
   ],
 };

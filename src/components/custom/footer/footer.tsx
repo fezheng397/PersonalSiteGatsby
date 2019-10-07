@@ -60,6 +60,10 @@ const iconDefaultFills = {
 
 const FooterHeader = styled.h2`
   color: ${Styles.Colors.textLightBlack};
+  margin-bottom: ${Styles.Spaces.spacing4};
+`;
+
+const FooterHeaderContainer = styled.div`
   margin-bottom: ${Styles.Spaces.spacing8};
 `;
 
@@ -82,7 +86,11 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
     return (
       <FooterComponent>
         <FooterContainer>
-          <FooterHeader>Say hi!</FooterHeader>
+          <FooterHeaderContainer>
+            <FooterHeader>Say hi!</FooterHeader>
+            <p>I'm always down for coffee or a quick chat :-)</p>
+          </FooterHeaderContainer>
+
           <FooterIconRow>
             <li>
               <a

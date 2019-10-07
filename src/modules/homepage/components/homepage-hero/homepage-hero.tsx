@@ -79,8 +79,8 @@ export class HomepageHero extends React.Component {
               translateY={50}
             >
               <HeroDescription>
-                I'm a Software Engineer based in the New York area. Most
-                recently interned at Grubhub.
+                I'm a Software Engineer based in the New York area finishing my
+                final year @ Rutgers. I most recently interned at Grubhub.
               </HeroDescription>
             </TransitionItem>
             <br />
@@ -91,8 +91,8 @@ export class HomepageHero extends React.Component {
               translateY={50}
             >
               <HeroDescription>
-                Previously, I've worn many hats. Retired breakdancer, mediocre
-                music producer, and aspiring designer.
+                Aside from my professional side, I love to produce music/DJ,
+                freestyle on piano, and design intriguing experiences.
               </HeroDescription>
             </TransitionItem>
           </Titles>

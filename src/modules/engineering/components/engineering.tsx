@@ -3,7 +3,9 @@ import { SectionHeader } from 'components/core/headers/headers';
 import { StyledLink } from 'components/core/link/link-styles';
 import { ProjectCard } from 'modules/engineering/components/project-card/project-card';
 import React from 'react';
+import ReactGA from 'react-ga';
 import styled from 'styled-components';
+import { internalLinkEvent } from 'utilities/analytics';
 import { Styles } from 'vars';
 
 export interface IEngineeringProps {}
@@ -33,7 +35,12 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
     return (
       <EngineeringComponent size="lg">
         <ProjectContainer>
-          <StyledLink to="/engineering/grubhub">
+          <StyledLink
+            onClick={() => {
+              internalLinkEvent('Grubhub');
+            }}
+            to="/engineering/grubhub"
+          >
             <ProjectCard
               imageDesc="Grubhub Project"
               imageSrc={require('assets/grubhub/projects/grubhub-project.png')}
@@ -45,7 +52,13 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
           </StyledLink>
         </ProjectContainer>
         <ProjectContainer>
-          <a href="https://www.sweinterns.com" target="_blank">
+          <a
+            onClick={() => {
+              internalLinkEvent('SWEInterns');
+            }}
+            href="https://www.sweinterns.com"
+            target="_blank"
+          >
             <ProjectCard
               imageDesc="SWEInterns Project"
               imageSrc={require('assets/sweinterns/sweinterns-project-cover.png')}
