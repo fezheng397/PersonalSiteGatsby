@@ -493,8 +493,10 @@ export class ProjectNav extends React.Component<IProjectNavProps, {}> {
 
   public handleScroll = (event) => {
     const scrollTop = window.pageYOffset;
+    const atBottom =
+      window.innerHeight + scrollTop >= document.body.offsetHeight - 300;
 
-    if (scrollTop >= this.projectNavOffsetY) {
+    if (scrollTop >= this.projectNavOffsetY && !atBottom) {
       this.setState({ fixPosition: true });
       if (!this.scrollingToProjectNav) {
         this.props.navPosFixed(true);
