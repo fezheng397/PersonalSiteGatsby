@@ -15,9 +15,7 @@ export interface ILayoutProps {
 
 const SiteContainer = styled.div``;
 
-const SiteContent = styled.div`
-  ${(props: ILayoutProps) => (props.offsetContent ? 'margin-top: 72px;' : '')}
-`;
+const SiteContent = styled.div``;
 
 export function Layout(props: ILayoutProps) {
   const { children, comingSoon, hideNav } = props;
@@ -35,19 +33,7 @@ export function Layout(props: ILayoutProps) {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Varela&display=swap"
-          rel="stylesheet"
-        />
-        <link
           href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap"
           rel="stylesheet"
         />
       </Helmet>

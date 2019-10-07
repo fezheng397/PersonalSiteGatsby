@@ -41,6 +41,7 @@ const TemplateBannerContainer = styled.div`
   ${Styles.MediaQuery.sm} {
     margin-top: 0;
     border-radius: 0;
+    box-shadow: none;
   }
 `;
 

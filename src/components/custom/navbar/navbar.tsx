@@ -1,3 +1,5 @@
+import Burger from '@animated-burgers/burger-rotate';
+import '@animated-burgers/burger-rotate/dist/styles.css';
 import { Container } from 'components/core/container/container';
 import { Icon } from 'components/core/icon/icon';
 import { StyledLink } from 'components/core/link/link-styles';
@@ -9,18 +11,21 @@ export interface INavbarProps {}
 
 export interface INavbarState {}
 
-const NavbarContainer = styled.div`
-  position: absolute;
-  top: 0;
+const NavbarComponent = styled.div`
   height: 72px;
   width: 100%;
+
   background: ${Styles.Colors.primaryWhite};
   z-index: ${Styles.Dimensions.baseZ + 5};
 `;
 
+const NavbarContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const NavbarLogo = styled(StyledLink)`
-  position: absolute;
-  top: 0;
   height: 72px;
   font-family: ${Styles.Fonts.fontLogo};
   font-size: 20px;
@@ -36,14 +41,22 @@ const LogoImage = styled.img`
   width: 40px;
 `;
 
+const HamburgerMenuContainer = styled.div`
+  position: relative;
+  height: 32px;
+  width: 32px;
+`;
+
+const HamburgerMenu = styled(Burger)``;
+
 export class Navbar extends React.Component {
   public render() {
     return (
-      <NavbarContainer>
-        <Container size="lg">
+      <NavbarComponent>
+        <NavbarContainer size="lg">
           <NavbarLogo to="/">Felix Zheng</NavbarLogo>
-        </Container>
-      </NavbarContainer>
+        </NavbarContainer>
+      </NavbarComponent>
     );
   }
 }
