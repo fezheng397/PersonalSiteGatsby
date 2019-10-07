@@ -46,6 +46,10 @@ const ProjectNav = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  ${Styles.MediaQuery.md} {
+    flex-direction: column;
+  }
 `;
 
 const projectDetails: ProjectDetails[] = [
