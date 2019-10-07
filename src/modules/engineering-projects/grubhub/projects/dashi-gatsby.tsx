@@ -67,12 +67,7 @@ export function DashiGatsby({  }: IDashiGatsbyProps) {
               these made the project hard to maintain, and time-consuming when
               onboaring new members.
             </TextSectionDesc>
-            <TextSectionSubHeader>Reviewing Expectations</TextSectionSubHeader>
-            <TextSectionDesc>
-              Since this was a project that was solely based on the engineering
-              side, I would be giving the finished deliverable to G&L's team
-              lead.
-            </TextSectionDesc>
+
             <TextSectionSubHeader>Research</TextSectionSubHeader>
             <p>
               Because I had never worked with Gatbsy before, the first step for
