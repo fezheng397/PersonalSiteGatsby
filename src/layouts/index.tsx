@@ -36,6 +36,7 @@ export function Layout(props: ILayoutProps) {
           href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap"
           rel="stylesheet"
         />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet"></link>
       </Helmet>
       <TransitionItem timeout={175} transitionType="fade">
         {!hideNav ? <Navbar /> : null}
