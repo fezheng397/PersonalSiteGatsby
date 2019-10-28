@@ -1,7 +1,7 @@
 export const Fonts = {
   // Font Types
-  fontRegular: '"Noto Sans", sans-serif',
-  fontLogo: '"Noto Sans", sans-serif',
+  fontRegular: '"circe", sans-serif',
+  fontLogo: '"circe", sans-serif',
 
   // Font Weights
   weightLight: 300,
