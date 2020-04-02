@@ -10,6 +10,7 @@ export interface IProjectCardProps {
   projectName: string;
   role: string;
   timePeriod: string;
+  logoOnly?: boolean;
 }
 
 const ProjectCardComponent = styled(Card)`
@@ -70,7 +71,7 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
       location,
       projectName,
       role,
-      timePeriod,
+      timePeriod
     } = this.props;
     return (
       <ProjectCardComponent>

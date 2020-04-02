@@ -33,21 +33,57 @@ const ProjectContainer = styled.div`
 export class Engineering extends React.Component<IEngineeringProps, {}> {
   public render() {
     return (
-      <EngineeringComponent size="lg">
+      <EngineeringComponent size='lg'>
+        <ProjectContainer>
+          <a
+            onClick={() => {
+              internalLinkEvent('SeatGeek');
+            }}
+            href='https://www.seatgeek.com'
+            target='_blank'
+          >
+            <ProjectCard
+              imageDesc='Constellate Project'
+              imageSrc={require('assets/constellate-card.svg')}
+              location='New York, NY'
+              projectName='Constellate'
+              role='Working on something new :)'
+              timePeriod='Present'
+            />
+          </a>
+        </ProjectContainer>
+        <ProjectContainer>
+          <a
+            onClick={() => {
+              internalLinkEvent('SeatGeek');
+            }}
+            href='https://www.seatgeek.com'
+            target='_blank'
+          >
+            <ProjectCard
+              imageDesc='SeatGeek Project'
+              imageSrc={require('assets/seatgeek-card.svg')}
+              location='New York, NY'
+              projectName='SeatGeek'
+              role='Software Engineer'
+              timePeriod='February 2020 - Present'
+            />
+          </a>
+        </ProjectContainer>
         <ProjectContainer>
           <StyledLink
             onClick={() => {
               internalLinkEvent('Grubhub');
             }}
-            to="/engineering/grubhub"
+            to='/engineering/grubhub'
           >
             <ProjectCard
-              imageDesc="Grubhub Project"
+              imageDesc='Grubhub Project'
               imageSrc={require('assets/grubhub/projects/grubhub-project.png')}
-              location="New York, NY"
-              projectName="Grubhub"
-              role="Software Engineer Intern"
-              timePeriod="Summer 2019"
+              location='New York, NY'
+              projectName='Grubhub'
+              role='Software Engineer Intern'
+              timePeriod='Summer 2019'
             />
           </StyledLink>
         </ProjectContainer>
@@ -56,16 +92,16 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
             onClick={() => {
               internalLinkEvent('SWEInterns');
             }}
-            href="https://www.sweinterns.com"
-            target="_blank"
+            href='https://www.sweinterns.com'
+            target='_blank'
           >
             <ProjectCard
-              imageDesc="SWEInterns Project"
+              imageDesc='SWEInterns Project'
               imageSrc={require('assets/sweinterns/sweinterns-project-cover.png')}
-              location="New York, NY"
-              projectName="Interns.SWE"
-              role="Designer/Developer"
-              timePeriod="Fall 2019"
+              location='New York, NY'
+              projectName='Interns.SWE'
+              role='Designer/Developer'
+              timePeriod='Fall 2019'
             />
           </a>
         </ProjectContainer>

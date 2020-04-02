@@ -7,7 +7,7 @@ import {
   HeadshotImgContainer,
   HeroBanner,
   HomepageHeroContainer,
-  Titles,
+  Titles
 } from 'modules/homepage/components/homepage-hero/homepage-hero-styles';
 import React from 'react';
 import styled from 'styled-components';
@@ -51,14 +51,14 @@ export class HomepageHero extends React.Component {
   public render() {
     return (
       <HomepageHeroContainer>
-        <HeroBanner size="md">
+        <HeroBanner size='md'>
           <HeadshotImgContainer>
             <HeadshotImg src={require('assets/pro-pic-min.png')} />
           </HeadshotImgContainer>
 
           <TransitionItem
             timeout={400}
-            transitionType="fade-translate"
+            transitionType='fade-translate'
             translateY={50}
           >
             <SubHeader>Hey, I'm</SubHeader>
@@ -66,7 +66,7 @@ export class HomepageHero extends React.Component {
 
           <TransitionItem
             timeout={400}
-            transitionType="fade-scale"
+            transitionType='fade-scale'
             scaleSize={1.55}
           >
             <HeroHeader>Felix Zheng</HeroHeader>
@@ -75,35 +75,35 @@ export class HomepageHero extends React.Component {
             <TransitionItem
               timeout={500}
               delay={150}
-              transitionType="fade-translate"
+              transitionType='fade-translate'
               translateY={50}
             >
               <HeroDescription>
-                I'm a Software Engineer based in the New York area finishing my
-                final year @ Rutgers. I most recently interned at Grubhub.
+                I'm a Software Engineer based in the New York area currently @
+                SeatGeek.
               </HeroDescription>
             </TransitionItem>
             <br />
             <TransitionItem
               timeout={475}
               delay={250}
-              transitionType="fade-translate"
+              transitionType='fade-translate'
               translateY={50}
             >
               <HeroDescription>
-                Aside from my professional side, I love to produce music/DJ,
-                freestyle on piano, and design intriguing experiences.
+                Aside from my professional side, I love to produce music/DJ and
+                freestyle on the piano.
               </HeroDescription>
             </TransitionItem>
           </Titles>
-          <TransitionItem timeout={500} delay={450} transitionType="fade">
+          <TransitionItem timeout={500} delay={450} transitionType='fade'>
             <SeeMoreButtonContainer>
               <SeeMoreButton onClick={this.scrollToProjects}>
                 <Icon
                   height={24}
                   width={24}
                   fill={Styles.Colors.textLightBlack}
-                  icon="arrow-right"
+                  icon='arrow-right'
                   rotate={90}
                 />
               </SeeMoreButton>
@@ -116,5 +116,5 @@ export class HomepageHero extends React.Component {
 
   public scrollToProjects = () => {
     scrollTo(document.getElementById('homepage-catalog'));
-  }
+  };
 }
