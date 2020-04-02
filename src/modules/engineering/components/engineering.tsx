@@ -35,11 +35,11 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
     return (
       <EngineeringComponent size='lg'>
         <ProjectContainer>
-          <a
+          <StyledLink
             onClick={() => {
-              internalLinkEvent('SeatGeek');
+              internalLinkEvent('Constellate');
             }}
-            href='https://www.seatgeek.com'
+            to='/'
             target='_blank'
           >
             <ProjectCard
@@ -50,7 +50,7 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
               role='Working on something new :)'
               timePeriod='Present'
             />
-          </a>
+          </StyledLink>
         </ProjectContainer>
         <ProjectContainer>
           <a
