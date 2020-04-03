@@ -34,7 +34,7 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
   public render() {
     return (
       <EngineeringComponent size='lg'>
-        <ProjectContainer>
+        {/* <ProjectContainer>
           <StyledLink
             onClick={() => {
               internalLinkEvent('Constellate');
@@ -51,7 +51,7 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
               timePeriod='Present'
             />
           </StyledLink>
-        </ProjectContainer>
+        </ProjectContainer> */}
         <ProjectContainer>
           <a
             onClick={() => {
