@@ -71,7 +71,7 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
           </a>
         </ProjectContainer>
         <ProjectContainer>
-          <StyledLink
+          {/* <StyledLink
             onClick={() => {
               internalLinkEvent('Grubhub');
             }}
@@ -85,7 +85,22 @@ export class Engineering extends React.Component<IEngineeringProps, {}> {
               role='Software Engineer Intern'
               timePeriod='Summer 2019'
             />
-          </StyledLink>
+          </StyledLink> */}
+          <a
+            onClick={() => {
+              internalLinkEvent('Grubhub');
+            }}
+            href='https://www.grubhub.com'
+          >
+            <ProjectCard
+              imageDesc='Grubhub Project'
+              imageSrc={require('assets/grubhub/projects/grubhub-project.png')}
+              location='New York, NY'
+              projectName='Grubhub'
+              role='Software Engineer Intern'
+              timePeriod='Summer 2019'
+            />
+          </a>
         </ProjectContainer>
         <ProjectContainer>
           <a
