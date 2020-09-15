@@ -1,10 +1,10 @@
 export const Fonts = {
   // Font Types
-  fontRegular: '"circe", sans-serif',
-  fontLogo: '"circe", sans-serif',
+  fontRegular: '"geomantist", sans-serif',
+  fontLogo: '"geomantist", sans-serif',
 
   // Font Weights
   weightLight: 300,
   weightStd: 400,
-  weightBold: 700,
+  weightBold: 500,
 };

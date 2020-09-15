@@ -1,7 +1,47 @@
+@font-face {
+  font-family: 'geomantist';
+  src: url('./fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.ttf')
+    format('truetype');
+  src: url('./fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.woff');
+  src: url('./fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'geomantist';
+  src: url('./fonts/Geomanist-Book-Webfont/geomanist-book-webfont.ttf')
+    format('truetype');
+  src: url('./fonts/Geomanist-Book-Webfont/geomanist-book-webfont.woff');
+  src: url('./fonts/Geomanist-Book-Webfont/geomanist-book-webfont.woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'geomantist';
+  src: url('./fonts/Geomanist-Medium-Webfont/geomanist-medium-webfont.ttf')
+    format('truetype');
+  src: url('./fonts/Geomanist-Medium-Webfont/geomanist-medium-webfont.woff');
+  src: url('./fonts/Geomanist-Medium-Webfont/geomanist-medium-webfont.woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'geomantist';
+  src: url('./fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.ttf')
+    format('truetype');
+  src: url('./fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.woff');
+  src: url('./fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 // Fonts
-$font-1: "circe", sans-serif;
+$font-1: 'geomantist', sans-serif;
 
 $font: (
   weight: 400,
-  weight-bold: 600
+  weight-bold: 500,
 );
