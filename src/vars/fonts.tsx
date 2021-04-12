@@ -1,10 +1,10 @@
 export const Fonts = {
   // Font Types
-  fontRegular: '"geomantist", sans-serif',
-  fontLogo: '"geomantist", sans-serif',
+  fontRegular: '"euclid", sans-serif',
+  fontLogo: '"euclid", sans-serif',
 
   // Font Weights
   weightLight: 300,
   weightStd: 400,
-  weightBold: 500,
+  weightBold: 700,
 };

@@ -34,7 +34,7 @@ export const SectionHeaderMajor = styled(CenteredSectionHeader)`
   padding: ${Styles.Spaces.spacing8} 0;
 
   &:after {
-    content: "";
+    content: '';
     border-bottom: solid 2px #e6e6e6;
     display: block;
     width: ${Styles.Spaces.spacing16};

@@ -88,14 +88,14 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
         <FooterContainer>
           <FooterHeaderContainer>
             <FooterHeader>Say hi!</FooterHeader>
-            <p>I'm always down for coffee or a quick chat :-)</p>
+            <p>I'm always down for coffee or a quick chat (:</p>
           </FooterHeaderContainer>
 
           <FooterIconRow>
             <li>
               <a
-                href="https://www.linkedin.com/in/felixzheng3/"
-                target="_blank"
+                href='https://www.linkedin.com/in/felixzheng3/'
+                target='_blank'
               >
                 <FooterIconContainer
                   iconBGColor={iconDefaultFills.linkedIn}
@@ -111,7 +111,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                   }}
                 >
                   <FooterIcon
-                    icon="linkedin"
+                    icon='linkedin'
                     height={24}
                     width={24}
                     fill={linkedInIconFill}
@@ -120,7 +120,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
               </a>
             </li>
             <li>
-              <a href="https://github.com/fezheng397" target="_blank">
+              <a href='https://github.com/fezheng397' target='_blank'>
                 <FooterIconContainer
                   iconBGColor={iconDefaultFills.github}
                   onMouseEnter={() => {
@@ -135,7 +135,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                   }}
                 >
                   <FooterIcon
-                    icon="github"
+                    icon='github'
                     height={24}
                     width={24}
                     fill={githubIconFill}
@@ -144,7 +144,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
               </a>
             </li>
             <li>
-              <a href="mailto:fezheng397@gmail.com" target="_blank">
+              <a href='mailto:fezheng397@gmail.com' target='_blank'>
                 <FooterIconContainer
                   iconBGColor={iconDefaultFills.mail}
                   onMouseEnter={() => {
@@ -159,7 +159,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                   }}
                 >
                   <FooterIcon
-                    icon="envelope"
+                    icon='envelope'
                     height={24}
                     width={24}
                     fill={mailIconFill}
@@ -168,7 +168,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/ferix397/" target="_blank">
+              <a href='https://www.instagram.com/ferix397/' target='_blank'>
                 <FooterIconContainer
                   iconBGColor={iconDefaultFills.instagram}
                   onMouseEnter={() => {
@@ -183,7 +183,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                   }}
                 >
                   <FooterIcon
-                    icon="instagram"
+                    icon='instagram'
                     height={24}
                     width={24}
                     fill={instagramIconFill}

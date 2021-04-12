@@ -53,7 +53,9 @@ export const ProjectCardImage = styled.img`
   border-radius: ${Styles.Sizes.radius5};
 `;
 
-const ProjectName = styled.h2``;
+const ProjectName = styled.h2`
+  font-weight: 500;
+`;
 
 const ProjectRole = styled.h4`
   color: ${Styles.Colors.textGreen};
@@ -71,7 +73,7 @@ export class ProjectCard extends React.Component<IProjectCardProps, {}> {
       location,
       projectName,
       role,
-      timePeriod
+      timePeriod,
     } = this.props;
     return (
       <ProjectCardComponent>
